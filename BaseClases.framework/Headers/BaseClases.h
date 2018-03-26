@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CommonCryptor.h"
+#import "CommonDigest.h"
+#import "iCarousel.h"
+#import "CardIO.h"
 
 //! Project version number for BaseClases.
 FOUNDATION_EXPORT double BaseClasesVersionNumber;

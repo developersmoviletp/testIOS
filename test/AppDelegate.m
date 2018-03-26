@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import <GoogleMaps/GoogleMaps.h>
+#import <GooglePlaces/GooglePlaces.h>
 @import GoogleMaps;
 @import GooglePlaces;
+@import UIKit;
+//@import prospect;
 @interface AppDelegate ()
 
 @end
@@ -17,8 +21,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [GMSServices provideAPIKey:@"AIzaSyDw-pJE12n8S6x1OI1NcvZF0_P-TYabVXQ"];
-    [GMSPlacesClient provideAPIKey:@"AIzaSyDw-pJE12n8S6x1OI1NcvZF0_P-TYabVXQ"];
+    [GMSServices provideAPIKey:@"AIzaSyDUuUWNrEkAMAgF5lcI04PIFy6w2XK9Wdc"];
+    [GMSPlacesClient provideAPIKey:@"AIzaSyABwUw-_wdaAyN1_aB0iLN6wtM86JouFWc"];
+    
     return YES;
 }
 

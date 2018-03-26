@@ -7,11 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CommonCryptor.h"
-#import "CommonDigest.h"
-#import "iCarousel.h"
-#import "CardIO.h"
-#import "PaymentModule.h"
+#import <BaseClases/BaseClases.h>
 
 
 @import AudioToolbox;
