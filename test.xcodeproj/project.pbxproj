@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0451C50B205B530000E63C26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451C50A205B530000E63C26 /* AppDelegate.m */; };
-		0451C50E205B530000E63C26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451C50D205B530000E63C26 /* ViewController.m */; };
 		0451C511205B530000E63C26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0451C50F205B530000E63C26 /* Main.storyboard */; };
 		0451C513205B530000E63C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0451C512205B530000E63C26 /* Assets.xcassets */; };
 		0451C516205B530000E63C26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0451C514205B530000E63C26 /* LaunchScreen.storyboard */; };
@@ -20,14 +19,15 @@
 		D5CFABF4A89EEB3524CD6B74 /* Pods_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3E0FE24A30D0FC9D43209D /* Pods_testUITests.framework */; };
 		EE12CC822069560700712A90 /* account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE12CC78206955EF00712A90 /* account.framework */; };
 		EE12CC832069560700712A90 /* account.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE12CC78206955EF00712A90 /* account.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE12CC842069560700712A90 /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE12CC7C206955F600712A90 /* BaseClases.framework */; };
-		EE12CC852069560700712A90 /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE12CC7C206955F600712A90 /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE12CC862069560700712A90 /* payment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE12CC7A206955F300712A90 /* payment.framework */; };
-		EE12CC872069560700712A90 /* payment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE12CC7A206955F300712A90 /* payment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE12CC882069560700712A90 /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE12CC79206955F200712A90 /* prospect.framework */; };
-		EE12CC892069560700712A90 /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE12CC79206955F200712A90 /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE12CC8A2069560700712A90 /* trace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE12CC7B206955F500712A90 /* trace.framework */; };
-		EE12CC8B2069560700712A90 /* trace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE12CC7B206955F500712A90 /* trace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE15BE36206BF98800C17FBF /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE15BE34206BF97B00C17FBF /* prospect.framework */; };
+		EE15BE37206BF98800C17FBF /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE15BE34206BF97B00C17FBF /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE32368B206C243000951F91 /* trace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE323689206C242600951F91 /* trace.framework */; };
+		EE32368C206C243000951F91 /* trace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE323689206C242600951F91 /* trace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE323693206C25B400951F91 /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE323691206C25A400951F91 /* BaseClases.framework */; };
+		EE323694206C25B400951F91 /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE323691206C25A400951F91 /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE79F03F206AD5BD00C16C7B /* payment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE79F03D206AD5B600C16C7B /* payment.framework */; };
+		EE79F040206AD5BD00C16C7B /* payment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE79F03D206AD5B600C16C7B /* payment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE79F082206B2C7F00C16C7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE79F081206B2C7F00C16C7B /* ViewController.m */; };
 		EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764520618BAD004F6CD0 /* CoreData.framework */; };
 		EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764620618BAD004F6CD0 /* CoreLocation.framework */; };
 		EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764720618BAD004F6CD0 /* Foundation.framework */; };
@@ -57,11 +57,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EE12CC852069560700712A90 /* BaseClases.framework in Embed Frameworks */,
-				EE12CC8B2069560700712A90 /* trace.framework in Embed Frameworks */,
-				EE12CC872069560700712A90 /* payment.framework in Embed Frameworks */,
-				EE12CC892069560700712A90 /* prospect.framework in Embed Frameworks */,
 				EE12CC832069560700712A90 /* account.framework in Embed Frameworks */,
+				EE32368C206C243000951F91 /* trace.framework in Embed Frameworks */,
+				EE79F040206AD5BD00C16C7B /* payment.framework in Embed Frameworks */,
+				EE323694206C25B400951F91 /* BaseClases.framework in Embed Frameworks */,
+				EE15BE37206BF98800C17FBF /* prospect.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,7 +73,6 @@
 		0451C509205B530000E63C26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0451C50A205B530000E63C26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0451C50C205B530000E63C26 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0451C50D205B530000E63C26 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0451C510205B530000E63C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0451C512205B530000E63C26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0451C515205B530000E63C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,10 +94,11 @@
 		B676DEC1959EA8CA9EDC7760 /* Pods-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testTests/Pods-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDE7DC608803FF23C8744517 /* Pods-testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testUITests/Pods-testUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EE12CC78206955EF00712A90 /* account.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = account.framework; sourceTree = "<group>"; };
-		EE12CC79206955F200712A90 /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
-		EE12CC7A206955F300712A90 /* payment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = payment.framework; sourceTree = "<group>"; };
-		EE12CC7B206955F500712A90 /* trace.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = trace.framework; sourceTree = "<group>"; };
-		EE12CC7C206955F600712A90 /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
+		EE15BE34206BF97B00C17FBF /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
+		EE323689206C242600951F91 /* trace.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = trace.framework; sourceTree = "<group>"; };
+		EE323691206C25A400951F91 /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
+		EE79F03D206AD5B600C16C7B /* payment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = payment.framework; sourceTree = "<group>"; };
+		EE79F081206B2C7F00C16C7B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EEBE764520618BAD004F6CD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EEBE764620618BAD004F6CD0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EEBE764720618BAD004F6CD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,14 +109,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE12CC862069560700712A90 /* payment.framework in Frameworks */,
 				EE12CC822069560700712A90 /* account.framework in Frameworks */,
 				EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */,
-				EE12CC842069560700712A90 /* BaseClases.framework in Frameworks */,
-				EE12CC8A2069560700712A90 /* trace.framework in Frameworks */,
+				EE79F03F206AD5BD00C16C7B /* payment.framework in Frameworks */,
 				EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */,
+				EE32368B206C243000951F91 /* trace.framework in Frameworks */,
+				EE323693206C25B400951F91 /* BaseClases.framework in Frameworks */,
 				EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */,
-				EE12CC882069560700712A90 /* prospect.framework in Frameworks */,
+				EE15BE36206BF98800C17FBF /* prospect.framework in Frameworks */,
 				694A34F8E1836600DD5C27A5 /* Pods_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,11 +143,11 @@
 		0451C4FD205B530000E63C26 = {
 			isa = PBXGroup;
 			children = (
+				EE323691206C25A400951F91 /* BaseClases.framework */,
+				EE323689206C242600951F91 /* trace.framework */,
+				EE15BE34206BF97B00C17FBF /* prospect.framework */,
+				EE79F03D206AD5B600C16C7B /* payment.framework */,
 				EE12CC78206955EF00712A90 /* account.framework */,
-				EE12CC7C206955F600712A90 /* BaseClases.framework */,
-				EE12CC7A206955F300712A90 /* payment.framework */,
-				EE12CC79206955F200712A90 /* prospect.framework */,
-				EE12CC7B206955F500712A90 /* trace.framework */,
 				0451C508205B530000E63C26 /* test */,
 				0451C521205B530000E63C26 /* testTests */,
 				0451C52C205B530000E63C26 /* testUITests */,
@@ -170,10 +170,10 @@
 		0451C508205B530000E63C26 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				EE79F081206B2C7F00C16C7B /* ViewController.m */,
 				0451C509205B530000E63C26 /* AppDelegate.h */,
 				0451C50A205B530000E63C26 /* AppDelegate.m */,
 				0451C50C205B530000E63C26 /* ViewController.h */,
-				0451C50D205B530000E63C26 /* ViewController.m */,
 				0451C50F205B530000E63C26 /* Main.storyboard */,
 				0451C512205B530000E63C26 /* Assets.xcassets */,
 				0451C514205B530000E63C26 /* LaunchScreen.storyboard */,
@@ -304,6 +304,7 @@
 				TargetAttributes = {
 					0451C505205B530000E63C26 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					0451C51D205B530000E63C26 = {
@@ -440,8 +441,10 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-Synchronous/Alamofire_Synchronous.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/CreditCardForm/CreditCardForm.framework",
 				"${BUILT_PRODUCTS_DIR}/CreditCardValidator/CreditCardValidator.framework",
 				"${BUILT_PRODUCTS_DIR}/IPDFCameraViewController/IPDFCameraViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -454,8 +457,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_Synchronous.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CreditCardForm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CreditCardValidator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IPDFCameraViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -545,7 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0451C50E205B530000E63C26 /* ViewController.m in Sources */,
+				EE79F082206B2C7F00C16C7B /* ViewController.m in Sources */,
 				0451C519205B530000E63C26 /* main.m in Sources */,
 				0451C50B205B530000E63C26 /* AppDelegate.m in Sources */,
 			);
@@ -711,8 +716,10 @@
 			baseConfigurationReference = A87FF19C91BA1C7FDF2B25EB /* Pods-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XF2RH3K2CN;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X8K9N6K2T4;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -722,8 +729,11 @@
 				INFOPLIST_FILE = test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.test11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.test15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "test/test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
@@ -734,8 +744,10 @@
 			baseConfigurationReference = 0FE394F922E18BBA5EA55952 /* Pods-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XF2RH3K2CN;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X8K9N6K2T4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -744,8 +756,10 @@
 				INFOPLIST_FILE = test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.test11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.test15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "test/test-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};

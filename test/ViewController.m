@@ -56,6 +56,8 @@
     [AccountRoute accountWithViewController:self user:@"0101490064"];
 }
 - (IBAction)lanzadorProspect:(id)sender {
-    [ProspectRoute prospectWithViewController:self];
+//    MapLocationSearchViewController *vc = [[MapLocationSearchViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:true];
+   [ProspectRoute prospectWithViewController:self];
 }
 @end

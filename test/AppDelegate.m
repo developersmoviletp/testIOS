@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <GooglePlaces/GooglePlaces.h>
+#import <prospect/prospect.h>
+#import <trace/trace.h>
 @import GoogleMaps;
 @import GooglePlaces;
 @import UIKit;
@@ -21,9 +23,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [GMSServices provideAPIKey:@"AIzaSyDUuUWNrEkAMAgF5lcI04PIFy6w2XK9Wdc"];
-    [GMSPlacesClient provideAPIKey:@"AIzaSyABwUw-_wdaAyN1_aB0iLN6wtM86JouFWc"];
-    
+    [ProspectRoute instanceAppDelegatePros];
+    [TraceRoute instanceAppDelegateTrace];
+    printf("holi");
     return YES;
 }
 

@@ -1287,6 +1287,7 @@ SWIFT_CLASS("_TtC8prospect27ProductMasterPlanesResponse")
 SWIFT_CLASS("_TtC8prospect13ProspectRoute")
 @interface ProspectRoute : NSObject
 + (void)prospectWithViewController:(UIViewController * _Nonnull)viewController;
++ (void)instanceAppDelegatePros;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
