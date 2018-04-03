@@ -1,6 +1,6 @@
 PODS:
   - ActionSheetPicker-3.0 (2.3.0)
-  - Alamofire (4.7.0)
+  - Alamofire (4.7.1)
   - Alamofire-Synchronous (4.0.0):
     - Alamofire (~> 4.0)
   - AlamofireObjectMapper (5.0.0):
@@ -17,15 +17,15 @@ PODS:
   - GooglePlaces (2.6.0):
     - GoogleMaps/Base (= 2.6.0)
   - IPDFCameraViewController (0.0.1)
-  - IQKeyboardManagerSwift (5.0.8)
+  - IQKeyboardManagerSwift (4.0.6)
   - moa (9.0.2)
   - ObjectMapper (3.1.0)
   - PKHUD (5.0.0)
-  - Realm (3.3.0):
-    - Realm/Headers (= 3.3.0)
-  - Realm/Headers (3.3.0)
-  - RealmSwift (3.3.0):
-    - Realm (= 3.3.0)
+  - Realm (3.3.1):
+    - Realm/Headers (= 3.3.1)
+  - Realm/Headers (3.3.1)
+  - RealmSwift (3.3.1):
+    - Realm (= 3.3.1)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
@@ -38,14 +38,14 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - IPDFCameraViewController
-  - IQKeyboardManagerSwift
+  - IQKeyboardManagerSwift (= 4.0.6)
   - moa
   - PKHUD
   - RealmSwift
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
-  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   Alamofire-Synchronous: eedf1e6e961c3795a63c74990b3f7d9fbfac7e50
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
@@ -54,13 +54,13 @@ SPEC CHECKSUMS:
   GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
   GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
   IPDFCameraViewController: c7e346c760d39ed7a137121bedfcecfde041cde6
-  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
+  IQKeyboardManagerSwift: b3015e819559ca76381f87a0833f44d178564603
   moa: b73dc5e0efa1fad00711c4608e41b197f4d15b12
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
-  Realm: 7d74ad6c5020432f58fe5e1df90bb6d97b2c7fef
-  RealmSwift: b2fa31a09c22e246026766557405505eeaad2b01
+  Realm: 63ebf4903b446b0bdf2131244eb1e1549925c724
+  RealmSwift: f28fe8507bdfb8f1c924962401b83e7b9d7abb5c
 
-PODFILE CHECKSUM: c7ffe9dc2f85c39ac87dea848bd3a43dbe0fd164
+PODFILE CHECKSUM: 8120c591de98f39b66b30c94eb7156d140154029
 
 COCOAPODS: 1.4.0

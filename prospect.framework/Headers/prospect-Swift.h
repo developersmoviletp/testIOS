@@ -179,7 +179,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import RealmSwift;
 @import Foundation;
 @import CoreLocation;
-@import GoogleMaps;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -251,7 +250,6 @@ SWIFT_CLASS("_TtC8prospect22AddonSelectorPresenter")
 - (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
 - (void)onErrorLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl messageError:(NSString * _Nonnull)messageError;
 - (void)generateProposalWithArrIncludeServices:(NSArray<ArrServiciosIncluidos *> * _Nonnull)arrIncludeServices addonServicesBean:(NSArray<ArrServiciosAdicionales *> * _Nonnull)addonServicesBean arrAddonProd:(NSArray<ArrProductosAdicionales *> * _Nonnull)arrAddonProd;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
 @end
 
 @class iCarousel;
@@ -274,8 +272,6 @@ SWIFT_CLASS("_TtC8prospect16AddressCPRequest")
 @property (nonatomic, copy) NSString * _Nullable cp;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithCp:(NSString * _Nonnull)cp OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
 @end
 
 @class Suburb;
@@ -292,7 +288,6 @@ SWIFT_CLASS("_TtC8prospect20AddressDataPresenter")
 @interface AddressDataPresenter : BaseEstrategiaPresenter
 - (void)saveDireccionFacturacionBean;
 - (void)saveDirecionFacturacionBeanWithDireccionFacturacionBean:(DireccionFacturacionBean * _Nonnull)direccionFacturacionBean;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class CheckBoxGroup;
@@ -728,7 +723,6 @@ SWIFT_CLASS("_TtC8prospect24ConfirmLocationPresenter")
 - (void)confirmDirrecionBeanWithDireccionBean:(DireccionBean * _Nonnull)direccionBean;
 - (ReferidoBean * _Nonnull)generateReferenciaBean SWIFT_WARN_UNUSED_RESULT;
 - (VendedorBean * _Nonnull)generateVendedorBean SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
 @end
 
 
@@ -841,7 +835,6 @@ SWIFT_CLASS("_TtC8prospect23FamilyPackagesPresenter")
 - (void)loadFamilyPackage;
 - (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
 - (void)onSuccessFamilyPackageWithRequestUrl:(NSString * _Nonnull)requestUrl familyPackageResponse:(FamilyPackageResponse * _Nonnull)familyPackageResponse;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
 @end
 
 
@@ -880,7 +873,6 @@ SWIFT_CLASS("_TtC8prospect17GeocoderPresenter")
 - (void)loadAddressFromZipCodeWithZipCode:(NSString * _Nonnull)zipCode;
 - (void)successLoadAddressWithRequestUrl:(NSString * _Nonnull)requestUrl addressCpResponse:(AddressCpResponse * _Nonnull)addressCpResponse;
 - (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
 @end
 
 @class Location;
@@ -981,60 +973,6 @@ SWIFT_CLASS("_TtC8prospect26MapLocationSearchPresenter")
 - (void)successLoadCoverageValidateWithRequestUrl:(NSString * _Nonnull)requestUrl validateCoverageResponse:(ValidateCoverageResponse * _Nonnull)validateCoverageResponse;
 - (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
 - (void)onErrorLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl messageError:(NSString * _Nonnull)messageError;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
-@end
-
-@class AddressComponent;
-@class PredictionAddressPresenter;
-@class GMSMarker;
-@class NoCoveragePresenter;
-@class NSMutableAttributedString;
-
-SWIFT_CLASS("_TtC8prospect31MapLocationSearchViewController")
-@interface MapLocationSearchViewController : BaseViewController <CLLocationManagerDelegate, GMSMapViewDelegate>
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull autoCompleteDirection;
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull autoComplete;
-@property (nonatomic, copy) NSArray<AddressComponent *> * _Nonnull addrressComplete;
-@property (nonatomic, strong) MapLocationSearchPresenter * _Null_unspecified mMapLocationSearchPresenter;
-@property (nonatomic, strong) PredictionAddressPresenter * _Null_unspecified predictionPresenter;
-@property (nonatomic, strong) GeocoderPresenter * _Null_unspecified mGeocodePresenter;
-@property (nonatomic, strong) CLLocationManager * _Null_unspecified locationManager;
-@property (nonatomic, readonly, strong) GMSMarker * _Nonnull marker;
-@property (nonatomic, strong) DireccionBean * _Null_unspecified mDireccionBean;
-@property (nonatomic, strong) FormValidator * _Null_unspecified mFormValidator;
-@property (nonatomic, strong) NoCoveragePresenter * _Nullable mNoCoveragePresenter;
-@property (nonatomic, strong) NSMutableAttributedString * _Nonnull placeHolder;
-@property (nonatomic, readonly, copy) NSString * _Nonnull mNamePlaceHolder;
-@property (nonatomic, readonly, copy) NSString * _Nonnull mEmailPlaceHolder;
-@property (nonatomic, readonly, copy) NSString * _Nonnull mPhonePlaceHolder;
-@property (nonatomic, readonly, copy) NSString * _Nonnull mZipCodePlaceHolder;
-@property (nonatomic, readonly, copy) NSString * _Nonnull mColonyPlaceHolder;
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)getLocation;
-- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<BasePresenter *> * _Nullable)getPresenters SWIFT_WARN_UNUSED_RESULT;
-- (void)onErrorCoverageValidate;
-- (void)didReceiveMemoryWarning;
-- (void)searchAutocompleteDirection:(NSString * _Nonnull)substring;
-- (void)onSuccessPredictionWithCollectionAddress:(NSArray<PredictionAddress *> * _Nonnull)collectionAddress;
-- (void)onSendingPrediction;
-- (void)onErrorPredictionWithErrorMessage:(NSString * _Nonnull)errorMessage;
-- (IBAction)onHideAddressButtonClick:(id _Nonnull)sender;
-- (void)onSendingGeometry;
-- (void)onErrorGeometryWithErrorMessage:(NSString * _Nonnull)errorMessage;
-- (void)onErrorConnectionGeometry;
-- (void)onErrorConnection;
-- (void)onSuccessGeometryWithGeoLatLon:(Geometry * _Nonnull)geoLatLon formatAddress:(NSArray<AddressComponent *> * _Nonnull)formatAddress;
-- (void)onTableViewCellClickWithItem:(NSObject * _Nonnull)item cell:(UITableViewCell * _Nonnull)cell;
-- (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
-- (IBAction)nextContinueButton:(id _Nonnull)sender;
-- (void)onSuccessLoadFactibilityWithDireccionBean:(DireccionBean * _Nonnull)direccionBean;
-- (void)onSuccessLoadAddressWithDirrecionBean:(DireccionBean * _Nonnull)dirrecionBean;
-- (IBAction)onCancelSendNotCoverageClick:(id _Nonnull)sender;
-- (IBAction)onSendNotCoverageClick:(id _Nonnull)sender;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class MetodoPagoBean;
@@ -1042,7 +980,6 @@ SWIFT_CLASS("_TtC8prospect31MapLocationSearchViewController")
 SWIFT_CLASS("_TtC8prospect22MethodPaymentPresenter")
 @interface MethodPaymentPresenter : BaseEstrategiaPresenter
 - (void)saveMethodPaymentWithMetodoPagoBean:(MetodoPagoBean * _Nonnull)metodoPagoBean;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1054,7 +991,6 @@ SWIFT_CLASS("_TtC8prospect19NoCoveragePresenter")
 - (void)onRequestWs;
 - (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
 - (void)onSuccessSendNoCoverage;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class ClientData;
@@ -1064,8 +1000,6 @@ SWIFT_CLASS("_TtC8prospect17NoCoverageRequest")
 @property (nonatomic, strong) ClientData * _Nullable clientData;
 - (nonnull instancetype)initWithClientData:(ClientData * _Nonnull)clientData OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1134,7 +1068,6 @@ SWIFT_CLASS("_TtC8prospect21PackagesTypePresenter")
 - (void)loadBusinessPackages;
 - (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
 - (void)onSuccessPMPlanesWithProducMaster:(ProductMasterPlanesResponse * _Nonnull)producMaster;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1195,7 +1128,6 @@ SWIFT_CLASS("_TtC8prospect27PaymentMethodViewController")
 SWIFT_CLASS("_TtC8prospect19PersonDataPresenter")
 @interface PersonDataPresenter : BaseEstrategiaPresenter
 - (void)saveContactoBeanWithContactoBean:(ContactoBean * _Nonnull)contactoBean infoAdicionalBean:(DatosAdicionalesBean * _Nonnull)infoAdicionalBean;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UISegmentedControl;
@@ -1222,8 +1154,6 @@ SWIFT_CLASS("_TtC8prospect18PlainDetailRequest")
 @property (nonatomic, copy) NSString * _Nullable idPlan;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithIdPlan:(NSString * _Nonnull)idPlan OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1273,7 +1203,6 @@ SWIFT_CLASS("_TtC8prospect26PredictionAddressPresenter")
 @interface PredictionAddressPresenter : BaseEstrategiaPresenter
 - (void)getPredictionAddressWithKeyword:(NSString * _Nonnull)keyword;
 - (void)getLatLonWithPlaceId:(NSString * _Nonnull)placeId;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1286,11 +1215,12 @@ SWIFT_CLASS("_TtC8prospect27ProductMasterPlanesResponse")
 
 SWIFT_CLASS("_TtC8prospect13ProspectRoute")
 @interface ProspectRoute : NSObject
-+ (void)prospectWithViewController:(UIViewController * _Nonnull)viewController;
++ (void)prospectWithViewController:(UIViewController * _Nonnull)viewController services:(NSString * _Nonnull)services Places:(NSString * _Nonnull)Places;
 + (void)instanceAppDelegatePros;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class AddressComponent;
 
 SWIFT_CLASS("_TtC8prospect14ResultLocation")
 @interface ResultLocation : NSObject
@@ -1314,7 +1244,6 @@ SWIFT_CLASS("_TtC8prospect24SendOpportunityPresenter")
 - (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
 - (ContactoBean * _Nonnull)generateContactoWithContactoBean:(ContactoBean * _Nonnull)contactoBean SWIFT_WARN_UNUSED_RESULT;
 - (MetodoPagoBean * _Nonnull)generateMetodoPagoWithMetodoPagoBean:(MetodoPagoBean * _Nonnull)metodoPagoBean SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
 @end
 
 @class AddOn;
@@ -1387,7 +1316,6 @@ SWIFT_CLASS("_TtC8prospect24SyncImagesViewController")
 SWIFT_CLASS("_TtC8prospect18TakePhotoPresenter")
 @interface TakePhotoPresenter : BaseEstrategiaPresenter
 - (UIImage * _Nonnull)imageWithSizeWithImage:(UIImage * _Nonnull)image size:(CGSize)size SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1441,8 +1369,6 @@ SWIFT_CLASS("_TtC8prospect23ValidateCoverageRequest")
 @property (nonatomic, copy) NSString * _Nullable clientType;
 - (nonnull instancetype)initWithLatitude:(NSString * _Nonnull)latitude longitude:(NSString * _Nonnull)longitude OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
 @end
 
 

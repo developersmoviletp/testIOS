@@ -1021,6 +1021,8 @@ SWIFT_CLASS("_TtC10BaseClases12TipoPlanBean")
 
 
 
+
+
 SWIFT_CLASS("_TtC10BaseClases4User")
 @interface User : RealmSwiftObject
 @property (nonatomic, copy) NSString * _Nonnull accountNumber;

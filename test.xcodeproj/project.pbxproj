@@ -17,20 +17,20 @@
 		4ADC15DFE6B92E88C1F80FE0 /* Pods_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3AB893979482E534CBF241 /* Pods_testTests.framework */; };
 		694A34F8E1836600DD5C27A5 /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530228C91F7710E48C4A0491 /* Pods_test.framework */; };
 		D5CFABF4A89EEB3524CD6B74 /* Pods_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3E0FE24A30D0FC9D43209D /* Pods_testUITests.framework */; };
-		EE12CC822069560700712A90 /* account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE12CC78206955EF00712A90 /* account.framework */; };
-		EE12CC832069560700712A90 /* account.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE12CC78206955EF00712A90 /* account.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE15BE36206BF98800C17FBF /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE15BE34206BF97B00C17FBF /* prospect.framework */; };
-		EE15BE37206BF98800C17FBF /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE15BE34206BF97B00C17FBF /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE32368B206C243000951F91 /* trace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE323689206C242600951F91 /* trace.framework */; };
-		EE32368C206C243000951F91 /* trace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE323689206C242600951F91 /* trace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE323693206C25B400951F91 /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE323691206C25A400951F91 /* BaseClases.framework */; };
-		EE323694206C25B400951F91 /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE323691206C25A400951F91 /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE79F03F206AD5BD00C16C7B /* payment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE79F03D206AD5B600C16C7B /* payment.framework */; };
-		EE79F040206AD5BD00C16C7B /* payment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE79F03D206AD5B600C16C7B /* payment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE79F082206B2C7F00C16C7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE79F081206B2C7F00C16C7B /* ViewController.m */; };
 		EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764520618BAD004F6CD0 /* CoreData.framework */; };
 		EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764620618BAD004F6CD0 /* CoreLocation.framework */; };
 		EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764720618BAD004F6CD0 /* Foundation.framework */; };
+		EEDB48B12072EFFD009A9A5C /* account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB48AB2072EFDC009A9A5C /* account.framework */; };
+		EEDB48B22072EFFD009A9A5C /* account.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB48AB2072EFDC009A9A5C /* account.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEDB48B32072EFFD009A9A5C /* payment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB48A92072EFBC009A9A5C /* payment.framework */; };
+		EEDB48B42072EFFD009A9A5C /* payment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB48A92072EFBC009A9A5C /* payment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEDB48BE2072F78A009A9A5C /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB48B92072F74D009A9A5C /* BaseClases.framework */; };
+		EEDB48BF2072F78A009A9A5C /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB48B92072F74D009A9A5C /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEDB48C02072F78A009A9A5C /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB48B72072F72D009A9A5C /* prospect.framework */; };
+		EEDB48C12072F78A009A9A5C /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB48B72072F72D009A9A5C /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEDB48C22072F78A009A9A5C /* trace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB48B52072F71D009A9A5C /* trace.framework */; };
+		EEDB48C32072F78A009A9A5C /* trace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB48B52072F71D009A9A5C /* trace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +57,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EE12CC832069560700712A90 /* account.framework in Embed Frameworks */,
-				EE32368C206C243000951F91 /* trace.framework in Embed Frameworks */,
-				EE79F040206AD5BD00C16C7B /* payment.framework in Embed Frameworks */,
-				EE323694206C25B400951F91 /* BaseClases.framework in Embed Frameworks */,
-				EE15BE37206BF98800C17FBF /* prospect.framework in Embed Frameworks */,
+				EEDB48B22072EFFD009A9A5C /* account.framework in Embed Frameworks */,
+				EEDB48C32072F78A009A9A5C /* trace.framework in Embed Frameworks */,
+				EEDB48B42072EFFD009A9A5C /* payment.framework in Embed Frameworks */,
+				EEDB48C12072F78A009A9A5C /* prospect.framework in Embed Frameworks */,
+				EEDB48BF2072F78A009A9A5C /* BaseClases.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,15 +93,15 @@
 		AC3E0FE24A30D0FC9D43209D /* Pods_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B676DEC1959EA8CA9EDC7760 /* Pods-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testTests/Pods-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDE7DC608803FF23C8744517 /* Pods-testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testUITests/Pods-testUITests.release.xcconfig"; sourceTree = "<group>"; };
-		EE12CC78206955EF00712A90 /* account.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = account.framework; sourceTree = "<group>"; };
-		EE15BE34206BF97B00C17FBF /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
-		EE323689206C242600951F91 /* trace.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = trace.framework; sourceTree = "<group>"; };
-		EE323691206C25A400951F91 /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
-		EE79F03D206AD5B600C16C7B /* payment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = payment.framework; sourceTree = "<group>"; };
 		EE79F081206B2C7F00C16C7B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EEBE764520618BAD004F6CD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EEBE764620618BAD004F6CD0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EEBE764720618BAD004F6CD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EEDB48A92072EFBC009A9A5C /* payment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = payment.framework; sourceTree = "<group>"; };
+		EEDB48AB2072EFDC009A9A5C /* account.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = account.framework; sourceTree = "<group>"; };
+		EEDB48B52072F71D009A9A5C /* trace.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = trace.framework; sourceTree = "<group>"; };
+		EEDB48B72072F72D009A9A5C /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
+		EEDB48B92072F74D009A9A5C /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,15 +109,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE12CC822069560700712A90 /* account.framework in Frameworks */,
 				EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */,
-				EE79F03F206AD5BD00C16C7B /* payment.framework in Frameworks */,
+				EEDB48B12072EFFD009A9A5C /* account.framework in Frameworks */,
 				EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */,
-				EE32368B206C243000951F91 /* trace.framework in Frameworks */,
-				EE323693206C25B400951F91 /* BaseClases.framework in Frameworks */,
+				EEDB48BE2072F78A009A9A5C /* BaseClases.framework in Frameworks */,
+				EEDB48C22072F78A009A9A5C /* trace.framework in Frameworks */,
 				EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */,
-				EE15BE36206BF98800C17FBF /* prospect.framework in Frameworks */,
 				694A34F8E1836600DD5C27A5 /* Pods_test.framework in Frameworks */,
+				EEDB48C02072F78A009A9A5C /* prospect.framework in Frameworks */,
+				EEDB48B32072EFFD009A9A5C /* payment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,11 +143,11 @@
 		0451C4FD205B530000E63C26 = {
 			isa = PBXGroup;
 			children = (
-				EE323691206C25A400951F91 /* BaseClases.framework */,
-				EE323689206C242600951F91 /* trace.framework */,
-				EE15BE34206BF97B00C17FBF /* prospect.framework */,
-				EE79F03D206AD5B600C16C7B /* payment.framework */,
-				EE12CC78206955EF00712A90 /* account.framework */,
+				EEDB48B92072F74D009A9A5C /* BaseClases.framework */,
+				EEDB48B72072F72D009A9A5C /* prospect.framework */,
+				EEDB48B52072F71D009A9A5C /* trace.framework */,
+				EEDB48AB2072EFDC009A9A5C /* account.framework */,
+				EEDB48A92072EFBC009A9A5C /* payment.framework */,
 				0451C508205B530000E63C26 /* test */,
 				0451C521205B530000E63C26 /* testTests */,
 				0451C52C205B530000E63C26 /* testUITests */,
@@ -717,6 +717,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = X8K9N6K2T4;
@@ -745,6 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = X8K9N6K2T4;

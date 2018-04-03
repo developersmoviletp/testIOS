@@ -29,21 +29,17 @@
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-    //setBottomBorderColor:[[UIColor whiteColor] colorWithAlphaComponent:0.5] height:0.5];
-    // Do any additional setup after loading the view, typically from a nib.
 }
-
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-//-(void)viewWillAppear:(BOOL)animated{
- //   [super viewWillAppear:animated];
- //   [self.navigationController setNavigationBarHidden:true];
-//}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//    [self.navigationController setNavigationBarHidden:true];
+}
 
 
 - (IBAction)onClick:(id)sender {
@@ -56,8 +52,6 @@
     [AccountRoute accountWithViewController:self user:@"0101490064"];
 }
 - (IBAction)lanzadorProspect:(id)sender {
-//    MapLocationSearchViewController *vc = [[MapLocationSearchViewController alloc] init];
-//    [self.navigationController pushViewController:vc animated:true];
-   [ProspectRoute prospectWithViewController:self];
+   [ProspectRoute prospectWithViewController:self services: @"AIzaSyDUuUWNrEkAMAgF5lcI04PIFy6w2XK9Wdc" Places: @"AIzaSyABwUw-_wdaAyN1_aB0iLN6wtM86JouFWc"];
 }
 @end

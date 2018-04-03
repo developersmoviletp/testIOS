@@ -14,7 +14,6 @@
 @import GoogleMaps;
 @import GooglePlaces;
 @import UIKit;
-//@import prospect;
 @interface AppDelegate ()
 
 @end
@@ -25,7 +24,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [ProspectRoute instanceAppDelegatePros];
     [TraceRoute instanceAppDelegateTrace];
-    printf("holi");
     return YES;
 }
 
