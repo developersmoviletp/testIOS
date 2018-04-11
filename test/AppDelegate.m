@@ -10,7 +10,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <GooglePlaces/GooglePlaces.h>
 #import <prospect/prospect.h>
-#import <trace/trace.h>
+//#import <trace/trace.h>
 @import GoogleMaps;
 @import GooglePlaces;
 @import UIKit;
@@ -23,7 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [ProspectRoute instanceAppDelegatePros];
-    [TraceRoute instanceAppDelegateTrace];
+    //[TraceRoute instanceAppDelegateTrace];
     return YES;
 }
 

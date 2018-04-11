@@ -19,6 +19,7 @@ pod 'CardIO'
 pod 'moa'
 pod 'IPDFCameraViewController'
 pod 'CreditCardValidator'
+
   # Pods for test
   use_frameworks! # <--Use this line
   
