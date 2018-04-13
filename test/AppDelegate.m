@@ -10,6 +10,8 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <GooglePlaces/GooglePlaces.h>
 #import <prospect/prospect.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 //#import <trace/trace.h>
 @import GoogleMaps;
 @import GooglePlaces;
@@ -23,6 +25,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [ProspectRoute instanceAppDelegatePros];
+    [Fabric with:@[[Crashlytics class]]];
     //[TraceRoute instanceAppDelegateTrace];
     return YES;
 }

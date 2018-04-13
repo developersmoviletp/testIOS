@@ -7,8 +7,11 @@ PODS:
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
   - CardIO (5.4.1)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
   - CreditCardForm (0.1.7)
   - CreditCardValidator (0.4)
+  - Fabric (1.7.6)
   - GoogleMaps (2.6.0):
     - GoogleMaps/Maps (= 2.6.0)
   - GoogleMaps/Base (2.6.0)
@@ -21,11 +24,11 @@ PODS:
   - moa (9.0.2)
   - ObjectMapper (3.1.0)
   - PKHUD (5.0.0)
-  - Realm (3.3.1):
-    - Realm/Headers (= 3.3.1)
-  - Realm/Headers (3.3.1)
-  - RealmSwift (3.3.1):
-    - Realm (= 3.3.1)
+  - Realm (3.3.2):
+    - Realm/Headers (= 3.3.2)
+  - Realm/Headers (3.3.2)
+  - RealmSwift (3.3.2):
+    - Realm (= 3.3.2)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
@@ -33,8 +36,10 @@ DEPENDENCIES:
   - Alamofire-Synchronous
   - AlamofireObjectMapper
   - CardIO
+  - Crashlytics
   - CreditCardForm
   - CreditCardValidator
+  - Fabric
   - GoogleMaps
   - GooglePlaces
   - IPDFCameraViewController
@@ -49,8 +54,10 @@ SPEC CHECKSUMS:
   Alamofire-Synchronous: eedf1e6e961c3795a63c74990b3f7d9fbfac7e50
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
   CreditCardForm: 66f0ce5a12182000a457d56f5630049efd3432df
   CreditCardValidator: 9f0814dd61682c004071a250d89327ca83514a48
+  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
   GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
   GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
   IPDFCameraViewController: c7e346c760d39ed7a137121bedfcecfde041cde6
@@ -58,9 +65,9 @@ SPEC CHECKSUMS:
   moa: b73dc5e0efa1fad00711c4608e41b197f4d15b12
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
-  Realm: 63ebf4903b446b0bdf2131244eb1e1549925c724
-  RealmSwift: f28fe8507bdfb8f1c924962401b83e7b9d7abb5c
+  Realm: d927fbf66df5532cfafc08afb5f7e53ded37b894
+  RealmSwift: 4e903a494e05d866581d69ad6f7e7b879d446baf
 
-PODFILE CHECKSUM: 8120c591de98f39b66b30c94eb7156d140154029
+PODFILE CHECKSUM: c010774827f3e0b53dca9ef7e3343f64794fd6c0
 
 COCOAPODS: 1.4.0

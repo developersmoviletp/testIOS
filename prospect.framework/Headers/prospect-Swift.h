@@ -207,36 +207,13 @@ SWIFT_CLASS("_TtC8prospect11ACDResponse")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
-@class AddonSelectorPresenter;
-@class AddonsCarouselDataSource;
-@class BasePresenter;
 @class Plans;
-@class NSBundle;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC8prospect31AdditionalServiceViewController")
-@interface AdditionalServiceViewController : BaseViewController
-@property (nonatomic) double mPriceConverted;
-@property (nonatomic, strong) AddonSelectorPresenter * _Nullable mAddonSelectorPresenter;
-@property (nonatomic, strong) AddonsCarouselDataSource * _Null_unspecified addonsCarouselDataSource;
-- (void)viewDidLoad;
-- (void)clearData;
-- (void)onCalculateTotalAmountWithPriceList:(double)priceList priceSoonPayment:(double)priceSoonPayment;
-- (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
-- (IBAction)onNextButtonClick:(id _Nonnull)sender;
-- (void)onSuccessLoadPlanWithPlan:(Plans * _Nonnull)plan;
-- (void)onCalculateTotalAmountWithPrice:(double)price;
-- (void)onSuccessSaveProposalBean;
-- (void)didReceiveMemoryWarning;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class ArrServiciosIncluidos;
 @class PlanDetailResponse;
 @class BaseResponse;
 @class ArrServiciosAdicionales;
 @class ArrProductosAdicionales;
+@class BaseViewController;
 
 SWIFT_CLASS("_TtC8prospect22AddonSelectorPresenter")
 @interface AddonSelectorPresenter : BaseEstrategiaPresenter
@@ -294,28 +271,9 @@ SWIFT_CLASS("_TtC8prospect20AddressDataPresenter")
 - (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class CheckBoxGroup;
-@class FormValidator;
-@class CheckBoxButton;
-
-SWIFT_CLASS("_TtC8prospect25AddressDataViewController")
-@interface AddressDataViewController : BaseEstrategiaViewController
-@property (nonatomic, strong) CheckBoxGroup * _Null_unspecified mAddressCheckBoxGroup;
-@property (nonatomic, strong) FormValidator * _Null_unspecified mFormValidator;
-@property (nonatomic, strong) AddressDataPresenter * _Null_unspecified mAddressDataPresenter;
-- (void)viewDidAppear:(BOOL)animated;
-- (void)viewDidLoad;
-- (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
-- (void)loadAddressInfo;
-- (IBAction)onNextButtonClick:(id _Nonnull)sender;
-- (void)onCheckBoxButtonClickWithCheckButton:(CheckBoxButton * _Nonnull)checkButton;
-- (void)didReceiveMemoryWarning;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @protocol NSObject;
 @class UITapGestureRecognizer;
+@class NSCoder;
 
 SWIFT_CLASS("_TtC8prospect17BaseTableViewCell")
 @interface BaseTableViewCell : UITableViewCell
@@ -627,38 +585,6 @@ SWIFT_CLASS("_TtC8prospect17AttachmentRequest")
 
 
 
-SWIFT_CLASS("_TtC8prospect26CapturePhotoViewController")
-@interface CapturePhotoViewController : BaseViewController
-- (void)viewDidLoad;
-- (void)viewDidAppear:(BOOL)animated;
-- (void)didReceiveMemoryWarning;
-- (IBAction)mCaptureButton:(id _Nonnull)sender;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class CardIOCreditCardInfo;
-@class CardIOPaymentViewController;
-
-SWIFT_CLASS("_TtC8prospect27CardMethodPayViewController")
-@interface CardMethodPayViewController : BaseViewController <CardIOPaymentViewControllerDelegate>
-@property (nonatomic, strong) CardIOCreditCardInfo * _Null_unspecified mCardInfo;
-@property (nonatomic, strong) FormValidator * _Null_unspecified mFormValidator;
-@property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull mContactTye;
-@property (nonatomic, copy) NSString * _Nullable mTypeIconCard;
-- (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
-- (IBAction)mSaveButton:(id _Nonnull)sender;
-- (IBAction)mDueDateTextField:(id _Nonnull)sender;
-- (IBAction)mScanCardButton:(id _Nonnull)sender;
-- (void)userDidCancelPaymentViewController:(CardIOPaymentViewController * _Null_unspecified)paymentViewController;
-- (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo * _Null_unspecified)cardInfo inPaymentViewController:(CardIOPaymentViewController * _Null_unspecified)paymentViewController;
-- (void)validateTypeCardWithNumberCard:(NSString * _Nonnull)numberCard;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 SWIFT_CLASS("_TtC8prospect18CarruselDataSource")
 @interface CarruselDataSource : NSObject <iCarouselDataSource, iCarouselDelegate>
 @property (nonatomic, strong) iCarousel * _Nonnull mICarousel;
@@ -671,17 +597,6 @@ SWIFT_CLASS("_TtC8prospect18CarruselDataSource")
 - (void)carousel:(iCarousel * _Nonnull)carousel didSelectItemAtIndex:(NSInteger)index;
 - (void)carouselCurrentItemIndexDidChange:(iCarousel * _Nonnull)carousel;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8prospect27CashMethodPayViewController")
-@interface CashMethodPayViewController : BaseEstrategiaViewController
-@property (nonatomic, strong) FormValidator * _Null_unspecified mFormValidator;
-- (void)viewDidLoad;
-- (IBAction)mSaveButton:(id _Nonnull)sender;
-- (void)didReceiveMemoryWarning;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -728,56 +643,6 @@ SWIFT_CLASS("_TtC8prospect24ConfirmLocationPresenter")
 - (ReferidoBean * _Nonnull)generateReferenciaBean SWIFT_WARN_UNUSED_RESULT;
 - (VendedorBean * _Nonnull)generateVendedorBean SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8prospect29ConfirmLocationViewController")
-@interface ConfirmLocationViewController : BaseViewController
-@property (nonatomic, strong) FormValidator * _Null_unspecified mFormValidator;
-@property (nonatomic, strong) ConfirmLocationPresenter * _Null_unspecified mConfirmLocationPresenter;
-- (void)viewDidLoad;
-- (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
-- (IBAction)nextButton:(id _Nonnull)sender;
-- (void)onSuccessLoadDireccionBeanWithDireccionBean:(DireccionBean * _Nonnull)direccionBean;
-- (void)onSuccessSaveDireccionBean;
-- (void)didReceiveMemoryWarning;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class SendOpportunityPresenter;
-
-SWIFT_CLASS("_TtC8prospect25ContractingViewController")
-@interface ContractingViewController : BaseEstrategiaViewController
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_ADD_CONTACT_INFO;)
-+ (NSString * _Nonnull)REQUEST_CODE_ADD_CONTACT_INFO SWIFT_WARN_UNUSED_RESULT;
-+ (void)setREQUEST_CODE_ADD_CONTACT_INFO:(NSString * _Nonnull)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_ADD_PERSON_INFO;)
-+ (NSString * _Nonnull)REQUEST_CODE_ADD_PERSON_INFO SWIFT_WARN_UNUSED_RESULT;
-+ (void)setREQUEST_CODE_ADD_PERSON_INFO:(NSString * _Nonnull)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_ADD_ADDRESS_INFO;)
-+ (NSString * _Nonnull)REQUEST_CODE_ADD_ADDRESS_INFO SWIFT_WARN_UNUSED_RESULT;
-+ (void)setREQUEST_CODE_ADD_ADDRESS_INFO:(NSString * _Nonnull)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_ADD_DOCUMENTS_INFO;)
-+ (NSString * _Nonnull)REQUEST_CODE_ADD_DOCUMENTS_INFO SWIFT_WARN_UNUSED_RESULT;
-+ (void)setREQUEST_CODE_ADD_DOCUMENTS_INFO:(NSString * _Nonnull)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_ADD_METHOD_PAYMENT_INFO;)
-+ (NSString * _Nonnull)REQUEST_CODE_ADD_METHOD_PAYMENT_INFO SWIFT_WARN_UNUSED_RESULT;
-+ (void)setREQUEST_CODE_ADD_METHOD_PAYMENT_INFO:(NSString * _Nonnull)value;
-@property (nonatomic) BOOL mSuccessCaptureContactInfo;
-@property (nonatomic) BOOL mSuccesCapturePaymentInfo;
-@property (nonatomic, strong) SendOpportunityPresenter * _Null_unspecified mSendOpportunityPresenter;
-- (void)viewDidLoad;
-- (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
-- (IBAction)mContactInfoButton:(id _Nonnull)sender;
-- (void)successCaptureContactoInfo;
-- (void)successCapturePaymentInfo;
-- (IBAction)mPaymentButton:(id _Nonnull)sender;
-- (IBAction)onSendOpportunityClick:(id _Nonnull)sender;
-- (void)onSuccessSendOpportunity;
-- (void)didReceiveMemoryWarning;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1083,58 +948,6 @@ SWIFT_CLASS("_TtC8prospect21PackagesTypePresenter")
 - (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
 @end
 
-
-SWIFT_CLASS("_TtC8prospect26PackagesTypeViewController")
-@interface PackagesTypeViewController : BaseViewController <UITableViewDelegate>
-@property (nonatomic, copy) NSArray<ArrFamily *> * _Null_unspecified mArrFamily;
-@property (nonatomic, strong) ArrFamily * _Nullable mArrFamilyBussiness;
-@property (nonatomic, strong) PackagesTypePresenter * _Nullable mPackagesTypePresenter;
-@property (nonatomic, copy) NSString * _Nullable mTypePlanSelected;
-- (void)viewDidLoad;
-- (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
-- (IBAction)mBusinessButton:(id _Nonnull)sender;
-- (IBAction)mHomeButton:(id _Nonnull)sender;
-- (IBAction)nextButton:(id _Nonnull)sender;
-- (void)onItemClickWithItem:(NSArray<ArrPlan *> * _Nonnull)item;
-- (void)onSuccessPMPlanesWithArrFamily:(NSArray<ArrFamily *> * _Nonnull)arrFamily;
-- (void)onTableViewCellClickWithItem:(NSObject * _Nonnull)item cell:(UITableViewCell * _Nonnull)cell;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC8prospect22PackagesViewController")
-@interface PackagesViewController : BaseViewController
-@property (nonatomic, copy) NSArray<DescriptionPackage *> * _Nonnull descriptionArray;
-@property (nonatomic, strong) DescriptionPackageDataSource * _Nullable descriptionPDataSoure;
-@property (nonatomic, strong) CarruselDataSource * _Nullable mCarruselDataSource;
-@property (nonatomic, strong) FamilyPackagesPresenter * _Nullable mFamilyPackagePresenter;
-@property (nonatomic, copy) NSArray<Plans *> * _Nonnull mArrayFamily;
-- (void)viewDidLoad;
-- (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
-- (void)didReceiveMemoryWarning;
-- (void)onSuccessFamilyPackageWithFamilyPackageResponse:(NSArray<Plans *> * _Nonnull)familyPackageResponse;
-- (void)onItemClickWithPlanSelected:(Plans * _Nonnull)planSelected;
-- (void)onChangeItemWithPlanDetail:(NSString * _Nonnull)planDetail planName:(NSString * _Nonnull)planName;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC8prospect27PaymentMethodViewController")
-@interface PaymentMethodViewController : BaseViewController
-@property (nonatomic, strong) MethodPaymentPresenter * _Null_unspecified mPaymentMethodPresenter;
-- (void)viewDidLoad;
-- (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
-- (void)loadMethodCashPay;
-- (void)loadMethodCardPay;
-- (void)onSuccessLoadInfoPaymentWithMetodoPagoBean:(MetodoPagoBean * _Nonnull)metodoPagoBean;
-- (IBAction)mTypeMethodSegmentControl:(id _Nonnull)sender;
-- (void)didReceiveMemoryWarning;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class ContactoBean;
 @class DatosAdicionalesBean;
 
@@ -1142,24 +955,6 @@ SWIFT_CLASS("_TtC8prospect19PersonDataPresenter")
 @interface PersonDataPresenter : BaseEstrategiaPresenter
 - (void)saveContactoBeanWithContactoBean:(ContactoBean * _Nonnull)contactoBean infoAdicionalBean:(DatosAdicionalesBean * _Nonnull)infoAdicionalBean;
 - (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class UISegmentedControl;
-
-SWIFT_CLASS("_TtC8prospect24PersonDataViewController")
-@interface PersonDataViewController : BaseEstrategiaViewController
-@property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull mIdentificationTypes;
-@property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull mContactTye;
-@property (nonatomic, strong) FormValidator * _Null_unspecified mFormValidator;
-@property (nonatomic, strong) PersonDataPresenter * _Null_unspecified mPersonDataPresenter;
-- (void)viewDidLoad;
-- (void)loadContactInfo;
-- (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
-- (void)didReceiveMemoryWarning;
-- (IBAction)mPersonTypeSegmentedControl:(UISegmentedControl * _Nonnull)sender;
-- (IBAction)onNextButtonClick:(id _Nonnull)sender;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1317,67 +1112,12 @@ SWIFT_CLASS("_TtC8prospect13SyncImageCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-SWIFT_CLASS("_TtC8prospect24SyncImagesViewController")
-@interface SyncImagesViewController : BaseEstrategiaViewController
-- (void)viewDidLoad;
-- (void)onSyncStatusChange;
-- (void)onSyncError;
-- (void)onSyncFinish;
-- (void)didReceiveMemoryWarning;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class UIImage;
 
 SWIFT_CLASS("_TtC8prospect18TakePhotoPresenter")
 @interface TakePhotoPresenter : BaseEstrategiaPresenter
 - (UIImage * _Nonnull)imageWithSizeWithImage:(UIImage * _Nonnull)image size:(CGSize)size SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC8prospect23TakePhotoViewController")
-@interface TakePhotoViewController : BaseEstrategiaViewController
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_PHOTO_FRONT_SIDE;)
-+ (NSString * _Nonnull)REQUEST_CODE_PHOTO_FRONT_SIDE SWIFT_WARN_UNUSED_RESULT;
-+ (void)setREQUEST_CODE_PHOTO_FRONT_SIDE:(NSString * _Nonnull)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_PHOTO_BEHIN_SIDE;)
-+ (NSString * _Nonnull)REQUEST_CODE_PHOTO_BEHIN_SIDE SWIFT_WARN_UNUSED_RESULT;
-+ (void)setREQUEST_CODE_PHOTO_BEHIN_SIDE:(NSString * _Nonnull)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_PHOTO_ADDRESS_VOUCHER;)
-+ (NSString * _Nonnull)REQUEST_CODE_PHOTO_ADDRESS_VOUCHER SWIFT_WARN_UNUSED_RESULT;
-+ (void)setREQUEST_CODE_PHOTO_ADDRESS_VOUCHER:(NSString * _Nonnull)value;
-@property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull mIdentificationTypes;
-@property (nonatomic, strong) TakePhotoPresenter * _Null_unspecified mTakePhotoPresenter;
-@property (nonatomic, strong) FormValidator * _Null_unspecified mFormValidator;
-@property (nonatomic) BOOL isSelectedVoucherAddress;
-@property (nonatomic) BOOL isPhotoOne;
-@property (nonatomic) BOOL isPhotoTwo;
-@property (nonatomic) BOOL isPhotoThree;
-- (void)viewDidLoad;
-- (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
-- (IBAction)onVoucherCheckButtonClick:(id _Nonnull)sender;
-- (IBAction)onSaveClick:(id _Nonnull)sender;
-- (void)SaveImages;
-- (IBAction)mIdFrontSideButton:(id _Nonnull)sender;
-- (IBAction)mIdBehindSideButton:(id _Nonnull)sender;
-- (IBAction)mAddressVoucherButton:(id _Nonnull)sender;
-- (void)didReceiveMemoryWarning;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC8prospect28TrackingTicketViewController")
-@interface TrackingTicketViewController : BaseEstrategiaViewController
-- (void)viewDidLoad;
-- (void)clearData;
-- (void)didReceiveMemoryWarning;
-- (IBAction)mSaveButton:(id _Nonnull)sender;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
