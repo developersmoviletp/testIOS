@@ -9,7 +9,7 @@
 #import "ViewController.h"
 //#import <payment/payment.h>
 #import <BaseClases/BaseClases.h>
-//#import <trace/trace.h>
+#import <trace/trace.h>
 //#import <account/account.h>
 #import <prospect/prospect.h>
 #import <GooglePlaces/GooglePlaces.h>
@@ -44,9 +44,9 @@
 //- (IBAction)onClick:(id)sender {
 //    [PaymentRoute paymetWithViewController:self user:@"0101490064"];
 //}
-//- (IBAction)lanzadorTrace:(id)sender {
-//    [TraceRoute traceWithViewController:self];
-//}
+- (IBAction)lanzadorTrace:(id)sender {
+    [TraceRoute traceWithViewController:self];
+}
 //- (IBAction)lanzadorAccount:(id)sender {
 //    [AccountRoute accountWithViewController:self user:@"0101490064"];
 //}

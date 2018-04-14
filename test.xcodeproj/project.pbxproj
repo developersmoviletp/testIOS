@@ -17,14 +17,25 @@
 		4ADC15DFE6B92E88C1F80FE0 /* Pods_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3AB893979482E534CBF241 /* Pods_testTests.framework */; };
 		694A34F8E1836600DD5C27A5 /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530228C91F7710E48C4A0491 /* Pods_test.framework */; };
 		D5CFABF4A89EEB3524CD6B74 /* Pods_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3E0FE24A30D0FC9D43209D /* Pods_testUITests.framework */; };
+		EE6B6CBC20818C62001AB112 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CBB20818C62001AB112 /* SystemConfiguration.framework */; };
+		EE6B6CC520818CF5001AB112 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CBD20818CF4001AB112 /* ImageIO.framework */; };
+		EE6B6CC620818CF5001AB112 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CBE20818CF5001AB112 /* libc++.tbd */; };
+		EE6B6CC720818CF5001AB112 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CBF20818CF5001AB112 /* libicucore.tbd */; };
+		EE6B6CC820818CF5001AB112 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC020818CF5001AB112 /* libz.tbd */; };
+		EE6B6CC920818CF5001AB112 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC120818CF5001AB112 /* OpenGLES.framework */; };
+		EE6B6CCA20818CF5001AB112 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC220818CF5001AB112 /* AVFoundation.framework */; };
+		EE6B6CCB20818CF5001AB112 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC320818CF5001AB112 /* QuartzCore.framework */; };
+		EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC420818CF5001AB112 /* GLKit.framework */; };
+		EE6B6CDB20819678001AB112 /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CD92081965D001AB112 /* prospect.framework */; };
+		EE6B6CDC20819678001AB112 /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CD92081965D001AB112 /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE6B6CDD20819678001AB112 /* trace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CD720819652001AB112 /* trace.framework */; };
+		EE6B6CDE20819678001AB112 /* trace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CD720819652001AB112 /* trace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE6B6CDF20819678001AB112 /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CD520819644001AB112 /* BaseClases.framework */; };
+		EE6B6CE020819678001AB112 /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CD520819644001AB112 /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE79F082206B2C7F00C16C7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE79F081206B2C7F00C16C7B /* ViewController.m */; };
 		EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764520618BAD004F6CD0 /* CoreData.framework */; };
 		EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764620618BAD004F6CD0 /* CoreLocation.framework */; };
 		EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764720618BAD004F6CD0 /* Foundation.framework */; };
-		EEE832EB20812A72004DC7EF /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE832E920812A69004DC7EF /* prospect.framework */; };
-		EEE832EC20812A72004DC7EF /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEE832E920812A69004DC7EF /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EEE832ED20812A72004DC7EF /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE832E720812A5D004DC7EF /* BaseClases.framework */; };
-		EEE832EE20812A72004DC7EF /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEE832E720812A5D004DC7EF /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +62,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EEE832EE20812A72004DC7EF /* BaseClases.framework in Embed Frameworks */,
-				EEE832EC20812A72004DC7EF /* prospect.framework in Embed Frameworks */,
+				EE6B6CDE20819678001AB112 /* trace.framework in Embed Frameworks */,
+				EE6B6CDC20819678001AB112 /* prospect.framework in Embed Frameworks */,
+				EE6B6CE020819678001AB112 /* BaseClases.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,12 +96,22 @@
 		AC3E0FE24A30D0FC9D43209D /* Pods_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B676DEC1959EA8CA9EDC7760 /* Pods-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testTests/Pods-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDE7DC608803FF23C8744517 /* Pods-testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testUITests/Pods-testUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EE6B6CBB20818C62001AB112 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EE6B6CBD20818CF4001AB112 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		EE6B6CBE20818CF5001AB112 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		EE6B6CBF20818CF5001AB112 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		EE6B6CC020818CF5001AB112 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EE6B6CC120818CF5001AB112 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		EE6B6CC220818CF5001AB112 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EE6B6CC320818CF5001AB112 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EE6B6CC420818CF5001AB112 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		EE6B6CD520819644001AB112 /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
+		EE6B6CD720819652001AB112 /* trace.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = trace.framework; sourceTree = "<group>"; };
+		EE6B6CD92081965D001AB112 /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
 		EE79F081206B2C7F00C16C7B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EEBE764520618BAD004F6CD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EEBE764620618BAD004F6CD0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EEBE764720618BAD004F6CD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EEE832E720812A5D004DC7EF /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
-		EEE832E920812A69004DC7EF /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +119,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE6B6CC520818CF5001AB112 /* ImageIO.framework in Frameworks */,
+				EE6B6CDD20819678001AB112 /* trace.framework in Frameworks */,
+				EE6B6CC620818CF5001AB112 /* libc++.tbd in Frameworks */,
+				EE6B6CDB20819678001AB112 /* prospect.framework in Frameworks */,
+				EE6B6CC720818CF5001AB112 /* libicucore.tbd in Frameworks */,
+				EE6B6CC820818CF5001AB112 /* libz.tbd in Frameworks */,
+				EE6B6CDF20819678001AB112 /* BaseClases.framework in Frameworks */,
+				EE6B6CC920818CF5001AB112 /* OpenGLES.framework in Frameworks */,
+				EE6B6CCA20818CF5001AB112 /* AVFoundation.framework in Frameworks */,
+				EE6B6CCB20818CF5001AB112 /* QuartzCore.framework in Frameworks */,
+				EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */,
 				EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */,
 				EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */,
-				EEE832ED20812A72004DC7EF /* BaseClases.framework in Frameworks */,
+				EE6B6CBC20818C62001AB112 /* SystemConfiguration.framework in Frameworks */,
 				EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */,
-				EEE832EB20812A72004DC7EF /* prospect.framework in Frameworks */,
 				694A34F8E1836600DD5C27A5 /* Pods_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,8 +160,9 @@
 		0451C4FD205B530000E63C26 = {
 			isa = PBXGroup;
 			children = (
-				EEE832E920812A69004DC7EF /* prospect.framework */,
-				EEE832E720812A5D004DC7EF /* BaseClases.framework */,
+				EE6B6CD92081965D001AB112 /* prospect.framework */,
+				EE6B6CD720819652001AB112 /* trace.framework */,
+				EE6B6CD520819644001AB112 /* BaseClases.framework */,
 				0451C508205B530000E63C26 /* test */,
 				0451C521205B530000E63C26 /* testTests */,
 				0451C52C205B530000E63C26 /* testUITests */,
@@ -199,6 +232,15 @@
 		75A87CF4B7A1D41530E75985 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE6B6CC220818CF5001AB112 /* AVFoundation.framework */,
+				EE6B6CC420818CF5001AB112 /* GLKit.framework */,
+				EE6B6CBD20818CF4001AB112 /* ImageIO.framework */,
+				EE6B6CBE20818CF5001AB112 /* libc++.tbd */,
+				EE6B6CBF20818CF5001AB112 /* libicucore.tbd */,
+				EE6B6CC020818CF5001AB112 /* libz.tbd */,
+				EE6B6CC120818CF5001AB112 /* OpenGLES.framework */,
+				EE6B6CC320818CF5001AB112 /* QuartzCore.framework */,
+				EE6B6CBB20818C62001AB112 /* SystemConfiguration.framework */,
 				EEBE764520618BAD004F6CD0 /* CoreData.framework */,
 				EEBE764620618BAD004F6CD0 /* CoreLocation.framework */,
 				EEBE764720618BAD004F6CD0 /* Foundation.framework */,

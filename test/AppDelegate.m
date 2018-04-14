@@ -12,7 +12,7 @@
 #import <prospect/prospect.h>
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
-//#import <trace/trace.h>
+#import <trace/trace.h>
 @import GoogleMaps;
 @import GooglePlaces;
 @import UIKit;
@@ -26,7 +26,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [ProspectRoute instanceAppDelegatePros];
     [Fabric with:@[[Crashlytics class]]];
-    //[TraceRoute instanceAppDelegateTrace];
+    printf("holi");
+    [TraceRoute instanceAppDelegateTrace];
     return YES;
 }
 
