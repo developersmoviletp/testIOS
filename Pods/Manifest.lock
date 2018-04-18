@@ -1,6 +1,6 @@
 PODS:
   - ActionSheetPicker-3.0 (2.3.0)
-  - Alamofire (4.7.1)
+  - Alamofire (4.7.2)
   - Alamofire-Synchronous (4.0.0):
     - Alamofire (~> 4.0)
   - AlamofireObjectMapper (5.0.0):
@@ -50,7 +50,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
-  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Alamofire-Synchronous: eedf1e6e961c3795a63c74990b3f7d9fbfac7e50
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443

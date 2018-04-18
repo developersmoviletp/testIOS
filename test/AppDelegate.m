@@ -9,10 +9,10 @@
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <GooglePlaces/GooglePlaces.h>
-#import <prospect/prospect.h>
-#import <Fabric/Fabric.h>
-#import <Crashlytics/Crashlytics.h>
-#import <trace/trace.h>
+//#import <prospect/prospect.h>
+//#import <Fabric/Fabric.h>
+//#import <Crashlytics/Crashlytics.h>
+//#import <trace/trace.h>
 @import GoogleMaps;
 @import GooglePlaces;
 @import UIKit;
@@ -24,10 +24,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [ProspectRoute instanceAppDelegatePros];
-    [Fabric with:@[[Crashlytics class]]];
-    printf("holi");
-    [TraceRoute instanceAppDelegateTrace];
+    [GMSServices provideAPIKey:@"AIzaSyB_Fl-ckWQLPuGZMRLL2GeN2SRdsDNt9ZI"];
+    [GMSPlacesClient provideAPIKey:@"AIzaSyBKJFbE-b8Jj0Hfw6QFs6gEsSEsWOQOEhY"];
+    //[Fabric with:@[[Crashlytics class]]];
     return YES;
 }
 

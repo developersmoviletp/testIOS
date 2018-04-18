@@ -232,10 +232,11 @@ SWIFT_CLASS("_TtC5trace20TimeToArriveResponse")
 @end
 
 @class UIViewController;
+@class GMSMapView;
 
 SWIFT_CLASS("_TtC5trace10TraceRoute")
 @interface TraceRoute : NSObject
-+ (void)traceWithViewController:(UIViewController * _Nonnull)viewController;
++ (void)traceWithViewController:(UIViewController * _Nonnull)viewController mapView:(GMSMapView * _Nonnull)mapView;
 + (void)instanceAppDelegateTrace;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
