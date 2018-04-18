@@ -32,6 +32,9 @@
     marker.map = mapView;
     
 }
+- (IBAction)loadMap:(id)sender {
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

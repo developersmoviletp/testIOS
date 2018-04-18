@@ -16,12 +16,16 @@
 		0451C52E205B530000E63C26 /* testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451C52D205B530000E63C26 /* testUITests.m */; };
 		4ADC15DFE6B92E88C1F80FE0 /* Pods_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3AB893979482E534CBF241 /* Pods_testTests.framework */; };
 		694A34F8E1836600DD5C27A5 /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530228C91F7710E48C4A0491 /* Pods_test.framework */; };
+		69B032292087B703009363FC /* payment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B032272087B6EB009363FC /* payment.framework */; };
+		69B0322A2087B703009363FC /* payment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69B032272087B6EB009363FC /* payment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69B0322B2087B703009363FC /* account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B032252087B6DF009363FC /* account.framework */; };
+		69B0322C2087B703009363FC /* account.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69B032252087B6DF009363FC /* account.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69B032342087C816009363FC /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B032332087C816009363FC /* BaseClases.framework */; };
+		69B032352087C816009363FC /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69B032332087C816009363FC /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69B032412088035F009363FC /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B032402088035F009363FC /* prospect.framework */; };
+		69B032422088035F009363FC /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69B032402088035F009363FC /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5CFABF4A89EEB3524CD6B74 /* Pods_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3E0FE24A30D0FC9D43209D /* Pods_testUITests.framework */; };
 		EE0F5190208692D60023C215 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0F518F208692D60023C215 /* MapViewController.m */; };
-		EE0F5195208698640023C215 /* trace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0F5193208694E30023C215 /* trace.framework */; };
-		EE0F5196208698640023C215 /* trace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE0F5193208694E30023C215 /* trace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE0F5197208698640023C215 /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0F5191208694D70023C215 /* BaseClases.framework */; };
-		EE0F5198208698640023C215 /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE0F5191208694D70023C215 /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE6B6CBC20818C62001AB112 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CBB20818C62001AB112 /* SystemConfiguration.framework */; };
 		EE6B6CC520818CF5001AB112 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CBD20818CF4001AB112 /* ImageIO.framework */; };
 		EE6B6CC620818CF5001AB112 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CBE20818CF5001AB112 /* libc++.tbd */; };
@@ -61,8 +65,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EE0F5198208698640023C215 /* BaseClases.framework in Embed Frameworks */,
-				EE0F5196208698640023C215 /* trace.framework in Embed Frameworks */,
+				69B0322A2087B703009363FC /* payment.framework in Embed Frameworks */,
+				69B032352087C816009363FC /* BaseClases.framework in Embed Frameworks */,
+				69B032422088035F009363FC /* prospect.framework in Embed Frameworks */,
+				69B0322C2087B703009363FC /* account.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +94,11 @@
 		0E3AB893979482E534CBF241 /* Pods_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE394F922E18BBA5EA55952 /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
 		530228C91F7710E48C4A0491 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69AC4FB22087233800788592 /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
+		69B032252087B6DF009363FC /* account.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = account.framework; sourceTree = "<group>"; };
+		69B032272087B6EB009363FC /* payment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = payment.framework; sourceTree = "<group>"; };
+		69B032332087C816009363FC /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
+		69B032402088035F009363FC /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
 		71891E1D4D92FA10C7E77AC7 /* Pods-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testTests/Pods-testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D27F62D1843B9416134D65B /* Pods-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testUITests/Pods-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A87FF19C91BA1C7FDF2B25EB /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,8 +107,6 @@
 		CDE7DC608803FF23C8744517 /* Pods-testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testUITests/Pods-testUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EE0F518E208692D60023C215 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		EE0F518F208692D60023C215 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		EE0F5191208694D70023C215 /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
-		EE0F5193208694E30023C215 /* trace.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = trace.framework; sourceTree = "<group>"; };
 		EE6B6CBB20818C62001AB112 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EE6B6CBD20818CF4001AB112 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		EE6B6CBE20818CF5001AB112 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -120,17 +129,19 @@
 			files = (
 				EE6B6CC520818CF5001AB112 /* ImageIO.framework in Frameworks */,
 				EE6B6CC620818CF5001AB112 /* libc++.tbd in Frameworks */,
+				69B0322B2087B703009363FC /* account.framework in Frameworks */,
 				EE6B6CC720818CF5001AB112 /* libicucore.tbd in Frameworks */,
+				69B032342087C816009363FC /* BaseClases.framework in Frameworks */,
 				EE6B6CC820818CF5001AB112 /* libz.tbd in Frameworks */,
 				EE6B6CC920818CF5001AB112 /* OpenGLES.framework in Frameworks */,
 				EE6B6CCA20818CF5001AB112 /* AVFoundation.framework in Frameworks */,
-				EE0F5195208698640023C215 /* trace.framework in Frameworks */,
 				EE6B6CCB20818CF5001AB112 /* QuartzCore.framework in Frameworks */,
-				EE0F5197208698640023C215 /* BaseClases.framework in Frameworks */,
 				EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */,
 				EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */,
 				EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */,
+				69B032292087B703009363FC /* payment.framework in Frameworks */,
 				EE6B6CBC20818C62001AB112 /* SystemConfiguration.framework in Frameworks */,
+				69B032412088035F009363FC /* prospect.framework in Frameworks */,
 				EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */,
 				694A34F8E1836600DD5C27A5 /* Pods_test.framework in Frameworks */,
 			);
@@ -158,8 +169,10 @@
 		0451C4FD205B530000E63C26 = {
 			isa = PBXGroup;
 			children = (
-				EE0F5193208694E30023C215 /* trace.framework */,
-				EE0F5191208694D70023C215 /* BaseClases.framework */,
+				69B032402088035F009363FC /* prospect.framework */,
+				69B032332087C816009363FC /* BaseClases.framework */,
+				69B032272087B6EB009363FC /* payment.framework */,
+				69B032252087B6DF009363FC /* account.framework */,
 				0451C508205B530000E63C26 /* test */,
 				0451C521205B530000E63C26 /* testTests */,
 				0451C52C205B530000E63C26 /* testUITests */,
@@ -231,6 +244,7 @@
 		75A87CF4B7A1D41530E75985 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69AC4FB22087233800788592 /* prospect.framework */,
 				EE6B6CC220818CF5001AB112 /* AVFoundation.framework */,
 				EE6B6CC420818CF5001AB112 /* GLKit.framework */,
 				EE6B6CBD20818CF4001AB112 /* ImageIO.framework */,
@@ -329,7 +343,7 @@
 					0451C505205B530000E63C26 = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0920;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					0451C51D205B530000E63C26 = {
 						CreatedOnToolsVersion = 9.0;
@@ -757,10 +771,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Total Play Telecomunicaciones, S.A. de C.V. (T64P762RG5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Total Play Telecomunicaciones, S.A. de C.V. (T64P762RG5)";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = T64P762RG5;
+				DEVELOPMENT_TEAM = MYA2FQRAS4;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -770,10 +784,10 @@
 				INFOPLIST_FILE = test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.dummy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.dummy89;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a1a4f3bf-24f4-43e4-b5e1-ad781c792648";
-				PROVISIONING_PROFILE_SPECIFIER = "Test dummy";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "test/test-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -789,10 +803,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Total Play Telecomunicaciones, S.A. de C.V. (T64P762RG5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Total Play Telecomunicaciones, S.A. de C.V. (T64P762RG5)";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = T64P762RG5;
+				DEVELOPMENT_TEAM = MYA2FQRAS4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -801,10 +815,10 @@
 				INFOPLIST_FILE = test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.dummy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.dummy89;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a1a4f3bf-24f4-43e4-b5e1-ad781c792648";
-				PROVISIONING_PROFILE_SPECIFIER = "Test dummy";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "test/test-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

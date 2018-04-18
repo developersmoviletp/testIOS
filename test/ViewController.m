@@ -7,13 +7,11 @@
 //
 #import "AppDelegate.h"
 #import "ViewController.h"
-//#import <payment/payment.h>
+#import <payment/payment.h>
 #import <BaseClases/BaseClases.h>
-#import <trace/trace.h>
-//#import <account/account.h>
-//#import <prospect/prospect.h>
-#import <GooglePlaces/GooglePlaces.h>
-#import <GoogleMaps/GoogleMaps.h>
+#import <account/account.h>
+#import <prospect/prospect.h>
+
 @import UIKit;
 @interface ViewController ()
 
@@ -23,19 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-                                                            longitude:151.20
-                                                                 zoom:6];
-    GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView.myLocationEnabled = YES;
-    self.view = mapView;
-    
-    
-    GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-    marker.title = @"Sydney";
-    marker.snippet = @"Australia";
-    marker.map = mapView;
+
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
@@ -53,17 +39,20 @@
     [super viewWillAppear:animated];
 }
 
-
-//- (IBAction)onClick:(id)sender {
-//    [PaymentRoute paymetWithViewController:self user:@"0101490064"];
-//}
 - (IBAction)lanzadorTrace:(id)sender {
-    //[TraceRoute traceWithViewController:self];
+     [ProspectRoute traceWithViewController:self];
 }
-//- (IBAction)lanzadorAccount:(id)sender {
-//    [AccountRoute accountWithViewController:self user:@"0101490064"];
-//}
-//- (IBAction)lanzadorProspect:(id)sender {
-//   [ProspectRoute prospectWithViewController:self ];
-//}
+
+- (IBAction)onClick:(id)sender {
+    [PaymentRoute paymetWithViewController:self user:@"0101490064"];
+}
+
+- (IBAction)lanzadorAccount:(id)sender {
+    [AccountRoute accountWithViewController:self user:@"0101490064"];
+}
+
+- (IBAction)lanzadorProspect:(id)sender {
+   [ProspectRoute prospectWithViewController:self ];
+}
+
 @end

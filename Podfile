@@ -7,8 +7,6 @@ target 'test' do
 
 pod 'CreditCardForm'
 pod 'ActionSheetPicker-3.0'
-pod 'GoogleMaps'
-pod 'GooglePlaces'
 pod 'Alamofire'
 pod 'Alamofire-Synchronous'
 pod 'AlamofireObjectMapper'
