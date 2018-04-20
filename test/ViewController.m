@@ -7,9 +7,7 @@
 //
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import <payment/payment.h>
 #import <BaseClases/BaseClases.h>
-#import <account/account.h>
 #import <prospect/prospect.h>
 
 @import UIKit;
@@ -40,15 +38,15 @@
 }
 
 - (IBAction)lanzadorTrace:(id)sender {
-     [ProspectRoute traceWithViewController:self];
+    [ProspectRoute traceWithViewController:self];
 }
 
 - (IBAction)onClick:(id)sender {
-    [PaymentRoute paymetWithViewController:self user:@"0101490064"];
+    [ProspectRoute paymetWithViewController:self user:@"0101490064"];
 }
 
 - (IBAction)lanzadorAccount:(id)sender {
-    [AccountRoute accountWithViewController:self user:@"0101490064"];
+    [ProspectRoute accountWithViewController:self user:@"0101490064"];
 }
 
 - (IBAction)lanzadorProspect:(id)sender {

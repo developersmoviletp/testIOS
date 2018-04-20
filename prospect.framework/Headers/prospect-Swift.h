@@ -174,10 +174,10 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import ObjectiveC;
 @import BaseClases;
+@import Foundation;
 @import UIKit;
 @import CoreGraphics;
 @import RealmSwift;
-@import Foundation;
 @import CoreLocation;
 #endif
 
@@ -207,12 +207,50 @@ SWIFT_CLASS("_TtC8prospect11ACDResponse")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
-@class AddonSelectorPresenter;
-@class AddonsCarouselDataSource;
+@class RegisterCardResponse;
+@class BaseResponse;
+@class BaseViewController;
+
+SWIFT_CLASS("_TtC8prospect19AddNewCardPresenter")
+@interface AddNewCardPresenter : BaseEstrategiaPresenter
+- (void)saveNewCardWithExpirationMonth:(NSString * _Nonnull)expirationMonth expirationYear:(NSString * _Nonnull)expirationYear name:(NSString * _Nonnull)name lastName:(NSString * _Nonnull)lastName secondLastName:(NSString * _Nonnull)secondLastName creditCardNumber:(NSString * _Nonnull)creditCardNumber ccType:(NSString * _Nonnull)ccType;
+- (void)successAddNewCardResponseWithRequestUrl:(NSString * _Nonnull)requestUrl registerCardResponse:(RegisterCardResponse * _Nonnull)registerCardResponse;
+- (void)onRequestWs;
+- (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
+- (void)onErrorLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl messageError:(NSString * _Nonnull)messageError;
+- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class FormValidator;
+@class CardIOCreditCardInfo;
 @class BasePresenter;
-@class Plans;
+@class CardIOPaymentViewController;
 @class NSBundle;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC8prospect24AddNewCardViewController")
+@interface AddNewCardViewController : BaseViewController <CardIOPaymentViewControllerDelegate>
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull REQUEST_NEW_CARD;)
++ (NSString * _Nonnull)REQUEST_NEW_CARD SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, strong) FormValidator * _Null_unspecified mFormValidator;
+@property (nonatomic, strong) AddNewCardPresenter * _Null_unspecified mAddNewCardPresenter;
+@property (nonatomic, strong) CardIOCreditCardInfo * _Null_unspecified mCardInfo;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidLoad;
+- (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
+- (IBAction)onSaveButtonClick:(id _Nonnull)sender;
+- (IBAction)onScanNewCard:(id _Nonnull)sender;
+- (IBAction)onSaveAndPaymentButtonClick:(id _Nonnull)sender;
+- (void)userDidCancelPaymentViewController:(CardIOPaymentViewController * _Null_unspecified)paymentViewController;
+- (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo * _Null_unspecified)cardInfo inPaymentViewController:(CardIOPaymentViewController * _Null_unspecified)paymentViewController;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class AddonSelectorPresenter;
+@class AddonsCarouselDataSource;
+@class Plans;
 
 SWIFT_CLASS("_TtC8prospect31AdditionalServiceViewController")
 @interface AdditionalServiceViewController : BaseViewController
@@ -234,7 +272,6 @@ SWIFT_CLASS("_TtC8prospect31AdditionalServiceViewController")
 
 @class ArrServiciosIncluidos;
 @class PlanDetailResponse;
-@class BaseResponse;
 @class ArrServiciosAdicionales;
 @class ArrProductosAdicionales;
 
@@ -254,15 +291,21 @@ SWIFT_CLASS("_TtC8prospect22AddonSelectorPresenter")
 @end
 
 @class iCarousel;
+@class UIViewController;
 @class UIView;
 
 SWIFT_CLASS("_TtC8prospect24AddonsCarouselDataSource")
 @interface AddonsCarouselDataSource : NSObject <iCarouselDataSource, iCarouselDelegate>
 @property (nonatomic, strong) iCarousel * _Null_unspecified carrusel;
+@property (nonatomic, strong) UIViewController * _Null_unspecified mViewController;
+@property (nonatomic) NSInteger mIsMaxAddon;
+@property (nonatomic) BOOL mUnselect;
 - (void)settings;
 - (NSInteger)numberOfItemsInCarousel:(iCarousel * _Nonnull)carousel SWIFT_WARN_UNUSED_RESULT;
 - (UIView * _Nonnull)carousel:(iCarousel * _Nonnull)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView * _Nullable)view SWIFT_WARN_UNUSED_RESULT;
 - (void)carousel:(iCarousel * _Nonnull)carousel didSelectItemAtIndex:(NSInteger)index;
+- (void)incrementCont;
+- (void)decrementCont;
 - (void)carouselCurrentItemIndexDidChange:(iCarousel * _Nonnull)carousel;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
@@ -295,7 +338,6 @@ SWIFT_CLASS("_TtC8prospect20AddressDataPresenter")
 @end
 
 @class CheckBoxGroup;
-@class FormValidator;
 @class CheckBoxButton;
 
 SWIFT_CLASS("_TtC8prospect25AddressDataViewController")
@@ -310,6 +352,8 @@ SWIFT_CLASS("_TtC8prospect25AddressDataViewController")
 - (IBAction)onNextButtonClick:(id _Nonnull)sender;
 - (void)onCheckBoxButtonClickWithCheckButton:(CheckBoxButton * _Nonnull)checkButton;
 - (void)didReceiveMemoryWarning;
+- (void)keyboardWillShowForResizingWithNotification:(NSNotification * _Nonnull)notification;
+- (void)keyboardWillHideForResizingWithNotification:(NSNotification * _Nonnull)notification;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -407,6 +451,13 @@ SWIFT_CLASS("_TtC8prospect32ArrDPPromocionesServicioProducto")
 - (nonnull instancetype)initWithValue:(id _Nonnull)value OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithRealm:(RLMRealm * _Nonnull)realm schema:(RLMObjectSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithValue:(id _Nonnull)value schema:(RLMSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect15ArrDatosFactura")
+@interface ArrDatosFactura : NSObject
+@property (nonatomic, copy) NSString * _Nullable totalPayable;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class ArrPlan;
@@ -535,6 +586,14 @@ SWIFT_CLASS("_TtC8prospect18ArrPromocionesPlan")
 - (nonnull instancetype)initWithValue:(id _Nonnull)value schema:(RLMSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC8prospect9ArrResult")
+@interface ArrResult : NSObject
+@property (nonatomic, copy) NSString * _Nullable resultDescription;
+@property (nonatomic, strong) ArrDatosFactura * _Nullable arrDatosFactura;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class ArrProductosIncluido;
 
 SWIFT_CLASS("_TtC8prospect23ArrServiciosAdicionales")
@@ -637,8 +696,6 @@ SWIFT_CLASS("_TtC8prospect26CapturePhotoViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class CardIOCreditCardInfo;
-@class CardIOPaymentViewController;
 
 SWIFT_CLASS("_TtC8prospect27CardMethodPayViewController")
 @interface CardMethodPayViewController : BaseViewController <CardIOPaymentViewControllerDelegate>
@@ -656,6 +713,16 @@ SWIFT_CLASS("_TtC8prospect27CardMethodPayViewController")
 - (void)validateTypeCardWithNumberCard:(NSString * _Nonnull)numberCard;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect23CardsCarruselDataSource")
+@interface CardsCarruselDataSource : NSObject <iCarouselDataSource, iCarouselDelegate>
+- (NSInteger)numberOfItemsInCarousel:(iCarousel * _Nonnull)carousel SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nonnull)carousel:(iCarousel * _Nonnull)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView * _Nullable)view SWIFT_WARN_UNUSED_RESULT;
+- (void)carousel:(iCarousel * _Nonnull)carousel didSelectItemAtIndex:(NSInteger)index;
+- (void)carouselCurrentItemIndexDidChange:(iCarousel * _Nonnull)carousel;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
 
@@ -693,6 +760,23 @@ SWIFT_CLASS("_TtC8prospect26CellDirectionTableViewCell")
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect22CheckBalanceBRMRequest")
+@interface CheckBalanceBRMRequest : BaseRequest
+@property (nonatomic, copy) NSString * _Nullable accountNumber;
+- (nonnull instancetype)initWithAccountNumber:(NSString * _Nonnull)accountNumber OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect23CheckBalanceBRMResponse")
+@interface CheckBalanceBRMResponse : BaseResponse
+@property (nonatomic, strong) ArrResult * _Nullable arrResult;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -743,6 +827,8 @@ SWIFT_CLASS("_TtC8prospect29ConfirmLocationViewController")
 - (void)onSuccessLoadDireccionBeanWithDireccionBean:(DireccionBean * _Nonnull)direccionBean;
 - (void)onSuccessSaveDireccionBean;
 - (void)didReceiveMemoryWarning;
+- (void)keyboardWillShowForResizingWithNotification:(NSNotification * _Nonnull)notification;
+- (void)keyboardWillHideForResizingWithNotification:(NSNotification * _Nonnull)notification;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -918,6 +1004,38 @@ SWIFT_CLASS("_TtC8prospect16GeometryResponse")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class GetBillsBRMResponse;
+
+SWIFT_CLASS("_TtC8prospect20GetBillsBRMPresenter")
+@interface GetBillsBRMPresenter : BaseEstrategiaPresenter
+- (void)getBillsBRM;
+- (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
+- (void)onSuccessGetBillsBRMWithRequestUrl:(NSString * _Nonnull)requestUrl getBillsBRMResponse:(GetBillsBRMResponse * _Nonnull)getBillsBRMResponse;
+- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
+@end
+
+@class UserPassIp;
+
+SWIFT_CLASS("_TtC8prospect18GetBillsBRMRequest")
+@interface GetBillsBRMRequest : BaseRequest
+@property (nonatomic, copy) NSString * _Nullable accountNumber;
+@property (nonatomic, strong) UserPassIp * _Nullable userPassIp;
+- (nonnull instancetype)initWithAccountNumber:(NSString * _Nonnull)accountNumber userPass:(UserPassIp * _Nonnull)userPass OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+@class Response;
+@class BillingInfo;
+
+SWIFT_CLASS("_TtC8prospect19GetBillsBRMResponse")
+@interface GetBillsBRMResponse : BaseResponse
+@property (nonatomic, strong) Response * _Nullable response;
+@property (nonatomic, strong) BillingInfo * _Nullable billingInfo;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC8prospect6IDPlan")
 @interface IDPlan : NSObject
@@ -945,6 +1063,19 @@ SWIFT_CLASS("_TtC8prospect13IconTextField")
 - (void)showActionCreditCardDatePickerWithDate:(NSString * _Nullable)date;
 - (void)showActionPicker;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect20InformationMyAccount")
+@interface InformationMyAccount : BaseResponse
+@property (nonatomic, copy) NSString * _Nonnull titulate;
+@property (nonatomic, copy) NSString * _Nonnull accountNumber;
+@property (nonatomic, copy) NSString * _Nonnull contractedPackage;
+@property (nonatomic, copy) NSString * _Nonnull packageSpeed;
+@property (nonatomic, copy) NSString * _Nonnull promotion;
+@property (nonatomic, copy) NSString * _Nonnull balance;
+@property (nonatomic, copy) NSString * _Nonnull promotionMonth;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1009,6 +1140,45 @@ SWIFT_CLASS("_TtC8prospect22MethodPaymentPresenter")
 @interface MethodPaymentPresenter : BaseEstrategiaPresenter
 - (void)saveMethodPaymentWithMetodoPagoBean:(MetodoPagoBean * _Nonnull)metodoPagoBean;
 - (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect17MyAccountResponse")
+@interface MyAccountResponse : BaseResponse
+@property (nonatomic, strong) InformationMyAccount * _Null_unspecified information;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect23MyAccountViewController")
+@interface MyAccountViewController : BaseViewController
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
+- (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
+- (void)onSuccessLoadMyAccountWithMyAccountResponse:(MyAccountResponse * _Nonnull)myAccountResponse;
+- (void)onSuccesCheckBalanceBRMWithCheckBRMRespnse:(CheckBalanceBRMResponse * _Nonnull)checkBRMRespnse;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class Statements;
+@class StatementResponse;
+
+SWIFT_CLASS("_TtC8prospect22MyAccountViewPresenter")
+@interface MyAccountViewPresenter : BaseEstrategiaPresenter
+@property (nonatomic, copy) NSArray<Statements *> * _Nonnull mStatements;
+- (void)loadInfoMyAccount;
+- (void)getBalanceBRM;
+- (void)successLoadMyAccountWithRequestUrl:(NSString * _Nonnull)requestUrl myAccountResponse:(MyAccountResponse * _Nonnull)myAccountResponse;
+- (void)successLoadStatementsWithRequestUrl:(NSString * _Nonnull)requestUrl statementsResponse:(StatementResponse * _Nonnull)statementsResponse;
+- (void)showStatements;
+- (void)showStatePaymentWithUrlStatement:(NSString * _Nonnull)urlStatement;
+- (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
+- (void)onSuccesCheckBalanceBRMWithCheckBRM:(CheckBalanceBRMResponse * _Nonnull)checkBRM;
+- (void)onErrorLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl messageError:(NSString * _Nonnull)messageError;
+- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1140,6 +1310,44 @@ SWIFT_CLASS("_TtC8prospect22PackagesViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class Card;
+@class RegisteredCardsResponse;
+@class PaymentRegisteredCardResponse;
+
+SWIFT_CLASS("_TtC8prospect19PayServicePresenter")
+@interface PayServicePresenter : BaseEstrategiaPresenter
+- (void)loadBalance;
+- (void)paymentWithCardWithAmount1:(NSString * _Nonnull)amount1 card:(Card * _Nonnull)card;
+- (void)payWithCardWithAmount:(NSString * _Nonnull)amount cvv:(NSString * _Nonnull)cvv;
+- (void)loadAccountCards;
+- (void)successLoadCheckBalanceResponseWithRequestUrl:(NSString * _Nonnull)requestUrl checkBalanceResponse:(CheckBalanceBRMResponse * _Nonnull)checkBalanceResponse;
+- (void)successLoadAccountCardsWithRequestUrl:(NSString * _Nonnull)requestUrl registeredCardsResponse:(RegisteredCardsResponse * _Nonnull)registeredCardsResponse;
+- (void)successPaymentWithCardWithRequestUrl:(NSString * _Nonnull)requestUrl paymentRegisteredCardResponse:(PaymentRegisteredCardResponse * _Nonnull)paymentRegisteredCardResponse;
+- (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
+- (void)getBillsBRM;
+- (void)onSuccessGetBillsBRMWithRequestUrl:(NSString * _Nonnull)requestUrl getBillsBRMResponse:(GetBillsBRMResponse * _Nonnull)getBillsBRMResponse;
+- (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect24PayServiceViewController")
+@interface PayServiceViewController : BaseViewController
+- (void)viewDidLoad;
+- (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
+- (void)clearData;
+- (void)onSuccessGetBillsBRMWithGetBillsBRMResponse:(GetBillsBRMResponse * _Nonnull)getBillsBRMResponse;
+- (void)onSuccessLoadCheckBalanceWithCheckBalanceResponse:(CheckBalanceBRMResponse * _Nonnull)checkBalanceResponse;
+- (void)onSuccessLoadAccountCardsWithCards:(NSArray<Card *> * _Nonnull)cards;
+- (void)onSuccessLoadInfoPackageWithPackageName:(NSString * _Nonnull)packageName packagePayment:(NSString * _Nonnull)packagePayment balance:(NSString * _Nonnull)balance;
+- (IBAction)onNextClick:(id _Nonnull)sender;
+- (void)onItemCardClick;
+- (void)onRefreshBalance;
+- (void)onItemAddNewCardClick;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC8prospect27PaymentMethodViewController")
 @interface PaymentMethodViewController : BaseViewController
@@ -1153,6 +1361,27 @@ SWIFT_CLASS("_TtC8prospect27PaymentMethodViewController")
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect28PaymentRegisteredCardRequest")
+@interface PaymentRegisteredCardRequest : BaseRequest
+@property (nonatomic, copy) NSString * _Nullable accountNumber;
+@property (nonatomic, copy) NSString * _Nullable idCard;
+@property (nonatomic, copy) NSString * _Nullable amount;
+@property (nonatomic, copy) NSString * _Nullable cvv;
+- (nonnull instancetype)initWithAccountNumber:(NSString * _Nonnull)accountNumber idCard:(NSString * _Nonnull)idCard amount:(NSString * _Nonnull)amount cvv:(NSString * _Nonnull)cvv OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect29PaymentRegisteredCardResponse")
+@interface PaymentRegisteredCardResponse : BaseResponse
+@property (nonatomic, copy) NSString * _Null_unspecified resultValue;
+@property (nonatomic, copy) NSString * _Null_unspecified transactionNumber;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class ContactoBean;
@@ -1178,6 +1407,8 @@ SWIFT_CLASS("_TtC8prospect24PersonDataViewController")
 - (void)didReceiveMemoryWarning;
 - (IBAction)mPersonTypeSegmentedControl:(UISegmentedControl * _Nonnull)sender;
 - (IBAction)onNextButtonClick:(id _Nonnull)sender;
+- (void)keyboardWillShowForResizingWithNotification:(NSNotification * _Nonnull)notification;
+- (void)keyboardWillHideForResizingWithNotification:(NSNotification * _Nonnull)notification;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1248,13 +1479,49 @@ SWIFT_CLASS("_TtC8prospect27ProductMasterPlanesResponse")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIViewController;
 
 SWIFT_CLASS("_TtC8prospect13ProspectRoute")
 @interface ProspectRoute : NSObject
 + (void)prospectWithViewController:(UIViewController * _Nonnull)viewController;
 + (void)traceWithViewController:(UIViewController * _Nonnull)viewController;
++ (void)paymetWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
++ (void)accountWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)instanceAppDelegatePros;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NewCard;
+
+SWIFT_CLASS("_TtC8prospect19RegisterCardRequest")
+@interface RegisterCardRequest : BaseRequest
+@property (nonatomic, copy) NSString * _Nullable accountNumber;
+@property (nonatomic, strong) NewCard * _Nullable newCard;
+- (nonnull instancetype)initWithAccountNumber:(NSString * _Nonnull)accountNumber newCard:(NewCard * _Nonnull)newCard OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect20RegisterCardResponse")
+@interface RegisterCardResponse : BaseResponse
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect22RegisteredCardsRequest")
+@interface RegisteredCardsRequest : BaseRequest
+@property (nonatomic, copy) NSString * _Nullable accountNumber;
+- (nonnull instancetype)initWithAccountNumber:(NSString * _Nonnull)accountNumber OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect23RegisteredCardsResponse")
+@interface RegisteredCardsResponse : BaseResponse
+@property (nonatomic, copy) NSArray<Card *> * _Nonnull cards;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1285,14 +1552,9 @@ SWIFT_CLASS("_TtC8prospect24SendOpportunityPresenter")
 - (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
 @end
 
-@class AddOn;
 
 SWIFT_CLASS("_TtC8prospect22ServiceAddOnDataSource")
 @interface ServiceAddOnDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) UITableView * _Nullable tableView;
-@property (nonatomic, copy) NSArray<AddOn *> * _Nonnull addOnArray;
-- (nonnull instancetype)initWithTableView:(UITableView * _Nonnull)tableView OBJC_DESIGNATED_INITIALIZER;
-- (void)updateWithColeccionInfo:(NSArray<AddOn *> * _Nonnull)coleccionInfo;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
@@ -1300,6 +1562,13 @@ SWIFT_CLASS("_TtC8prospect22ServiceAddOnDataSource")
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)tableView:(UITableView * _Nonnull)tableView didDeselectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect17StatementResponse")
+@interface StatementResponse : BaseResponse
+@property (nonatomic, copy) NSArray<Statements *> * _Nonnull services;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

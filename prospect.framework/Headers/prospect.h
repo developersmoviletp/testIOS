@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <BaseClases/BaseClases.h>
 
+@import AudioToolbox;
+@import AVFoundation;
+@import CoreMedia;
+@import CoreVideo;
+@import MobileCoreServices;
+
+
 //! Project version number for prospect.
 FOUNDATION_EXPORT double prospectVersionNumber;
 
