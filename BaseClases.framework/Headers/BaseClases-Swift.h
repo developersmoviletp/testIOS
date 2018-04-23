@@ -375,7 +375,6 @@ SWIFT_CLASS("_TtC10BaseClases23ArrProductosAdicionales")
 @property (nonatomic, copy) NSString * _Nonnull comentarioProducto;
 @property (nonatomic, copy) NSString * _Nonnull priceApp;
 @property (nonatomic, copy) NSString * _Nonnull image;
-@property (nonatomic) BOOL isSelected;
 - (NSArray<NSObject *> * _Nonnull)attributeArray SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)attrbuteTitleSection SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
@@ -818,6 +817,9 @@ SWIFT_CLASS("_TtC10BaseClases9DateUtils")
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull dateFormat;)
 + (NSString * _Nonnull)dateFormat SWIFT_WARN_UNUSED_RESULT;
 + (void)setDateFormat:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull dateFormatN;)
++ (NSString * _Nonnull)dateFormatN SWIFT_WARN_UNUSED_RESULT;
++ (void)setDateFormatN:(NSString * _Nonnull)value;
 + (NSString * _Nonnull)toStringWithDate:(NSDate * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)getDateNow SWIFT_WARN_UNUSED_RESULT;
 + (NSDate * _Nonnull)toDateWithDate:(NSString * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
@@ -1142,7 +1144,6 @@ SWIFT_CLASS("_TtC10BaseClases12ReferidoBean")
 @property (nonatomic, copy) NSString * _Nonnull ApellidoMaterno;
 @property (nonatomic, copy) NSString * _Nonnull Parentesco;
 @property (nonatomic, copy) NSString * _Nonnull Telefono;
-@property (nonatomic) BOOL isValid;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithValue:(id _Nonnull)value OBJC_DESIGNATED_INITIALIZER;

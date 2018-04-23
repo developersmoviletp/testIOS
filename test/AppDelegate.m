@@ -8,8 +8,10 @@
 
 #import "AppDelegate.h"
 
+@import IQKeyboardManagerSwift;
 @import UIKit;
 @interface AppDelegate ()
+
 
 @end
 
@@ -18,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [IQKeyboardManager sharedManager].enable = true;
     return YES;
 }
 

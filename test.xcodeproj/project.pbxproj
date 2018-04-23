@@ -16,8 +16,6 @@
 		0451C52E205B530000E63C26 /* testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451C52D205B530000E63C26 /* testUITests.m */; };
 		4ADC15DFE6B92E88C1F80FE0 /* Pods_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3AB893979482E534CBF241 /* Pods_testTests.framework */; };
 		694A34F8E1836600DD5C27A5 /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530228C91F7710E48C4A0491 /* Pods_test.framework */; };
-		699395E820897B690021C71F /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699395E720897B690021C71F /* prospect.framework */; };
-		699395E920897B690021C71F /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 699395E720897B690021C71F /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5CFABF4A89EEB3524CD6B74 /* Pods_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3E0FE24A30D0FC9D43209D /* Pods_testUITests.framework */; };
 		EE0F5190208692D60023C215 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0F518F208692D60023C215 /* MapViewController.m */; };
 		EE6B6CBC20818C62001AB112 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CBB20818C62001AB112 /* SystemConfiguration.framework */; };
@@ -30,8 +28,10 @@
 		EE6B6CCB20818CF5001AB112 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC320818CF5001AB112 /* QuartzCore.framework */; };
 		EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC420818CF5001AB112 /* GLKit.framework */; };
 		EE79F082206B2C7F00C16C7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE79F081206B2C7F00C16C7B /* ViewController.m */; };
-		EE89861220897E3A008F6436 /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE89861020897E2B008F6436 /* BaseClases.framework */; };
-		EE89861320897E3A008F6436 /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE89861020897E2B008F6436 /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE7F4B4E208E4AD700A41D2D /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F4B4C208E4A7D00A41D2D /* prospect.framework */; };
+		EE7F4B4F208E4AD700A41D2D /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F4B4C208E4A7D00A41D2D /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE7F4B50208E4AD700A41D2D /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F4B4A208E499000A41D2D /* BaseClases.framework */; };
+		EE7F4B51208E4AD700A41D2D /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F4B4A208E499000A41D2D /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764520618BAD004F6CD0 /* CoreData.framework */; };
 		EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764620618BAD004F6CD0 /* CoreLocation.framework */; };
 		EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764720618BAD004F6CD0 /* Foundation.framework */; };
@@ -55,14 +55,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0451C53F205B531E00E63C26 /* Embed Frameworks */ = {
+		043A6A22208A63CC00FB97DD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EE89861320897E3A008F6436 /* BaseClases.framework in Embed Frameworks */,
-				699395E920897B690021C71F /* prospect.framework in Embed Frameworks */,
+				EE7F4B51208E4AD700A41D2D /* BaseClases.framework in Embed Frameworks */,
+				EE7F4B4F208E4AD700A41D2D /* prospect.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,7 +88,6 @@
 		0E3AB893979482E534CBF241 /* Pods_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE394F922E18BBA5EA55952 /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
 		530228C91F7710E48C4A0491 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		699395E720897B690021C71F /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
 		69E693C720896491001DD7AA /* test.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = test.xcworkspace; sourceTree = "<group>"; };
 		71891E1D4D92FA10C7E77AC7 /* Pods-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testTests/Pods-testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D27F62D1843B9416134D65B /* Pods-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testUITests/Pods-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +107,8 @@
 		EE6B6CC320818CF5001AB112 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EE6B6CC420818CF5001AB112 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		EE79F081206B2C7F00C16C7B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EE89861020897E2B008F6436 /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
+		EE7F4B4A208E499000A41D2D /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
+		EE7F4B4C208E4A7D00A41D2D /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
 		EEBE764520618BAD004F6CD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EEBE764620618BAD004F6CD0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EEBE764720618BAD004F6CD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,13 +121,13 @@
 			files = (
 				EE6B6CC520818CF5001AB112 /* ImageIO.framework in Frameworks */,
 				EE6B6CC620818CF5001AB112 /* libc++.tbd in Frameworks */,
+				EE7F4B4E208E4AD700A41D2D /* prospect.framework in Frameworks */,
 				EE6B6CC720818CF5001AB112 /* libicucore.tbd in Frameworks */,
-				699395E820897B690021C71F /* prospect.framework in Frameworks */,
 				EE6B6CC820818CF5001AB112 /* libz.tbd in Frameworks */,
 				EE6B6CC920818CF5001AB112 /* OpenGLES.framework in Frameworks */,
 				EE6B6CCA20818CF5001AB112 /* AVFoundation.framework in Frameworks */,
 				EE6B6CCB20818CF5001AB112 /* QuartzCore.framework in Frameworks */,
-				EE89861220897E3A008F6436 /* BaseClases.framework in Frameworks */,
+				EE7F4B50208E4AD700A41D2D /* BaseClases.framework in Frameworks */,
 				EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */,
 				EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */,
 				EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */,
@@ -159,8 +159,8 @@
 		0451C4FD205B530000E63C26 = {
 			isa = PBXGroup;
 			children = (
-				EE89861020897E2B008F6436 /* BaseClases.framework */,
-				699395E720897B690021C71F /* prospect.framework */,
+				EE7F4B4C208E4A7D00A41D2D /* prospect.framework */,
+				EE7F4B4A208E499000A41D2D /* BaseClases.framework */,
 				69E693C720896491001DD7AA /* test.xcworkspace */,
 				0451C508205B530000E63C26 /* test */,
 				0451C521205B530000E63C26 /* testTests */,
@@ -263,10 +263,10 @@
 				0451C502205B530000E63C26 /* Sources */,
 				0451C503205B530000E63C26 /* Frameworks */,
 				0451C504205B530000E63C26 /* Resources */,
-				0451C53F205B531E00E63C26 /* Embed Frameworks */,
 				9383D5A7F6B8A4E0AFE4CF80 /* [CP] Embed Pods Frameworks */,
 				EB25B25B71D3ECE86428C898 /* [CP] Copy Pods Resources */,
 				EE26E31E207FDA4A00DE4EF2 /* ShellScript */,
+				043A6A22208A63CC00FB97DD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -762,7 +762,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = MYA2FQRAS4;
+				DEVELOPMENT_TEAM = XF2RH3K2CN;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -772,13 +772,13 @@
 				INFOPLIST_FILE = test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.dummy89;
+				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.dummy123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "test/test-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
@@ -794,7 +794,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = MYA2FQRAS4;
+				DEVELOPMENT_TEAM = XF2RH3K2CN;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -803,12 +803,12 @@
 				INFOPLIST_FILE = test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.dummy89;
+				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.dummy123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "test/test-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
