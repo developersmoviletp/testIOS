@@ -76,7 +76,7 @@
                                     <action selector="lanzadorProspect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G4E-Zy-09F"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqE-1H-5Cu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqE-1H-5Cu">
                                 <rect key="frame" x="143" y="484" width="88" height="30"/>
                                 <color key="backgroundColor" red="0.5708189348984205" green="1" blue="0.53733138801778735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="WiFI support">
