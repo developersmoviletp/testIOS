@@ -7,21 +7,19 @@ PODS:
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
   - CardIO (5.4.1)
-  - Crashlytics (3.10.1):
-    - Fabric (~> 1.7.5)
   - CreditCardForm (0.1.7)
   - CreditCardValidator (0.4)
-  - Fabric (1.7.6)
   - IPDFCameraViewController (0.0.1)
   - IQKeyboardManagerSwift (5.0.4)
   - moa (9.0.2)
   - ObjectMapper (3.1.0)
   - PKHUD (5.0.0)
-  - Realm (3.3.2):
-    - Realm/Headers (= 3.3.2)
-  - Realm/Headers (3.3.2)
-  - RealmSwift (3.3.2):
-    - Realm (= 3.3.2)
+  - Realm (3.4.0):
+    - Realm/Headers (= 3.4.0)
+  - Realm/Headers (3.4.0)
+  - RealmSwift (3.4.0):
+    - Realm (= 3.4.0)
+  - UICircularProgressRing (2.0.0)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
@@ -29,15 +27,14 @@ DEPENDENCIES:
   - Alamofire-Synchronous
   - AlamofireObjectMapper
   - CardIO
-  - Crashlytics
   - CreditCardForm
   - CreditCardValidator
-  - Fabric
   - IPDFCameraViewController
   - IQKeyboardManagerSwift (= 5.0.4)
   - moa
   - PKHUD
   - RealmSwift
+  - UICircularProgressRing
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
@@ -45,18 +42,17 @@ SPEC CHECKSUMS:
   Alamofire-Synchronous: eedf1e6e961c3795a63c74990b3f7d9fbfac7e50
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
-  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
   CreditCardForm: 66f0ce5a12182000a457d56f5630049efd3432df
   CreditCardValidator: 9f0814dd61682c004071a250d89327ca83514a48
-  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
   IPDFCameraViewController: c7e346c760d39ed7a137121bedfcecfde041cde6
   IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
   moa: b73dc5e0efa1fad00711c4608e41b197f4d15b12
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
-  Realm: d927fbf66df5532cfafc08afb5f7e53ded37b894
-  RealmSwift: 4e903a494e05d866581d69ad6f7e7b879d446baf
+  Realm: 9527c7baa2260f3a3aad6823d2d71cafff9b046b
+  RealmSwift: f40a747beaea1cadde7dcef41ee5a34b3001677b
+  UICircularProgressRing: f41663e98c0f40b4794461a4209a67569ea2cc28
 
-PODFILE CHECKSUM: 9bde316019fda1f12460e84bddb0a6275e053a04
+PODFILE CHECKSUM: b895206aafcfe56eed9b7d66d9c4889590892bc5
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

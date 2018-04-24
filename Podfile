@@ -17,6 +17,7 @@ pod 'CardIO'
 pod 'moa'
 pod 'IPDFCameraViewController'
 pod 'CreditCardValidator'
+pod 'UICircularProgressRing'
 
   # Pods for test
   use_frameworks! # <--Use this line

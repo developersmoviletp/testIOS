@@ -28,10 +28,12 @@
 		EE6B6CCB20818CF5001AB112 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC320818CF5001AB112 /* QuartzCore.framework */; };
 		EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC420818CF5001AB112 /* GLKit.framework */; };
 		EE79F082206B2C7F00C16C7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE79F081206B2C7F00C16C7B /* ViewController.m */; };
-		EE7F4B4E208E4AD700A41D2D /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F4B4C208E4A7D00A41D2D /* prospect.framework */; };
-		EE7F4B4F208E4AD700A41D2D /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F4B4C208E4A7D00A41D2D /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE7F4B50208E4AD700A41D2D /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F4B4A208E499000A41D2D /* BaseClases.framework */; };
 		EE7F4B51208E4AD700A41D2D /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F4B4A208E499000A41D2D /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE9F64F9208F896500A92FD3 /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9F64F7208F894500A92FD3 /* prospect.framework */; };
+		EE9F64FA208F896500A92FD3 /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE9F64F7208F894500A92FD3 /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEABDFD7208FA1DF005E431D /* wifiSupFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEABDFD5208FA19B005E431D /* wifiSupFramework.framework */; };
+		EEABDFD8208FA1DF005E431D /* wifiSupFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEABDFD5208FA19B005E431D /* wifiSupFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764520618BAD004F6CD0 /* CoreData.framework */; };
 		EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764620618BAD004F6CD0 /* CoreLocation.framework */; };
 		EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764720618BAD004F6CD0 /* Foundation.framework */; };
@@ -61,8 +63,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EE9F64FA208F896500A92FD3 /* prospect.framework in Embed Frameworks */,
 				EE7F4B51208E4AD700A41D2D /* BaseClases.framework in Embed Frameworks */,
-				EE7F4B4F208E4AD700A41D2D /* prospect.framework in Embed Frameworks */,
+				EEABDFD8208FA1DF005E431D /* wifiSupFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,7 +111,8 @@
 		EE6B6CC420818CF5001AB112 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		EE79F081206B2C7F00C16C7B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EE7F4B4A208E499000A41D2D /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
-		EE7F4B4C208E4A7D00A41D2D /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
+		EE9F64F7208F894500A92FD3 /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
+		EEABDFD5208FA19B005E431D /* wifiSupFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = wifiSupFramework.framework; sourceTree = "<group>"; };
 		EEBE764520618BAD004F6CD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EEBE764620618BAD004F6CD0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EEBE764720618BAD004F6CD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,8 +125,8 @@
 			files = (
 				EE6B6CC520818CF5001AB112 /* ImageIO.framework in Frameworks */,
 				EE6B6CC620818CF5001AB112 /* libc++.tbd in Frameworks */,
-				EE7F4B4E208E4AD700A41D2D /* prospect.framework in Frameworks */,
 				EE6B6CC720818CF5001AB112 /* libicucore.tbd in Frameworks */,
+				EE9F64F9208F896500A92FD3 /* prospect.framework in Frameworks */,
 				EE6B6CC820818CF5001AB112 /* libz.tbd in Frameworks */,
 				EE6B6CC920818CF5001AB112 /* OpenGLES.framework in Frameworks */,
 				EE6B6CCA20818CF5001AB112 /* AVFoundation.framework in Frameworks */,
@@ -130,6 +134,7 @@
 				EE7F4B50208E4AD700A41D2D /* BaseClases.framework in Frameworks */,
 				EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */,
 				EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */,
+				EEABDFD7208FA1DF005E431D /* wifiSupFramework.framework in Frameworks */,
 				EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */,
 				EE6B6CBC20818C62001AB112 /* SystemConfiguration.framework in Frameworks */,
 				EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */,
@@ -159,7 +164,8 @@
 		0451C4FD205B530000E63C26 = {
 			isa = PBXGroup;
 			children = (
-				EE7F4B4C208E4A7D00A41D2D /* prospect.framework */,
+				EEABDFD5208FA19B005E431D /* wifiSupFramework.framework */,
+				EE9F64F7208F894500A92FD3 /* prospect.framework */,
 				EE7F4B4A208E499000A41D2D /* BaseClases.framework */,
 				69E693C720896491001DD7AA /* test.xcworkspace */,
 				0451C508205B530000E63C26 /* test */,
@@ -475,6 +481,7 @@
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 				"${BUILT_PRODUCTS_DIR}/moa/moa.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -491,6 +498,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/moa.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,7 +588,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" f25a5285efc3cbe5512e84847488042e778281ab bb62b89d6634f5ad00a3904451a9cf59afe9fdbd84b6cb536698c5d88153bd19";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 

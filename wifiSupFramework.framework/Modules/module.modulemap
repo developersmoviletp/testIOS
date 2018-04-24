@@ -1,0 +1,11 @@
+framework module wifiSupFramework {
+  umbrella header "wifiSupFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module wifiSupFramework.Swift {
+    header "wifiSupFramework-Swift.h"
+    requires objc
+}

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Upy-Af-Nlu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Upy-Af-Nlu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,9 +36,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4M-66-kBw">
-                                <rect key="frame" x="157" y="175" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4M-66-kBw">
+                                <rect key="frame" x="157" y="164" width="60" height="30"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="payment">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,9 +46,8 @@
                                     <action selector="onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i0x-Y7-r3Y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OL-56-roL">
-                                <rect key="frame" x="168" y="238" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OL-56-roL">
+                                <rect key="frame" x="168" y="244" width="39" height="30"/>
                                 <color key="backgroundColor" red="0.031732470864065852" green="0.79475823631484643" blue="0.99942404029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Trace">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -58,9 +56,8 @@
                                     <action selector="lanzadorTrace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJb-h2-FPw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSF-V4-M7S">
-                                <rect key="frame" x="159" y="345" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSF-V4-M7S">
+                                <rect key="frame" x="159" y="324" width="57" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.31896238311639369" blue="0.30276628519793936" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Account">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,9 +66,8 @@
                                     <action selector="lanzadorAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5O-HV-Exh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5D-dV-2dE">
-                                <rect key="frame" x="156" y="423" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5D-dV-2dE">
+                                <rect key="frame" x="156" y="404" width="62" height="30"/>
                                 <color key="backgroundColor" red="0.68826737311492792" green="0.42149143899248276" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="prospect">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,8 +76,30 @@
                                     <action selector="lanzadorProspect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G4E-Zy-09F"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqE-1H-5Cu">
+                                <rect key="frame" x="143" y="484" width="88" height="30"/>
+                                <color key="backgroundColor" red="0.5708189348984205" green="1" blue="0.53733138801778735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="WiFI support">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="lanzadorWifi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rSW-Nk-1dL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P5D-dV-2dE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="12r-i3-9TT"/>
+                            <constraint firstItem="5OL-56-roL" firstAttribute="top" secondItem="r4M-66-kBw" secondAttribute="bottom" constant="50" id="2OJ-W1-5Kj"/>
+                            <constraint firstItem="r4M-66-kBw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="6gp-0m-IhY"/>
+                            <constraint firstItem="nqE-1H-5Cu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IOa-6X-eeR"/>
+                            <constraint firstItem="nqE-1H-5Cu" firstAttribute="top" secondItem="P5D-dV-2dE" secondAttribute="bottom" constant="50" id="ZnG-4q-u62"/>
+                            <constraint firstItem="r4M-66-kBw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jv8-6y-B3y"/>
+                            <constraint firstItem="5OL-56-roL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pCs-8e-txe"/>
+                            <constraint firstItem="P5D-dV-2dE" firstAttribute="top" secondItem="lSF-V4-M7S" secondAttribute="bottom" constant="50" id="uHR-nd-tv9"/>
+                            <constraint firstItem="lSF-V4-M7S" firstAttribute="top" secondItem="5OL-56-roL" secondAttribute="bottom" constant="50" id="w9s-fD-VwE"/>
+                            <constraint firstItem="lSF-V4-M7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wsB-Fc-vIH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="Zws-UZ-Mgl"/>
