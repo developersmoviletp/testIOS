@@ -1492,7 +1492,7 @@ SWIFT_CLASS("_TtC8prospect13ProspectRoute")
 + (void)traceWithViewController:(UIViewController * _Nonnull)viewController;
 + (void)paymetWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)accountWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
-+ (void)instanceAppDelegatePros;
++ (void)instanceAppDelegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
