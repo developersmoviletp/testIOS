@@ -77,13 +77,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqE-1H-5Cu">
-                                <rect key="frame" x="143" y="484" width="88" height="30"/>
+                                <rect key="frame" x="159.5" y="484" width="55" height="30"/>
                                 <color key="backgroundColor" red="0.5708189348984205" green="1" blue="0.53733138801778735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="WiFI support">
+                                <state key="normal" title="Devices">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="lanzadorWifi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rSW-Nk-1dL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krs-95-vmi">
+                                <rect key="frame" x="154" y="567" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.59888267203207457" blue="0.29679462489575203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Optimizer"/>
+                                <connections>
+                                    <action selector="lanzadorOptimizer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mch-lb-Z9Z"/>
                                 </connections>
                             </button>
                         </subviews>

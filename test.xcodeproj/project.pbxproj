@@ -16,6 +16,10 @@
 		0451C52E205B530000E63C26 /* testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451C52D205B530000E63C26 /* testUITests.m */; };
 		4ADC15DFE6B92E88C1F80FE0 /* Pods_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3AB893979482E534CBF241 /* Pods_testTests.framework */; };
 		694A34F8E1836600DD5C27A5 /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530228C91F7710E48C4A0491 /* Pods_test.framework */; };
+		764E1F782096BE4000EABB11 /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764E1F742096BE0F00EABB11 /* BaseClases.framework */; };
+		764E1F792096BE4000EABB11 /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 764E1F742096BE0F00EABB11 /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		765AC3B02097E6CC007E6E94 /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765AC3AE2097E6B4007E6E94 /* prospect.framework */; };
+		765AC3B12097E6CC007E6E94 /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 765AC3AE2097E6B4007E6E94 /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5CFABF4A89EEB3524CD6B74 /* Pods_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3E0FE24A30D0FC9D43209D /* Pods_testUITests.framework */; };
 		EE6B6CBC20818C62001AB112 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CBB20818C62001AB112 /* SystemConfiguration.framework */; };
 		EE6B6CC520818CF5001AB112 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CBD20818CF4001AB112 /* ImageIO.framework */; };
@@ -27,12 +31,6 @@
 		EE6B6CCB20818CF5001AB112 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC320818CF5001AB112 /* QuartzCore.framework */; };
 		EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC420818CF5001AB112 /* GLKit.framework */; };
 		EE79F082206B2C7F00C16C7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE79F081206B2C7F00C16C7B /* ViewController.m */; };
-		EE7F4B50208E4AD700A41D2D /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F4B4A208E499000A41D2D /* BaseClases.framework */; };
-		EE7F4B51208E4AD700A41D2D /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F4B4A208E499000A41D2D /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE959609208FF98F001ABC51 /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE959607208FF976001ABC51 /* prospect.framework */; };
-		EE95960A208FF98F001ABC51 /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE959607208FF976001ABC51 /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE95960B208FF98F001ABC51 /* wifiSupFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE959605208FF969001ABC51 /* wifiSupFramework.framework */; };
-		EE95960C208FF98F001ABC51 /* wifiSupFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE959605208FF969001ABC51 /* wifiSupFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764520618BAD004F6CD0 /* CoreData.framework */; };
 		EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764620618BAD004F6CD0 /* CoreLocation.framework */; };
 		EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764720618BAD004F6CD0 /* Foundation.framework */; };
@@ -62,9 +60,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EE95960A208FF98F001ABC51 /* prospect.framework in Embed Frameworks */,
-				EE7F4B51208E4AD700A41D2D /* BaseClases.framework in Embed Frameworks */,
-				EE95960C208FF98F001ABC51 /* wifiSupFramework.framework in Embed Frameworks */,
+				765AC3B12097E6CC007E6E94 /* prospect.framework in Embed Frameworks */,
+				764E1F792096BE4000EABB11 /* BaseClases.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +89,8 @@
 		530228C91F7710E48C4A0491 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E693C720896491001DD7AA /* test.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = test.xcworkspace; sourceTree = "<group>"; };
 		71891E1D4D92FA10C7E77AC7 /* Pods-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testTests/Pods-testTests.debug.xcconfig"; sourceTree = "<group>"; };
+		764E1F742096BE0F00EABB11 /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
+		765AC3AE2097E6B4007E6E94 /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
 		7D27F62D1843B9416134D65B /* Pods-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testUITests/Pods-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A87FF19C91BA1C7FDF2B25EB /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
 		AC3E0FE24A30D0FC9D43209D /* Pods_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,9 +106,6 @@
 		EE6B6CC320818CF5001AB112 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EE6B6CC420818CF5001AB112 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		EE79F081206B2C7F00C16C7B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EE7F4B4A208E499000A41D2D /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
-		EE959605208FF969001ABC51 /* wifiSupFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = wifiSupFramework.framework; sourceTree = "<group>"; };
-		EE959607208FF976001ABC51 /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
 		EEBE764520618BAD004F6CD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EEBE764620618BAD004F6CD0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EEBE764720618BAD004F6CD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,16 +119,15 @@
 				EE6B6CC520818CF5001AB112 /* ImageIO.framework in Frameworks */,
 				EE6B6CC620818CF5001AB112 /* libc++.tbd in Frameworks */,
 				EE6B6CC720818CF5001AB112 /* libicucore.tbd in Frameworks */,
-				EE959609208FF98F001ABC51 /* prospect.framework in Frameworks */,
+				765AC3B02097E6CC007E6E94 /* prospect.framework in Frameworks */,
 				EE6B6CC820818CF5001AB112 /* libz.tbd in Frameworks */,
 				EE6B6CC920818CF5001AB112 /* OpenGLES.framework in Frameworks */,
 				EE6B6CCA20818CF5001AB112 /* AVFoundation.framework in Frameworks */,
 				EE6B6CCB20818CF5001AB112 /* QuartzCore.framework in Frameworks */,
-				EE7F4B50208E4AD700A41D2D /* BaseClases.framework in Frameworks */,
 				EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */,
 				EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */,
-				EE95960B208FF98F001ABC51 /* wifiSupFramework.framework in Frameworks */,
 				EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */,
+				764E1F782096BE4000EABB11 /* BaseClases.framework in Frameworks */,
 				EE6B6CBC20818C62001AB112 /* SystemConfiguration.framework in Frameworks */,
 				EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */,
 				694A34F8E1836600DD5C27A5 /* Pods_test.framework in Frameworks */,
@@ -161,9 +156,8 @@
 		0451C4FD205B530000E63C26 = {
 			isa = PBXGroup;
 			children = (
-				EE959607208FF976001ABC51 /* prospect.framework */,
-				EE959605208FF969001ABC51 /* wifiSupFramework.framework */,
-				EE7F4B4A208E499000A41D2D /* BaseClases.framework */,
+				765AC3AE2097E6B4007E6E94 /* prospect.framework */,
+				764E1F742096BE0F00EABB11 /* BaseClases.framework */,
 				69E693C720896491001DD7AA /* test.xcworkspace */,
 				0451C508205B530000E63C26 /* test */,
 				0451C521205B530000E63C26 /* testTests */,
@@ -764,7 +758,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XF2RH3K2CN;
+				DEVELOPMENT_TEAM = BC8K358E39;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -774,7 +768,7 @@
 				INFOPLIST_FILE = test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.dummy123;
+				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.dummy111;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -796,7 +790,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XF2RH3K2CN;
+				DEVELOPMENT_TEAM = BC8K358E39;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -805,7 +799,7 @@
 				INFOPLIST_FILE = test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.dummy123;
+				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.dummy111;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

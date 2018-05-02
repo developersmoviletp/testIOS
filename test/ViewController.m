@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import <BaseClases/BaseClases.h>
 #import <prospect/prospect.h>
-#import <wifiSupFramework/wifiSupFramework.h>
 @import UIKit;
 @interface ViewController ()
 
@@ -53,7 +52,10 @@
    [ProspectRoute prospectWithViewController:self ];
 }
 - (IBAction)lanzadorWifi:(id)sender {
-    [WifiRoute wifiLaunchWithViewController:self user:@"0101490064"];
+    [ProspectRoute wifiLaunchWithViewController:self user:@"1.4246228"];
+}
+- (IBAction)lanzadorOptimizer:(id)sender {
+    [ProspectRoute optimizerLaunchWithViewController:self user:@"1.4246228"];
 }
 
 @end

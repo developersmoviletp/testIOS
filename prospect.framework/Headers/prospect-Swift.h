@@ -833,6 +833,29 @@ SWIFT_CLASS("_TtC8prospect29ConfirmLocationViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class LogginApp;
+@class ParamsDevices;
+
+SWIFT_CLASS("_TtC8prospect23ConnectedDevicesRequest")
+@interface ConnectedDevicesRequest : BaseRequest
+@property (nonatomic, strong) LogginApp * _Nonnull mLogginApp;
+@property (nonatomic, strong) ParamsDevices * _Nullable mParamsDevices;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+@class Resp;
+@class ContentDevice;
+
+SWIFT_CLASS("_TtC8prospect24ConnectedDevicesResponse")
+@interface ConnectedDevicesResponse : BaseResponse
+@property (nonatomic, strong) Resp * _Nullable mResp;
+@property (nonatomic, strong) ContentDevice * _Nullable mCount;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
 
 SWIFT_CLASS("_TtC8prospect26ConsultOTAccountAppRequest")
 @interface ConsultOTAccountAppRequest : BaseRequest
@@ -851,6 +874,15 @@ SWIFT_CLASS("_TtC8prospect27ConsultOTAccountAppResponse")
 @interface ConsultOTAccountAppResponse : BaseResponse
 @property (nonatomic, strong) WorkOrder * _Nullable workOrder;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class Devices;
+
+SWIFT_CLASS("_TtC8prospect13ContentDevice")
+@interface ContentDevice : NSObject
+@property (nonatomic, copy) NSArray<Devices *> * _Nonnull mDevices;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 @class SendOpportunityPresenter;
@@ -886,6 +918,45 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQU
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class LogginSS;
+
+SWIFT_CLASS("_TtC8prospect17DataUpdateRequest")
+@interface DataUpdateRequest : BaseRequest
+@property (nonatomic, strong) LogginSS * _Nonnull mLoggin;
+@property (nonatomic, copy) NSString * _Nullable mCountNum;
+@property (nonatomic, copy) NSString * _Nullable mSsidName;
+@property (nonatomic, copy) NSString * _Nullable mDispoConnect;
+@property (nonatomic, copy) NSString * _Nullable mAuthenticationMode;
+@property (nonatomic, copy) NSString * _Nullable mEncriptation;
+@property (nonatomic, copy) NSString * _Nullable mPassword;
+@property (nonatomic, copy) NSString * _Nullable mLanguage;
+@property (nonatomic, copy) NSString * _Nullable mAutoScan;
+@property (nonatomic, copy) NSString * _Nullable mChannel;
+@property (nonatomic, copy) NSString * _Nullable mChannel4x;
+@property (nonatomic, copy) NSString * _Nullable mFrecuency;
+@property (nonatomic, copy) NSString * _Nullable mTxPower;
+@property (nonatomic, copy) NSString * _Nullable mSerialNumber;
+@property (nonatomic, copy) NSString * _Nullable mIpOnt;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+@class STBox;
+
+SWIFT_CLASS("_TtC8prospect18DataUpdateResponse")
+@interface DataUpdateResponse : BaseResponse
+@property (nonatomic, copy) NSString * _Nullable mResulID;
+@property (nonatomic, copy) NSString * _Nullable mResult;
+@property (nonatomic, copy) NSString * _Nullable mResulONT;
+@property (nonatomic, copy) NSArray<STBox *> * _Nonnull mStBox;
+@property (nonatomic, copy) NSString * _Nullable mResultInv;
+@property (nonatomic, copy) NSString * _Nullable mResultExtender;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
@@ -924,12 +995,50 @@ SWIFT_CLASS("_TtC8prospect31DescriptionPackageTableViewCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC8prospect7Devices")
+@interface Devices : NSObject
+@property (nonatomic, copy) NSString * _Nullable mHostName;
+@property (nonatomic, copy) NSString * _Nullable mIp;
+@property (nonatomic, copy) NSString * _Nullable mAdsresSource;
+@property (nonatomic, copy) NSString * _Nullable mMAC;
+@property (nonatomic, copy) NSString * _Nullable mLeaseTimeRemaining;
+@property (nonatomic, copy) NSString * _Nullable mInterfaceType;
+@property (nonatomic, copy) NSString * _Nullable mDeviceType;
+@property (nonatomic, copy) NSString * _Nullable mStatus;
+@property (nonatomic, copy) NSString * _Nullable mStrIPTr069;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class PredictionAddress;
 
 SWIFT_CLASS("_TtC8prospect17DirectionResponse")
 @interface DirectionResponse : NSObject
 @property (nonatomic, copy) NSArray<PredictionAddress *> * _Nonnull predictionData;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class Params;
+@class LoginApp;
+
+SWIFT_CLASS("_TtC8prospect17EnableWifiRequest")
+@interface EnableWifiRequest : BaseRequest
+@property (nonatomic, strong) Params * _Nullable mParams;
+@property (nonatomic, strong) LoginApp * _Nonnull mLoginApp;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+@class ParamResp;
+
+SWIFT_CLASS("_TtC8prospect18EnableWifiResponse")
+@interface EnableWifiResponse : BaseResponse
+@property (nonatomic, strong) Resp * _Nullable mResp;
+@property (nonatomic, strong) ParamResp * _Nullable mParams;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
@@ -1042,6 +1151,38 @@ SWIFT_CLASS("_TtC8prospect19GetBillsBRMResponse")
 @end
 
 
+SWIFT_CLASS("_TtC8prospect14GetDataRequest")
+@interface GetDataRequest : BaseRequest
+@property (nonatomic, strong) LogginSS * _Nonnull mLoggin;
+@property (nonatomic, copy) NSString * _Nullable mAccount;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+@class SerialNumber;
+
+SWIFT_CLASS("_TtC8prospect15GetDataResponse")
+@interface GetDataResponse : BaseResponse
+@property (nonatomic, copy) NSString * _Nullable mTtlID;
+@property (nonatomic, copy) NSString * _Nullable mSsidName;
+@property (nonatomic, copy) NSString * _Nullable mDispoConnect;
+@property (nonatomic, copy) NSString * _Nullable mVmm;
+@property (nonatomic, copy) NSString * _Nullable mAuthenticationMode;
+@property (nonatomic, copy) NSString * _Nullable mEncriptation;
+@property (nonatomic, copy) NSString * _Nullable mPassword;
+@property (nonatomic, copy) NSString * _Nullable mWps;
+@property (nonatomic, copy) NSString * _Nullable mLanguage;
+@property (nonatomic, copy) NSString * _Nullable mChannel;
+@property (nonatomic, copy) NSString * _Nullable mFrecuency;
+@property (nonatomic, strong) SerialNumber * _Nullable mSerialNumber;
+@property (nonatomic, copy) NSString * _Nullable mIdOnt;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC8prospect6IDPlan")
 @interface IDPlan : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -1122,6 +1263,48 @@ SWIFT_CLASS("_TtC8prospect8Location")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC8prospect9LogginApp")
+@interface LogginApp : NSObject
+@property (nonatomic, copy) NSString * _Nullable mLoggin;
+@property (nonatomic, copy) NSString * _Nullable mPassword;
+@property (nonatomic, copy) NSString * _Nullable mIp;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8prospect8LogginSS")
+@interface LogginSS : NSObject
+@property (nonatomic, copy) NSString * _Nullable mLoggin;
+@property (nonatomic, copy) NSString * _Nullable mPassword;
+@property (nonatomic, copy) NSString * _Nullable mIp;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8prospect5Login")
+@interface Login : NSObject
+@property (nonatomic, copy) NSString * _Nullable mUserId;
+@property (nonatomic, copy) NSString * _Nullable mUser;
+@property (nonatomic, copy) NSString * _Nullable mPassword;
+@property (nonatomic, copy) NSString * _Nullable mIp;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8prospect8LoginApp")
+@interface LoginApp : NSObject
+@property (nonatomic, copy) NSString * _Nullable user;
+@property (nonatomic, copy) NSString * _Nullable password;
+@property (nonatomic, copy) NSString * _Nullable ip;
+@property (nonatomic, copy) NSString * _Nullable versionAPP;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class CLLocationManager;
 @class CLLocation;
 @class ValidateCoverageResponse;
@@ -1137,6 +1320,16 @@ SWIFT_CLASS("_TtC8prospect26MapLocationSearchPresenter")
 - (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
 - (void)onErrorLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl messageError:(NSString * _Nonnull)messageError;
 - (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect4Menu")
+@interface Menu : NSObject
+@property (nonatomic, copy) NSString * _Nullable mTitle;
+@property (nonatomic, copy) NSString * _Nullable mIconUrl;
+- (nonnull instancetype)initWithMTitle:(NSString * _Nonnull)mTitle mIconUrl:(NSString * _Nonnull)mIconUrl OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 @class MetodoPagoBean;
@@ -1316,6 +1509,49 @@ SWIFT_CLASS("_TtC8prospect22PackagesViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC8prospect10ParamAlarm")
+@interface ParamAlarm : NSObject
+@property (nonatomic, copy) NSString * _Nullable mAccount;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8prospect7ParamOP")
+@interface ParamOP : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8prospect9ParamResp")
+@interface ParamResp : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8prospect6Params")
+@interface Params : NSObject
+@property (nonatomic, copy) NSString * _Nullable mSerieONT;
+@property (nonatomic, copy) NSString * _Nullable mIpONT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (nonnull instancetype)initWithMSerieONT:(NSString * _Nonnull)mSerieONT mIsEnlace:(BOOL)mIsEnlace mIpONT:(NSString * _Nonnull)mIpONT mSetStatus:(BOOL)mSetStatus OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect13ParamsDevices")
+@interface ParamsDevices : NSObject
+@property (nonatomic, copy) NSString * _Nullable mSerie;
+@property (nonatomic, copy) NSString * _Nullable mEnlace;
+@property (nonatomic, copy) NSString * _Nullable mIP;
+- (nonnull instancetype)initWithMSerie:(NSString * _Nonnull)mSerie mEnlace:(NSString * _Nonnull)mEnlace mIP:(NSString * _Nonnull)mIP OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
 @class Card;
 @class RegisteredCardsResponse;
 @class PaymentRegisteredCardResponse;
@@ -1389,6 +1625,27 @@ SWIFT_CLASS("_TtC8prospect29PaymentRegisteredCardResponse")
 @property (nonatomic, copy) NSString * _Null_unspecified resultValue;
 @property (nonatomic, copy) NSString * _Null_unspecified transactionNumber;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect18PersonAlarmRequest")
+@interface PersonAlarmRequest : BaseRequest
+@property (nonatomic, strong) LoginApp * _Nonnull mLogin;
+@property (nonatomic, strong) ParamAlarm * _Nullable mParamsAlarm;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+@class RespONT;
+
+SWIFT_CLASS("_TtC8prospect19PersonAlarmResponse")
+@interface PersonAlarmResponse : BaseResponse
+@property (nonatomic, strong) Resp * _Nullable mResp;
+@property (nonatomic, strong) RespONT * _Nullable mRespONT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 @class ContactoBean;
@@ -1492,6 +1749,7 @@ SWIFT_CLASS("_TtC8prospect13ProspectRoute")
 + (void)traceWithViewController:(UIViewController * _Nonnull)viewController;
 + (void)paymetWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)accountWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
++ (void)wifiLaunchWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)instanceAppDelegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1533,6 +1791,23 @@ SWIFT_CLASS("_TtC8prospect23RegisteredCardsResponse")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC8prospect4Resp")
+@interface Resp : NSObject
+@property (nonatomic, copy) NSString * _Nullable mIdResult;
+@property (nonatomic, copy) NSString * _Nullable mResult;
+@property (nonatomic, copy) NSString * _Nullable mResultDescription;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8prospect7RespONT")
+@interface RespONT : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
 @class AddressComponent;
 
 SWIFT_CLASS("_TtC8prospect14ResultLocation")
@@ -1540,6 +1815,15 @@ SWIFT_CLASS("_TtC8prospect14ResultLocation")
 @property (nonatomic, strong) Geometry * _Nullable geometry;
 @property (nonatomic, copy) NSArray<AddressComponent *> * _Nonnull formattedAddress;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect5STBox")
+@interface STBox : NSObject
+@property (nonatomic, copy) NSString * _Nullable mResultSTB;
+@property (nonatomic, copy) NSString * _Nullable mDescription;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
@@ -1561,6 +1845,45 @@ SWIFT_CLASS("_TtC8prospect24SendOpportunityPresenter")
 @end
 
 
+SWIFT_CLASS("_TtC8prospect12SerialNumber")
+@interface SerialNumber : NSObject
+@property (nonatomic, copy) NSString * _Nullable mNil;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8prospect13SerialRequest")
+@interface SerialRequest : BaseRequest
+@property (nonatomic, copy) NSString * _Nullable mAccount;
+@property (nonatomic, strong) Login * _Nonnull mLogin;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect14SerialResponse")
+@interface SerialResponse : BaseResponse
+@property (nonatomic, copy) NSString * _Nullable mIdResult;
+@property (nonatomic, copy) NSString * _Nullable mResult;
+@property (nonatomic, copy) NSString * _Nullable mResultDescription;
+@property (nonatomic, copy) NSString * _Nullable mIpONT;
+@property (nonatomic, copy) NSString * _Nullable mSerialNumber;
+@property (nonatomic, copy) NSString * _Nullable mOLT;
+@property (nonatomic, copy) NSString * _Nullable mSLOT;
+@property (nonatomic, copy) NSString * _Nullable mPORT;
+@property (nonatomic, copy) NSString * _Nullable mONT_ID;
+@property (nonatomic, copy) NSString * _Nullable mETIQUETA;
+@property (nonatomic, copy) NSString * _Nullable mMODEL;
+@property (nonatomic, copy) NSString * _Nullable mIPOLT;
+@property (nonatomic, copy) NSString * _Nullable mSTRMODEL;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC8prospect22ServiceAddOnDataSource")
 @interface ServiceAddOnDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
@@ -1569,6 +1892,28 @@ SWIFT_CLASS("_TtC8prospect22ServiceAddOnDataSource")
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)tableView:(UITableView * _Nonnull)tableView didDeselectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8prospect20SetEnableWifiRequest")
+@interface SetEnableWifiRequest : BaseRequest
+@property (nonatomic, strong) Params * _Nullable mParams;
+@property (nonatomic, strong) LoginApp * _Nonnull mLoginApp;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect21SetEnableWifiResponse")
+@interface SetEnableWifiResponse : BaseResponse
+@property (nonatomic, copy) NSString * _Nullable mResultOnt;
+@property (nonatomic, copy) NSArray<STBox *> * _Nullable mStBox;
+@property (nonatomic, copy) NSString * _Nullable mResultInvLog;
+@property (nonatomic, copy) NSString * _Nullable resultExtender;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -1667,6 +2012,26 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQU
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect13TesTTRRequest")
+@interface TesTTRRequest : BaseRequest
+@property (nonatomic, strong) Login * _Nonnull mLogin;
+@property (nonatomic, copy) NSString * _Nullable mAccount;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect13TestTResponse")
+@interface TestTResponse : BaseResponse
+@property (nonatomic, copy) NSString * _Nullable mResult;
+@property (nonatomic, copy) NSString * _Nullable mResultDescription;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
@@ -1818,6 +2183,15 @@ SWIFT_CLASS("_TtC8prospect24ValidateCoverageResponse")
 @interface ValidateCoverageResponse : BaseResponse
 @property (nonatomic, strong) Feasibility * _Null_unspecified feasibility;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect21WifiOptimizerResponse")
+@interface WifiOptimizerResponse : BaseResponse
+@property (nonatomic, strong) Resp * _Nullable mResp;
+@property (nonatomic, strong) ParamOP * _Nullable mParamsOptimizer;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
