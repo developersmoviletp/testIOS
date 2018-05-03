@@ -18,6 +18,8 @@ pod 'moa'
 pod 'IPDFCameraViewController'
 pod 'CreditCardValidator'
 pod 'UICircularProgressRing'
+pod 'GoogleMaps'
+pod 'GooglePlaces'
 
   # Pods for test
   use_frameworks! # <--Use this line

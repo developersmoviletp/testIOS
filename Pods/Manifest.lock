@@ -9,16 +9,23 @@ PODS:
   - CardIO (5.4.1)
   - CreditCardForm (0.1.7)
   - CreditCardValidator (0.4)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
   - IPDFCameraViewController (0.0.1)
   - IQKeyboardManagerSwift (5.0.4)
   - moa (9.0.2)
   - ObjectMapper (3.1.0)
   - PKHUD (5.0.0)
-  - Realm (3.4.0):
-    - Realm/Headers (= 3.4.0)
-  - Realm/Headers (3.4.0)
-  - RealmSwift (3.4.0):
-    - Realm (= 3.4.0)
+  - Realm (3.5.0):
+    - Realm/Headers (= 3.5.0)
+  - Realm/Headers (3.5.0)
+  - RealmSwift (3.5.0):
+    - Realm (= 3.5.0)
   - UICircularProgressRing (2.0.0)
 
 DEPENDENCIES:
@@ -29,6 +36,8 @@ DEPENDENCIES:
   - CardIO
   - CreditCardForm
   - CreditCardValidator
+  - GoogleMaps
+  - GooglePlaces
   - IPDFCameraViewController
   - IQKeyboardManagerSwift (= 5.0.4)
   - moa
@@ -44,15 +53,17 @@ SPEC CHECKSUMS:
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   CreditCardForm: 66f0ce5a12182000a457d56f5630049efd3432df
   CreditCardValidator: 9f0814dd61682c004071a250d89327ca83514a48
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   IPDFCameraViewController: c7e346c760d39ed7a137121bedfcecfde041cde6
   IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
   moa: b73dc5e0efa1fad00711c4608e41b197f4d15b12
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
-  Realm: 9527c7baa2260f3a3aad6823d2d71cafff9b046b
-  RealmSwift: f40a747beaea1cadde7dcef41ee5a34b3001677b
+  Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
+  RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
   UICircularProgressRing: f41663e98c0f40b4794461a4209a67569ea2cc28
 
-PODFILE CHECKSUM: b895206aafcfe56eed9b7d66d9c4889590892bc5
+PODFILE CHECKSUM: ddea3a3bd25d4a8bc45115e161292e38f5fbf4d7
 
 COCOAPODS: 1.4.0

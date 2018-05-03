@@ -170,6 +170,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import RealmSwift;
 @import Foundation;
 @import CoreLocation;
+@import GoogleMaps;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -1750,6 +1751,8 @@ SWIFT_CLASS("_TtC8prospect13ProspectRoute")
 + (void)paymetWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)accountWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)wifiLaunchWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
++ (void)optimizerLaunchWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
++ (void)navigatorWithViewController:(UIViewController * _Nonnull)viewController;
 + (void)instanceAppDelegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -2105,7 +2108,7 @@ SWIFT_CLASS("_TtC8prospect19TracingMapPresenter")
 
 
 SWIFT_CLASS("_TtC8prospect24TracingMapViewController")
-@interface TracingMapViewController : BaseViewController
+@interface TracingMapViewController : BaseViewController <GMSMapViewDelegate>
 @property (nonatomic, strong) TracingMapPresenter * _Null_unspecified mTracingMapPresenter;
 @property (nonatomic) BOOL didFindMyLocation;
 @property (nonatomic, readonly, copy) NSString * _Nonnull baseURLDirections;
@@ -2116,8 +2119,6 @@ SWIFT_CLASS("_TtC8prospect24TracingMapViewController")
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
-- (void)hideViews;
-- (void)cleanData;
 - (void)onSuccessLoadTimeArriveWithTimeToArrivalResponse:(TimeToArriveResponse * _Nonnull)timeToArrivalResponse;
 - (void)traceRouteWithTimeToArriveResponse:(TimeToArriveResponse * _Nonnull)timeToArriveResponse;
 - (void)newMarkerWithTitle:(NSString * _Nonnull)title location:(CLLocationCoordinate2D)location;
