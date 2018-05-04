@@ -20,6 +20,7 @@ pod 'CreditCardValidator'
 pod 'UICircularProgressRing'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+pod 'DatePickerDialog'
 
   # Pods for test
   use_frameworks! # <--Use this line

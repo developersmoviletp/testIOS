@@ -9,6 +9,7 @@ PODS:
   - CardIO (5.4.1)
   - CreditCardForm (0.1.7)
   - CreditCardValidator (0.4)
+  - DatePickerDialog (2.0)
   - GoogleMaps (2.7.0):
     - GoogleMaps/Maps (= 2.7.0)
   - GoogleMaps/Base (2.7.0)
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - CardIO
   - CreditCardForm
   - CreditCardValidator
+  - DatePickerDialog
   - GoogleMaps
   - GooglePlaces
   - IPDFCameraViewController
@@ -53,6 +55,7 @@ SPEC CHECKSUMS:
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   CreditCardForm: 66f0ce5a12182000a457d56f5630049efd3432df
   CreditCardValidator: 9f0814dd61682c004071a250d89327ca83514a48
+  DatePickerDialog: 5e1c24d9fe6506cd45dbc573eed7b0a251b1c09d
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   IPDFCameraViewController: c7e346c760d39ed7a137121bedfcecfde041cde6
@@ -64,6 +67,6 @@ SPEC CHECKSUMS:
   RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
   UICircularProgressRing: f41663e98c0f40b4794461a4209a67569ea2cc28
 
-PODFILE CHECKSUM: ddea3a3bd25d4a8bc45115e161292e38f5fbf4d7
+PODFILE CHECKSUM: c19be650aadccd0dac15ef0f447b7e9228b3ee9f
 
 COCOAPODS: 1.4.0

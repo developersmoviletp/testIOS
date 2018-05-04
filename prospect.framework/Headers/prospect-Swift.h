@@ -170,7 +170,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import RealmSwift;
 @import Foundation;
 @import CoreLocation;
-@import GoogleMaps;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -958,6 +957,20 @@ SWIFT_CLASS("_TtC8prospect18DataUpdateResponse")
 @property (nonatomic, copy) NSString * _Nullable mResultExtender;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+@class UIDatePicker;
+@class UIColor;
+@class UIFont;
+
+SWIFT_CLASS("_TtC8prospect16DatePickerDialog")
+@interface DatePickerDialog : UIView
+@property (nonatomic, strong) UIDatePicker * _Null_unspecified datePicker;
+- (nonnull instancetype)initWithTextColor:(UIColor * _Nonnull)textColor buttonColor:(UIColor * _Nonnull)buttonColor font:(UIFont * _Nonnull)font locale:(NSLocale * _Nullable)locale showCancelButton:(BOOL)showCancelButton OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// Create the dialog view, and animate opening the dialog
+- (void)show:(NSString * _Nonnull)title doneButtonTitle:(NSString * _Nonnull)doneButtonTitle cancelButtonTitle:(NSString * _Nonnull)cancelButtonTitle defaultDate:(NSDate * _Nonnull)defaultDate minimumDate:(NSDate * _Nullable)minimumDate maximumDate:(NSDate * _Nullable)maximumDate datePickerMode:(UIDatePickerMode)datePickerMode callback:(void (^ _Nonnull)(NSDate * _Nullable))callback;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
@@ -2108,7 +2121,7 @@ SWIFT_CLASS("_TtC8prospect19TracingMapPresenter")
 
 
 SWIFT_CLASS("_TtC8prospect24TracingMapViewController")
-@interface TracingMapViewController : BaseViewController <GMSMapViewDelegate>
+@interface TracingMapViewController : BaseViewController
 @property (nonatomic, strong) TracingMapPresenter * _Null_unspecified mTracingMapPresenter;
 @property (nonatomic) BOOL didFindMyLocation;
 @property (nonatomic, readonly, copy) NSString * _Nonnull baseURLDirections;
@@ -2165,6 +2178,8 @@ SWIFT_CLASS("_TtC8prospect28TrackingTicketViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 SWIFT_CLASS("_TtC8prospect23ValidateCoverageRequest")

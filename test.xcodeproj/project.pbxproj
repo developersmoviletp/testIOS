@@ -30,10 +30,10 @@
 		EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764520618BAD004F6CD0 /* CoreData.framework */; };
 		EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764620618BAD004F6CD0 /* CoreLocation.framework */; };
 		EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764720618BAD004F6CD0 /* Foundation.framework */; };
-		EED7550F209BD684003C0C2F /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED7550D209BD678003C0C2F /* prospect.framework */; };
-		EED75510209BD684003C0C2F /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EED7550D209BD678003C0C2F /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EED75513209BD9D4003C0C2F /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED75511209BD8B0003C0C2F /* BaseClases.framework */; };
 		EED75514209BD9D4003C0C2F /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EED75511209BD8B0003C0C2F /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEF12D8D209D232100D86EDA /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF12D8B209D231A00D86EDA /* prospect.framework */; };
+		EEF12D8E209D232100D86EDA /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEF12D8B209D231A00D86EDA /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +60,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EEF12D8E209D232100D86EDA /* prospect.framework in Embed Frameworks */,
 				EED75514209BD9D4003C0C2F /* BaseClases.framework in Embed Frameworks */,
-				EED75510209BD684003C0C2F /* prospect.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,8 +107,8 @@
 		EEBE764520618BAD004F6CD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EEBE764620618BAD004F6CD0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EEBE764720618BAD004F6CD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EED7550D209BD678003C0C2F /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
 		EED75511209BD8B0003C0C2F /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
+		EEF12D8B209D231A00D86EDA /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,7 @@
 				EE6B6CC520818CF5001AB112 /* ImageIO.framework in Frameworks */,
 				EE6B6CC620818CF5001AB112 /* libc++.tbd in Frameworks */,
 				EE6B6CC720818CF5001AB112 /* libicucore.tbd in Frameworks */,
-				EED7550F209BD684003C0C2F /* prospect.framework in Frameworks */,
+				EEF12D8D209D232100D86EDA /* prospect.framework in Frameworks */,
 				EE6B6CC820818CF5001AB112 /* libz.tbd in Frameworks */,
 				EE6B6CC920818CF5001AB112 /* OpenGLES.framework in Frameworks */,
 				EE6B6CCA20818CF5001AB112 /* AVFoundation.framework in Frameworks */,
@@ -156,8 +156,8 @@
 		0451C4FD205B530000E63C26 = {
 			isa = PBXGroup;
 			children = (
+				EEF12D8B209D231A00D86EDA /* prospect.framework */,
 				EED75511209BD8B0003C0C2F /* BaseClases.framework */,
-				EED7550D209BD678003C0C2F /* prospect.framework */,
 				69E693C720896491001DD7AA /* test.xcworkspace */,
 				0451C508205B530000E63C26 /* test */,
 				0451C521205B530000E63C26 /* testTests */,
@@ -464,6 +464,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/CreditCardForm/CreditCardForm.framework",
 				"${BUILT_PRODUCTS_DIR}/CreditCardValidator/CreditCardValidator.framework",
+				"${BUILT_PRODUCTS_DIR}/DatePickerDialog/DatePickerDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/IPDFCameraViewController/IPDFCameraViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -481,6 +482,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CreditCardForm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CreditCardValidator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IPDFCameraViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
