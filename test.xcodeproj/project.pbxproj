@@ -27,13 +27,13 @@
 		EE6B6CCB20818CF5001AB112 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC320818CF5001AB112 /* QuartzCore.framework */; };
 		EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC420818CF5001AB112 /* GLKit.framework */; };
 		EE79F082206B2C7F00C16C7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE79F081206B2C7F00C16C7B /* ViewController.m */; };
-		EE8FD03C209B77A60094DF2A /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8FD03A209B779C0094DF2A /* BaseClases.framework */; };
-		EE8FD03D209B77A60094DF2A /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE8FD03A209B779C0094DF2A /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE8FD07E209B8CDF0094DF2A /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8FD07C209B8CA80094DF2A /* prospect.framework */; };
-		EE8FD07F209B8CDF0094DF2A /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE8FD07C209B8CA80094DF2A /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764520618BAD004F6CD0 /* CoreData.framework */; };
 		EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764620618BAD004F6CD0 /* CoreLocation.framework */; };
 		EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764720618BAD004F6CD0 /* Foundation.framework */; };
+		EED7550F209BD684003C0C2F /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED7550D209BD678003C0C2F /* prospect.framework */; };
+		EED75510209BD684003C0C2F /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EED7550D209BD678003C0C2F /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EED75513209BD9D4003C0C2F /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED75511209BD8B0003C0C2F /* BaseClases.framework */; };
+		EED75514209BD9D4003C0C2F /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EED75511209BD8B0003C0C2F /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +60,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EE8FD07F209B8CDF0094DF2A /* prospect.framework in Embed Frameworks */,
-				EE8FD03D209B77A60094DF2A /* BaseClases.framework in Embed Frameworks */,
+				EED75514209BD9D4003C0C2F /* BaseClases.framework in Embed Frameworks */,
+				EED75510209BD684003C0C2F /* prospect.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,11 +104,11 @@
 		EE6B6CC320818CF5001AB112 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EE6B6CC420818CF5001AB112 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		EE79F081206B2C7F00C16C7B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EE8FD03A209B779C0094DF2A /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
-		EE8FD07C209B8CA80094DF2A /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
 		EEBE764520618BAD004F6CD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EEBE764620618BAD004F6CD0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EEBE764720618BAD004F6CD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EED7550D209BD678003C0C2F /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
+		EED75511209BD8B0003C0C2F /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +119,12 @@
 				EE6B6CC520818CF5001AB112 /* ImageIO.framework in Frameworks */,
 				EE6B6CC620818CF5001AB112 /* libc++.tbd in Frameworks */,
 				EE6B6CC720818CF5001AB112 /* libicucore.tbd in Frameworks */,
-				EE8FD07E209B8CDF0094DF2A /* prospect.framework in Frameworks */,
+				EED7550F209BD684003C0C2F /* prospect.framework in Frameworks */,
 				EE6B6CC820818CF5001AB112 /* libz.tbd in Frameworks */,
 				EE6B6CC920818CF5001AB112 /* OpenGLES.framework in Frameworks */,
 				EE6B6CCA20818CF5001AB112 /* AVFoundation.framework in Frameworks */,
 				EE6B6CCB20818CF5001AB112 /* QuartzCore.framework in Frameworks */,
-				EE8FD03C209B77A60094DF2A /* BaseClases.framework in Frameworks */,
+				EED75513209BD9D4003C0C2F /* BaseClases.framework in Frameworks */,
 				EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */,
 				EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */,
 				EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */,
@@ -156,8 +156,8 @@
 		0451C4FD205B530000E63C26 = {
 			isa = PBXGroup;
 			children = (
-				EE8FD07C209B8CA80094DF2A /* prospect.framework */,
-				EE8FD03A209B779C0094DF2A /* BaseClases.framework */,
+				EED75511209BD8B0003C0C2F /* BaseClases.framework */,
+				EED7550D209BD678003C0C2F /* prospect.framework */,
 				69E693C720896491001DD7AA /* test.xcworkspace */,
 				0451C508205B530000E63C26 /* test */,
 				0451C521205B530000E63C26 /* testTests */,
