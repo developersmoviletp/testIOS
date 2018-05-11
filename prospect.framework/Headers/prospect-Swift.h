@@ -2182,6 +2182,8 @@ SWIFT_CLASS("_TtC8prospect28TrackingTicketViewController")
 
 
 
+
+
 SWIFT_CLASS("_TtC8prospect23ValidateCoverageRequest")
 @interface ValidateCoverageRequest : BaseRequest
 @property (nonatomic, copy) NSString * _Nullable latitude;
