@@ -164,9 +164,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import ObjectiveC;
-@import BaseClases;
 @import UIKit;
 @import CoreGraphics;
+@import BaseClases;
 @import RealmSwift;
 @import Foundation;
 @import CoreLocation;
@@ -205,6 +205,34 @@ SWIFT_CLASS("_TtC8prospect11ACDResponse")
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
+@class UIColor;
+@class NSCoder;
+@class UIScrollView;
+
+SWIFT_CLASS("_TtC8prospect15ACTabScrollView")
+@interface ACTabScrollView : UIView <UIScrollViewDelegate>
+@property (nonatomic) NSInteger defaultPage;
+@property (nonatomic) CGFloat tabSectionHeight;
+@property (nonatomic, strong) UIColor * _Nonnull tabSectionBackgroundColor;
+@property (nonatomic, strong) UIColor * _Nonnull contentSectionBackgroundColor;
+@property (nonatomic) BOOL tabGradient;
+@property (nonatomic) BOOL arrowIndicator;
+@property (nonatomic) BOOL pagingEnabled;
+@property (nonatomic) NSInteger cachedPageLimit;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+- (void)prepareForInterfaceBuilder;
+- (void)scrollViewWillBeginDragging:(UIScrollView * _Nonnull)scrollView;
+- (void)scrollViewDidEndDecelerating:(UIScrollView * _Nonnull)scrollView;
+- (void)scrollViewDidEndDragging:(UIScrollView * _Nonnull)scrollView willDecelerate:(BOOL)decelerate;
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView * _Nonnull)scrollView;
+- (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+- (void)reloadData;
+- (void)changePageToIndex:(NSInteger)index animated:(BOOL)animated;
+- (void)changePageToIndex:(NSInteger)index animated:(BOOL)animated completion:(void (^ _Nonnull)(void))completion;
+@end
+
 @class RegisterCardResponse;
 @class BaseResponse;
 @class BaseViewController;
@@ -224,7 +252,6 @@ SWIFT_CLASS("_TtC8prospect19AddNewCardPresenter")
 @class BasePresenter;
 @class CardIOPaymentViewController;
 @class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC8prospect24AddNewCardViewController")
 @interface AddNewCardViewController : BaseViewController <CardIOPaymentViewControllerDelegate>
@@ -290,7 +317,6 @@ SWIFT_CLASS("_TtC8prospect22AddonSelectorPresenter")
 
 @class iCarousel;
 @class UIViewController;
-@class UIView;
 
 SWIFT_CLASS("_TtC8prospect24AddonsCarouselDataSource")
 @interface AddonsCarouselDataSource : NSObject <iCarouselDataSource, iCarouselDelegate>
@@ -960,7 +986,6 @@ SWIFT_CLASS("_TtC8prospect18DataUpdateResponse")
 @end
 
 @class UIDatePicker;
-@class UIColor;
 @class UIFont;
 
 SWIFT_CLASS("_TtC8prospect16DatePickerDialog")
@@ -1765,6 +1790,7 @@ SWIFT_CLASS("_TtC8prospect13ProspectRoute")
 + (void)accountWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)wifiLaunchWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)optimizerLaunchWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
++ (void)resumenLaunchWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)navigatorWithViewController:(UIViewController * _Nonnull)viewController;
 + (void)instanceAppDelegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -2178,6 +2204,7 @@ SWIFT_CLASS("_TtC8prospect28TrackingTicketViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 

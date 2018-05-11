@@ -58,5 +58,9 @@
 - (IBAction)lanzadorOptimizer:(id)sender {
     [ProspectRoute optimizerLaunchWithViewController:self user:@"0101490064"];
 }
+- (IBAction)lanzadorResume:(id)sender {
+    [ProspectRoute resumenLaunchWithViewController:self user:@"1.4246228"];
+
+}
 
 @end
