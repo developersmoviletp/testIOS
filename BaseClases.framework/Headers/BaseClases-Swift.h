@@ -989,9 +989,10 @@ SWIFT_CLASS("_TtC10BaseClases6Imagen")
 SWIFT_CLASS("_TtC10BaseClases11Information")
 @interface Information : NSObject
 @property (nonatomic, copy) NSString * _Nonnull type;
+@property (nonatomic, copy) NSString * _Nonnull city;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-- (nonnull instancetype)initWithType:(NSString * _Nonnull)type OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithType:(NSString * _Nonnull)type city:(NSString * _Nonnull)city OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

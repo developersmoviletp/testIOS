@@ -1718,8 +1718,10 @@ SWIFT_CLASS("_TtC8prospect24PersonDataViewController")
 SWIFT_CLASS("_TtC8prospect18PlainDetailRequest")
 @interface PlainDetailRequest : BaseRequest
 @property (nonatomic, copy) NSString * _Nullable idPlan;
+@property (nonatomic, copy) NSString * _Nullable mPlazaC;
+@property (nonatomic, copy) NSString * _Nullable mColoniaC;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithIdPlan:(NSString * _Nonnull)idPlan OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithIdPlan:(NSString * _Nonnull)idPlan mPlazaC:(NSString * _Nonnull)mPlazaC mColoniaC:(NSString * _Nonnull)mColoniaC OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
 @end
@@ -1789,7 +1791,8 @@ SWIFT_CLASS("_TtC8prospect13ProspectRoute")
 + (void)paymetWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)accountWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)wifiLaunchWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
-+ (void)optimizerLaunchWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
++ (void)AlarmLaunchWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
++ (void)OptimizerLaunchWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)resumenLaunchWithViewController:(UIViewController * _Nonnull)viewController user:(NSString * _Nonnull)user;
 + (void)navigatorWithViewController:(UIViewController * _Nonnull)viewController;
 + (void)instanceAppDelegate;
@@ -1846,6 +1849,7 @@ SWIFT_CLASS("_TtC8prospect4Resp")
 
 SWIFT_CLASS("_TtC8prospect7RespONT")
 @interface RespONT : NSObject
+@property (nonatomic, copy) NSString * _Nullable mTypeAlarm;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -2036,6 +2040,21 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQU
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_PHOTO_ADDRESS_VOUCHER;)
 + (NSString * _Nonnull)REQUEST_CODE_PHOTO_ADDRESS_VOUCHER SWIFT_WARN_UNUSED_RESULT;
 + (void)setREQUEST_CODE_PHOTO_ADDRESS_VOUCHER:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_PHOTO_PAGE1;)
++ (NSString * _Nonnull)REQUEST_CODE_PHOTO_PAGE1 SWIFT_WARN_UNUSED_RESULT;
++ (void)setREQUEST_CODE_PHOTO_PAGE1:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_PHOTO_PAGE2;)
++ (NSString * _Nonnull)REQUEST_CODE_PHOTO_PAGE2 SWIFT_WARN_UNUSED_RESULT;
++ (void)setREQUEST_CODE_PHOTO_PAGE2:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_PHOTO_PAGE3;)
++ (NSString * _Nonnull)REQUEST_CODE_PHOTO_PAGE3 SWIFT_WARN_UNUSED_RESULT;
++ (void)setREQUEST_CODE_PHOTO_PAGE3:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_PHOTO_PAGE4;)
++ (NSString * _Nonnull)REQUEST_CODE_PHOTO_PAGE4 SWIFT_WARN_UNUSED_RESULT;
++ (void)setREQUEST_CODE_PHOTO_PAGE4:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQUEST_CODE_PHOTO_RFC;)
++ (NSString * _Nonnull)REQUEST_CODE_PHOTO_RFC SWIFT_WARN_UNUSED_RESULT;
++ (void)setREQUEST_CODE_PHOTO_RFC:(NSString * _Nonnull)value;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull mIdentificationTypes;
 @property (nonatomic, strong) TakePhotoPresenter * _Null_unspecified mTakePhotoPresenter;
 @property (nonatomic, strong) FormValidator * _Null_unspecified mFormValidator;
@@ -2044,6 +2063,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull REQU
 @property (nonatomic) BOOL isPhotoTwo;
 @property (nonatomic) BOOL isPhotoThree;
 - (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
 - (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
 - (IBAction)onVoucherCheckButtonClick:(id _Nonnull)sender;
 - (IBAction)onSaveClick:(id _Nonnull)sender;
@@ -2211,6 +2231,7 @@ SWIFT_CLASS("_TtC8prospect28TrackingTicketViewController")
 
 
 
+
 SWIFT_CLASS("_TtC8prospect23ValidateCoverageRequest")
 @interface ValidateCoverageRequest : BaseRequest
 @property (nonatomic, copy) NSString * _Nullable latitude;
@@ -2249,6 +2270,13 @@ SWIFT_CLASS("_TtC8prospect9WorkOrder")
 @property (nonatomic, copy) NSString * _Nonnull idOperator;
 @property (nonatomic, copy) NSString * _Nonnull schedulingDate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect8YourPlan")
+@interface YourPlan : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 #if __has_attribute(external_source_symbol)

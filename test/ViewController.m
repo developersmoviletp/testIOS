@@ -53,14 +53,16 @@
    [ProspectRoute prospectWithViewController:self ];
 }
 - (IBAction)lanzadorWifi:(id)sender {
-    [ProspectRoute wifiLaunchWithViewController:self user:@"0101454621"];
+    [ProspectRoute wifiLaunchWithViewController:self user:@"0102132657"];
 }
-- (IBAction)lanzadorOptimizer:(id)sender {
-    [ProspectRoute optimizerLaunchWithViewController:self user:@"0101490064"];
+- (IBAction)lanzadorAlarm:(id)sender {
+    [ProspectRoute AlarmLaunchWithViewController:self user:@"0101030425"];
 }
 - (IBAction)lanzadorResume:(id)sender {
     [ProspectRoute resumenLaunchWithViewController:self user:@"1.4246228"];
-
+}
+- (IBAction)lanzadorOptimizer:(id)sender {
+    [ProspectRoute OptimizerLaunchWithViewController:self user:@"0101030425"];
 }
 
 @end
