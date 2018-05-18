@@ -328,8 +328,6 @@ SWIFT_CLASS("_TtC8prospect24AddonsCarouselDataSource")
 - (NSInteger)numberOfItemsInCarousel:(iCarousel * _Nonnull)carousel SWIFT_WARN_UNUSED_RESULT;
 - (UIView * _Nonnull)carousel:(iCarousel * _Nonnull)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView * _Nullable)view SWIFT_WARN_UNUSED_RESULT;
 - (void)carousel:(iCarousel * _Nonnull)carousel didSelectItemAtIndex:(NSInteger)index;
-- (void)incrementCont;
-- (void)decrementCont;
 - (void)carouselCurrentItemIndexDidChange:(iCarousel * _Nonnull)carousel;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
