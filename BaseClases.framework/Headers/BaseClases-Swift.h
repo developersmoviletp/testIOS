@@ -286,6 +286,62 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class RLMRealm;
+@class RLMObjectSchema;
+@class RLMSchema;
+
+SWIFT_CLASS("_TtC10BaseClases19ArrCostoInstalacion")
+@interface ArrCostoInstalacion : RealmSwiftObject
+@property (nonatomic, copy) NSString * _Nonnull uuid;
+@property (nonatomic, copy) NSString * _Nonnull id;
+@property (nonatomic, copy) NSString * _Nonnull nombre;
+@property (nonatomic, copy) NSString * _Nonnull agrupacionAddon;
+@property (nonatomic, copy) NSString * _Nonnull cantidadDN;
+@property (nonatomic, copy) NSString * _Nonnull cantidadTroncal;
+@property (nonatomic, copy) NSString * _Nonnull comentario;
+@property (nonatomic, copy) NSString * _Nonnull esAutomaticoCiudad;
+@property (nonatomic, copy) NSString * _Nonnull esCargoUnico;
+@property (nonatomic, copy) NSString * _Nonnull estatus;
+@property (nonatomic, copy) NSString * _Nonnull esVisible;
+@property (nonatomic, copy) NSString * _Nonnull idBrmArrear;
+@property (nonatomic, copy) NSString * _Nonnull idBrmCU;
+@property (nonatomic, copy) NSString * _Nonnull idBrmForward;
+@property (nonatomic, copy) NSString * _Nonnull iEPS;
+@property (nonatomic, copy) NSString * _Nonnull iVA;
+@property (nonatomic, copy) NSString * _Nonnull maximoAgregar;
+@property (nonatomic, copy) NSString * _Nonnull nombreEditable;
+@property (nonatomic, copy) NSString * _Nonnull planDescuentoId;
+@property (nonatomic, copy) NSString * _Nonnull plazo;
+@property (nonatomic, copy) NSString * _Nonnull precioBase;
+@property (nonatomic, copy) NSString * _Nonnull precioEditable;
+@property (nonatomic, copy) NSString * _Nonnull precioProntoPago;
+@property (nonatomic, copy) NSString * _Nonnull productoPadre;
+@property (nonatomic, copy) NSString * _Nonnull tipoProducto;
+@property (nonatomic, copy) NSString * _Nonnull idProducto;
+@property (nonatomic, copy) NSString * _Nonnull nameProducto;
+@property (nonatomic, copy) NSString * _Nonnull productoId;
+@property (nonatomic, copy) NSString * _Nonnull ciudad;
+@property (nonatomic, copy) NSString * _Nonnull velocidadSubida;
+@property (nonatomic, copy) NSString * _Nonnull velocidadBajada;
+@property (nonatomic, copy) NSString * _Nonnull tieneIPDinamica;
+@property (nonatomic, copy) NSString * _Nonnull tieneIPFija;
+@property (nonatomic, copy) NSString * _Nonnull tieneSTBAdicional;
+@property (nonatomic, copy) NSString * _Nonnull esCCTV;
+@property (nonatomic, copy) NSString * _Nonnull esWiFi;
+@property (nonatomic, copy) NSString * _Nonnull cantidad;
+@property (nonatomic, copy) NSString * _Nonnull estatusProducto;
+@property (nonatomic, copy) NSString * _Nonnull fechaInicio;
+@property (nonatomic, copy) NSString * _Nonnull fechaFin;
+@property (nonatomic, copy) NSString * _Nonnull comentarioProducto;
+@property (nonatomic, copy) NSString * _Nonnull esProntoPago;
+@property (nonatomic, copy) NSString * _Nonnull mesInicio;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithValue:(id _Nonnull)value OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithRealm:(RLMRealm * _Nonnull)realm schema:(RLMObjectSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithValue:(id _Nonnull)value schema:(RLMSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC10BaseClases7ArrPlan")
 @interface ArrPlan : NSObject
@@ -294,9 +350,6 @@ SWIFT_CLASS("_TtC10BaseClases7ArrPlan")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class RLMRealm;
-@class RLMObjectSchema;
-@class RLMSchema;
 
 SWIFT_CLASS("_TtC10BaseClases11ArrPlanBean")
 @interface ArrPlanBean : RealmSwiftObject
@@ -740,8 +793,10 @@ SWIFT_CLASS("_TtC10BaseClases23CotServicioProductoBean")
 @property (nonatomic, copy) NSString * _Nonnull VelocidadBajada;
 @property (nonatomic, copy) NSString * _Nonnull VelocidadSubida;
 @property (nonatomic, copy) NSString * _Nonnull DP_PromocionPlan;
+@property (nonatomic, copy) NSString * _Nonnull MesInstalacion;
 - (nonnull instancetype)initWithArrProductoIncluido:(ArrProductosIncluido * _Nonnull)arrProductoIncluido;
 - (nonnull instancetype)initWithArrProductoAdicional:(ArrProductosAdicionales * _Nonnull)arrProductoAdicional;
+- (nonnull instancetype)initWithArrCostoInstalacion:(ArrCostoInstalacion * _Nonnull)arrCostoInstalacion;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithValue:(id _Nonnull)value OBJC_DESIGNATED_INITIALIZER;
