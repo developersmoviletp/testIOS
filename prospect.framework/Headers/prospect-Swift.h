@@ -258,6 +258,7 @@ SWIFT_CLASS("_TtC8prospect31AdditionalServiceViewController")
 - (void)viewDidLoad;
 - (void)clearData;
 - (void)onCalculateTotalAmountWithPriceList:(double)priceList priceSoonPayment:(double)priceSoonPayment;
+- (void)onCalculateActivacionFianzaWithGrupo:(NSString * _Nonnull)grupo costo:(double)costo;
 - (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
 - (IBAction)onNextButtonClick:(id _Nonnull)sender;
 - (void)onSuccessLoadPlanWithPlan:(Plans * _Nonnull)plan;
@@ -269,6 +270,7 @@ SWIFT_CLASS("_TtC8prospect31AdditionalServiceViewController")
 @end
 
 @class ArrServiciosIncluidos;
+@class ArrCostoInstalacion;
 @class PlanDetailResponse;
 @class ArrServiciosAdicionales;
 @class ArrProductosAdicionales;
@@ -277,6 +279,7 @@ SWIFT_CLASS("_TtC8prospect22AddonSelectorPresenter")
 @interface AddonSelectorPresenter : BaseEstrategiaPresenter
 @property (nonatomic, strong) Plans * _Null_unspecified mPlanSelected;
 @property (nonatomic, copy) NSArray<ArrServiciosIncluidos *> * _Nonnull mArrIncludeServices;
+@property (nonatomic, copy) NSArray<ArrCostoInstalacion *> * _Nonnull mArrCostoInstalacion;
 @property (nonatomic) double planSoonPrice;
 - (void)loadPlan;
 - (void)onRequestWs;
@@ -1220,6 +1223,9 @@ SWIFT_CLASS("_TtC8prospect13IconTextField")
 - (void)showActionDatePickerWithDate:(NSString * _Nullable)date;
 - (void)showActionCreditCardDatePickerWithDate:(NSString * _Nullable)date;
 - (void)showActionPicker;
+- (CGRect)textRectForBounds:(CGRect)bounds SWIFT_WARN_UNUSED_RESULT;
+- (CGRect)placeholderRectForBounds:(CGRect)bounds SWIFT_WARN_UNUSED_RESULT;
+- (CGRect)editingRectForBounds:(CGRect)bounds SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
@@ -1273,6 +1279,16 @@ SWIFT_CLASS("_TtC8prospect34ItemTypeCardCollectionReusableView")
 SWIFT_CLASS("_TtC8prospect8Location")
 @interface Location : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8prospect6Loggin")
+@interface Loggin : NSObject
+@property (nonatomic, copy) NSString * _Nullable user;
+@property (nonatomic, copy) NSString * _Nullable password;
+@property (nonatomic, copy) NSString * _Nullable ip;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1588,6 +1604,7 @@ SWIFT_CLASS("_TtC8prospect24PayServiceViewController")
 @interface PayServiceViewController : BaseViewController
 - (void)viewDidLoad;
 - (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
+- (void)viewDidAppear:(BOOL)animated;
 - (void)clearData;
 - (void)onSuccessGetBillsBRMWithGetBillsBRMResponse:(GetBillsBRMResponse * _Nonnull)getBillsBRMResponse;
 - (void)onSuccessLoadCheckBalanceWithCheckBalanceResponse:(CheckBalanceBRMResponse * _Nonnull)checkBalanceResponse;
@@ -1611,7 +1628,6 @@ SWIFT_CLASS("_TtC8prospect27PaymentMethodViewController")
 - (void)loadMethodCashPay;
 - (void)loadMethodCardPay;
 - (void)onSuccessLoadInfoPaymentWithMetodoPagoBean:(MetodoPagoBean * _Nonnull)metodoPagoBean;
-- (IBAction)mTypeMethodSegmentControl:(id _Nonnull)sender;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -1624,6 +1640,7 @@ SWIFT_CLASS("_TtC8prospect28PaymentRegisteredCardRequest")
 @property (nonatomic, copy) NSString * _Nullable idCard;
 @property (nonatomic, copy) NSString * _Nullable amount;
 @property (nonatomic, copy) NSString * _Nullable cvv;
+@property (nonatomic, strong) Loggin * _Nullable loggin;
 - (nonnull instancetype)initWithAccountNumber:(NSString * _Nonnull)accountNumber idCard:(NSString * _Nonnull)idCard amount:(NSString * _Nonnull)amount cvv:(NSString * _Nonnull)cvv OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
@@ -1669,7 +1686,6 @@ SWIFT_CLASS("_TtC8prospect19PersonDataPresenter")
 - (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UISegmentedControl;
 
 SWIFT_CLASS("_TtC8prospect24PersonDataViewController")
 @interface PersonDataViewController : BaseEstrategiaViewController
@@ -1681,7 +1697,6 @@ SWIFT_CLASS("_TtC8prospect24PersonDataViewController")
 - (void)loadContactInfo;
 - (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
 - (void)didReceiveMemoryWarning;
-- (IBAction)mPersonTypeSegmentedControl:(UISegmentedControl * _Nonnull)sender;
 - (IBAction)onNextButtonClick:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -1699,7 +1714,6 @@ SWIFT_CLASS("_TtC8prospect18PlainDetailRequest")
 - (nonnull instancetype)initWithUser:(NSString * _Nonnull)user password:(NSString * _Nonnull)password ip:(NSString * _Nonnull)ip SWIFT_UNAVAILABLE;
 @end
 
-@class ArrCostoInstalacion;
 
 SWIFT_CLASS("_TtC8prospect18PlanDetailResponse")
 @interface PlanDetailResponse : BaseResponse
