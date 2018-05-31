@@ -292,6 +292,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 
 SWIFT_CLASS("_TtC10BaseClases19ArrCostoInstalacion")
 @interface ArrCostoInstalacion : RealmSwiftObject
+- (NSString * _Nonnull)getID SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)getAdicionalType SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getAdicionalName SWIFT_WARN_UNUSED_RESULT;
+- (double)getPrecioBase SWIFT_WARN_UNUSED_RESULT;
+- (double)getPrecioProntoPago SWIFT_WARN_UNUSED_RESULT;
+- (double)getCantidad SWIFT_WARN_UNUSED_RESULT;
+- (double)getIVA SWIFT_WARN_UNUSED_RESULT;
+- (double)getIEPS SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, copy) NSString * _Nonnull uuid;
 @property (nonatomic, copy) NSString * _Nonnull id;
 @property (nonatomic, copy) NSString * _Nonnull nombre;
@@ -793,7 +801,7 @@ SWIFT_CLASS("_TtC10BaseClases23CotServicioProductoBean")
 @property (nonatomic, copy) NSString * _Nonnull VelocidadBajada;
 @property (nonatomic, copy) NSString * _Nonnull VelocidadSubida;
 @property (nonatomic, copy) NSString * _Nonnull DP_PromocionPlan;
-@property (nonatomic, copy) NSString * _Nonnull MesInstalacion;
+@property (nonatomic, copy) NSString * _Nonnull MesInicio;
 - (nonnull instancetype)initWithArrProductoIncluido:(ArrProductosIncluido * _Nonnull)arrProductoIncluido;
 - (nonnull instancetype)initWithArrProductoAdicional:(ArrProductosAdicionales * _Nonnull)arrProductoAdicional;
 - (nonnull instancetype)initWithArrCostoInstalacion:(ArrCostoInstalacion * _Nonnull)arrCostoInstalacion;

@@ -14,10 +14,6 @@
 		0E118EE6A77105F60A4ADC91 /* Pods_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9596AD8EEB1C7D5186339CE1 /* Pods_testUITests.framework */; };
 		8C8C453B1E41A8619FEF012B /* Pods_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D2F35250E2DC967A084A7E9 /* Pods_testTests.framework */; };
 		E230823E35D1B833592F533E /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E36DF5F695004D9FE462BFA8 /* Pods_test.framework */; };
-		EE3E0FBE20B65D5F003C4CEC /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3E0FBC20B65D57003C4CEC /* prospect.framework */; };
-		EE3E0FBF20B65D5F003C4CEC /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE3E0FBC20B65D57003C4CEC /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE3E0FC220B65EEB003C4CEC /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3E0FC020B65EE5003C4CEC /* BaseClases.framework */; };
-		EE3E0FC320B65EEB003C4CEC /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE3E0FC020B65EE5003C4CEC /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE5D95FE20AF519E0088002C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE5D95FD20AF519E0088002C /* Main.storyboard */; };
 		EE6B6CBC20818C62001AB112 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CBB20818C62001AB112 /* SystemConfiguration.framework */; };
 		EE6B6CC520818CF5001AB112 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CBD20818CF4001AB112 /* ImageIO.framework */; };
@@ -29,9 +25,13 @@
 		EE6B6CCB20818CF5001AB112 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC320818CF5001AB112 /* QuartzCore.framework */; };
 		EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B6CC420818CF5001AB112 /* GLKit.framework */; };
 		EE79F082206B2C7F00C16C7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE79F081206B2C7F00C16C7B /* ViewController.m */; };
+		EE7F9AEA20BF73F300EDE1E9 /* prospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F9AE820BF739900EDE1E9 /* prospect.framework */; };
+		EE7F9AEB20BF73F300EDE1E9 /* prospect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F9AE820BF739900EDE1E9 /* prospect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764520618BAD004F6CD0 /* CoreData.framework */; };
 		EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764620618BAD004F6CD0 /* CoreLocation.framework */; };
 		EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBE764720618BAD004F6CD0 /* Foundation.framework */; };
+		EEF2922D20BF1B6800A5B9E2 /* BaseClases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF2922B20BF1B5A00A5B9E2 /* BaseClases.framework */; };
+		EEF2922E20BF1B6800A5B9E2 /* BaseClases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEF2922B20BF1B5A00A5B9E2 /* BaseClases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,14 +52,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EE3E0F7320B60767003C4CEC /* Embed Frameworks */ = {
+		EEF2922820BF120A00A5B9E2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EE3E0FC320B65EEB003C4CEC /* BaseClases.framework in Embed Frameworks */,
-				EE3E0FBF20B65D5F003C4CEC /* prospect.framework in Embed Frameworks */,
+				EE7F9AEB20BF73F300EDE1E9 /* prospect.framework in Embed Frameworks */,
+				EEF2922E20BF1B6800A5B9E2 /* BaseClases.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,8 +86,7 @@
 		A823759B054A0B11DBE67B12 /* Pods-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testTests/Pods-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		CFDE71F3EA4CDF170A33487C /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
 		E36DF5F695004D9FE462BFA8 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE3E0FBC20B65D57003C4CEC /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
-		EE3E0FC020B65EE5003C4CEC /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
+		EE3E107A20B8CA76003C4CEC /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = prospect.framework; path = "../Library/Developer/Xcode/DerivedData/prospect-acyysvccqaihmfdxuamnvssetior/Build/Products/Release-iphoneos/prospect.framework"; sourceTree = "<group>"; };
 		EE5D95FD20AF519E0088002C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EE6B6CBB20818C62001AB112 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EE6B6CBD20818CF4001AB112 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -99,9 +98,11 @@
 		EE6B6CC320818CF5001AB112 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EE6B6CC420818CF5001AB112 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		EE79F081206B2C7F00C16C7B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EE7F9AE820BF739900EDE1E9 /* prospect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = prospect.framework; sourceTree = "<group>"; };
 		EEBE764520618BAD004F6CD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EEBE764620618BAD004F6CD0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EEBE764720618BAD004F6CD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EEF2922B20BF1B5A00A5B9E2 /* BaseClases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseClases.framework; sourceTree = "<group>"; };
 		FD4A501A075DD051EDE71043 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,15 +114,15 @@
 				EE6B6CC520818CF5001AB112 /* ImageIO.framework in Frameworks */,
 				EE6B6CC620818CF5001AB112 /* libc++.tbd in Frameworks */,
 				EE6B6CC720818CF5001AB112 /* libicucore.tbd in Frameworks */,
-				EE3E0FBE20B65D5F003C4CEC /* prospect.framework in Frameworks */,
+				EE7F9AEA20BF73F300EDE1E9 /* prospect.framework in Frameworks */,
 				EE6B6CC820818CF5001AB112 /* libz.tbd in Frameworks */,
 				EE6B6CC920818CF5001AB112 /* OpenGLES.framework in Frameworks */,
 				EE6B6CCA20818CF5001AB112 /* AVFoundation.framework in Frameworks */,
 				EE6B6CCB20818CF5001AB112 /* QuartzCore.framework in Frameworks */,
-				EE3E0FC220B65EEB003C4CEC /* BaseClases.framework in Frameworks */,
 				EE6B6CCC20818CF5001AB112 /* GLKit.framework in Frameworks */,
 				EEBE764820618BAD004F6CD0 /* CoreData.framework in Frameworks */,
 				EEBE764920618BAD004F6CD0 /* CoreLocation.framework in Frameworks */,
+				EEF2922D20BF1B6800A5B9E2 /* BaseClases.framework in Frameworks */,
 				EE6B6CBC20818C62001AB112 /* SystemConfiguration.framework in Frameworks */,
 				EEBE764A20618BAD004F6CD0 /* Foundation.framework in Frameworks */,
 				E230823E35D1B833592F533E /* Pods_test.framework in Frameworks */,
@@ -150,8 +151,8 @@
 		0451C4FD205B530000E63C26 = {
 			isa = PBXGroup;
 			children = (
-				EE3E0FC020B65EE5003C4CEC /* BaseClases.framework */,
-				EE3E0FBC20B65D57003C4CEC /* prospect.framework */,
+				EE7F9AE820BF739900EDE1E9 /* prospect.framework */,
+				EEF2922B20BF1B5A00A5B9E2 /* BaseClases.framework */,
 				69E693C720896491001DD7AA /* test.xcworkspace */,
 				0451C508205B530000E63C26 /* test */,
 				0451C507205B530000E63C26 /* Products */,
@@ -202,6 +203,7 @@
 		75A87CF4B7A1D41530E75985 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE3E107A20B8CA76003C4CEC /* prospect.framework */,
 				EE6B6CC220818CF5001AB112 /* AVFoundation.framework */,
 				EE6B6CC420818CF5001AB112 /* GLKit.framework */,
 				EE6B6CBD20818CF4001AB112 /* ImageIO.framework */,
@@ -235,7 +237,7 @@
 				EE26E31E207FDA4A00DE4EF2 /* ShellScript */,
 				6FD9B35E0DD0DFE37DE5B624 /* [CP] Embed Pods Frameworks */,
 				5D0B20E6D6C9012D4A3BA3D1 /* [CP] Copy Pods Resources */,
-				EE3E0F7320B60767003C4CEC /* Embed Frameworks */,
+				EEF2922820BF120A00A5B9E2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -722,7 +724,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XF2RH3K2CN;
+				DEVELOPMENT_TEAM = MYA2FQRAS4;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -732,7 +734,7 @@
 				INFOPLIST_FILE = test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.test223;
+				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -754,7 +756,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XF2RH3K2CN;
+				DEVELOPMENT_TEAM = MYA2FQRAS4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -763,7 +765,7 @@
 				INFOPLIST_FILE = test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.test223;
+				PRODUCT_BUNDLE_IDENTIFIER = com.totalplay.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

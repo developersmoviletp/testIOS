@@ -272,7 +272,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
      IQPreviousNextDisplayModeAlwaysHide:   Do not show NextPrevious buttons in any case.
      IQPreviousNextDisplayModeAlwaysShow:   Always show nextPrevious buttons, if there are more than 1 textField then both buttons will be visible but will be shown as disabled.
      */
-    open var previousNextDisplayMode = IQPreviousNextDisplayMode.Default
+    open var previousNextDisplayMode = IQPreviousNextDisplayMode.alwaysHide
 
     /**
      Toolbar done button icon, If nothing is provided then check toolbarDoneBarButtonItemText to draw done button.

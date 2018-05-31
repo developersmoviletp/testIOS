@@ -705,11 +705,9 @@ SWIFT_CLASS("_TtC8prospect27CardMethodPayViewController")
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)mSaveButton:(id _Nonnull)sender;
-- (IBAction)mDueDateTextField:(id _Nonnull)sender;
 - (IBAction)mScanCardButton:(id _Nonnull)sender;
 - (void)userDidCancelPaymentViewController:(CardIOPaymentViewController * _Null_unspecified)paymentViewController;
 - (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo * _Null_unspecified)cardInfo inPaymentViewController:(CardIOPaymentViewController * _Null_unspecified)paymentViewController;
-- (void)validateTypeCardWithNumberCard:(NSString * _Nonnull)numberCard;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1071,6 +1069,7 @@ SWIFT_CLASS("_TtC8prospect23FamilyPackagesPresenter")
 @property (nonatomic, copy) NSArray<IDPlan *> * _Nonnull midPlans;
 - (void)viewDidLoad;
 - (void)loadFamilyPackage;
+- (void)onRequestWs;
 - (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
 - (void)onSuccessFamilyPackageWithRequestUrl:(NSString * _Nonnull)requestUrl familyPackageResponse:(FamilyPackageResponse * _Nonnull)familyPackageResponse;
 - (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
@@ -1495,6 +1494,7 @@ SWIFT_CLASS("_TtC8prospect21PackagesTypePresenter")
 @property (nonatomic, copy) NSString * _Nonnull mSelectedType;
 - (void)loadHomePackages;
 - (void)loadBusinessPackages;
+- (void)onRequestWs;
 - (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
 - (void)onSuccessPMPlanesWithProducMaster:(ProductMasterPlanesResponse * _Nonnull)producMaster;
 - (nonnull instancetype)initWithViewController:(BaseViewController * _Nonnull)viewController SWIFT_UNAVAILABLE;
@@ -1527,6 +1527,7 @@ SWIFT_CLASS("_TtC8prospect22PackagesViewController")
 @property (nonatomic, strong) CarruselDataSource * _Nullable mCarruselDataSource;
 @property (nonatomic, strong) FamilyPackagesPresenter * _Nullable mFamilyPackagePresenter;
 @property (nonatomic, copy) NSArray<Plans *> * _Nonnull mArrayFamily;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
 - (void)didReceiveMemoryWarning;
@@ -2121,7 +2122,6 @@ SWIFT_CLASS("_TtC8prospect22TracingDetailPresenter")
 @property (nonatomic, strong) WorkOrder * _Null_unspecified mWorkOrder;
 @property (nonatomic, strong) TimeToArriveResponse * _Null_unspecified mTimeToArriveResponse;
 - (void)loadWorkOrder;
-- (void)exit;
 - (void)showDetailService;
 - (void)successLoadTimeArriveWithRequestUrl:(NSString * _Nonnull)requestUrl timeToArriveResponse:(TimeToArriveResponse * _Nonnull)timeToArriveResponse;
 - (void)onSuccessLoadResponseWithRequestUrl:(NSString * _Nonnull)requestUrl response:(BaseResponse * _Nonnull)response;
@@ -2134,7 +2134,6 @@ SWIFT_CLASS("_TtC8prospect27TracingDetailViewController")
 @interface TracingDetailViewController : BaseViewController
 - (void)viewDidLoad;
 - (void)hideViews;
-- (void)cleanView;
 - (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
 - (void)updateStatusWithStatus:(NSInteger)status;
 - (void)onSuccessLoadTimeArriveWithTimeToArriveResponse:(TimeToArriveResponse * _Nonnull)timeToArriveResponse;
@@ -2164,7 +2163,6 @@ SWIFT_CLASS("_TtC8prospect24TracingMapViewController")
 @property (nonatomic, copy) NSString * _Null_unspecified originAddress;
 @property (nonatomic, copy) NSString * _Null_unspecified destinationAddress;
 - (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
 - (BasePresenter * _Nullable)getPresenter SWIFT_WARN_UNUSED_RESULT;
 - (void)onSuccessLoadTimeArriveWithTimeToArrivalResponse:(TimeToArriveResponse * _Nonnull)timeToArrivalResponse;
 - (void)traceRouteWithTimeToArriveResponse:(TimeToArriveResponse * _Nonnull)timeToArriveResponse;
@@ -2212,8 +2210,6 @@ SWIFT_CLASS("_TtC8prospect28TrackingTicketViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
 
 
 
