@@ -231,58 +231,44 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (NSString * _Nonnull)GEO_CODING_API_KEY SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull API_TOTAL;)
 + (NSString * _Nonnull)API_TOTAL SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_LOGIN;)
-+ (NSString * _Nonnull)WS_LOGIN SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_REGISTER_USER;)
-+ (NSString * _Nonnull)WS_REGISTER_USER SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_RECOVERY_PASSWORD;)
-+ (NSString * _Nonnull)WS_RECOVERY_PASSWORD SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_MY_ACCOUNT;)
-+ (NSString * _Nonnull)WS_MY_ACCOUNT SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_CONSULT_OT;)
-+ (NSString * _Nonnull)WS_CONSULT_OT SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_STATEMENTS;)
-+ (NSString * _Nonnull)WS_STATEMENTS SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_MY_ACCOUNT_BALANCE;)
-+ (NSString * _Nonnull)WS_MY_ACCOUNT_BALANCE SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_MY_ACCOUNT_CARDS;)
-+ (NSString * _Nonnull)WS_MY_ACCOUNT_CARDS SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_BALANCE;)
++ (NSString * _Nonnull)WS_BALANCE SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_BAR_CODE;)
++ (NSString * _Nonnull)WS_BAR_CODE SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_SEND_MAIL;)
++ (NSString * _Nonnull)WS_SEND_MAIL SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_STATEMENT;)
++ (NSString * _Nonnull)WS_STATEMENT SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_SINGLE_CHARGE;)
++ (NSString * _Nonnull)WS_SINGLE_CHARGE SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_ADD_NEW_CARD;)
 + (NSString * _Nonnull)WS_ADD_NEW_CARD SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_TRACING_ROUTE;)
-+ (NSString * _Nonnull)WS_TRACING_ROUTE SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_COVERAGE_VALIDATE;)
-+ (NSString * _Nonnull)WS_COVERAGE_VALIDATE SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_GET_PLANS;)
-+ (NSString * _Nonnull)WS_GET_PLANS SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_PLAIN_DETAIL;)
-+ (NSString * _Nonnull)WS_PLAIN_DETAIL SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_FAMILY_PACKAGE;)
-+ (NSString * _Nonnull)WS_FAMILY_PACKAGE SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_CHECK_BILLING_INFORMATION;)
-+ (NSString * _Nonnull)WS_CHECK_BILLING_INFORMATION SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_PAYMENT_UNIQUE;)
-+ (NSString * _Nonnull)WS_PAYMENT_UNIQUE SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_PAYMENT_REGISTERED_CARD;)
 + (NSString * _Nonnull)WS_PAYMENT_REGISTERED_CARD SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_ARRIVAL_TIME;)
-+ (NSString * _Nonnull)WS_ARRIVAL_TIME SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_NO_COVERAGE;)
-+ (NSString * _Nonnull)WS_NO_COVERAGE SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_SAVE_ID_DEVICE;)
-+ (NSString * _Nonnull)WS_SAVE_ID_DEVICE SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_GET_BILLS_BRM;)
-+ (NSString * _Nonnull)WS_GET_BILLS_BRM SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_CHECK_BALANCE_BRM;)
-+ (NSString * _Nonnull)WS_CHECK_BALANCE_BRM SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_REMOVE_CARD;)
++ (NSString * _Nonnull)WS_REMOVE_CARD SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_EDIT_CARD;)
++ (NSString * _Nonnull)WS_EDIT_CARD SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_MY_ACCOUNT;)
++ (NSString * _Nonnull)WS_MY_ACCOUNT SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_CHANGE_BILLING_ADDRESS;)
++ (NSString * _Nonnull)WS_CHANGE_BILLING_ADDRESS SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_CONVENIENCE_STORE;)
++ (NSString * _Nonnull)WS_CONVENIENCE_STORE SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_RECURRING_CHARGE;)
++ (NSString * _Nonnull)WS_RECURRING_CHARGE SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_INVOICE_DETAIL;)
++ (NSString * _Nonnull)WS_INVOICE_DETAIL SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_PAYMENT_PERIODS;)
++ (NSString * _Nonnull)WS_PAYMENT_PERIODS SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_REGISTERED_CARDS;)
++ (NSString * _Nonnull)WS_REGISTERED_CARDS SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_GET_ENRUTADO;)
++ (NSString * _Nonnull)WS_GET_ENRUTADO SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull API_QUERY_UPLOAD_DOCUMENT;)
 + (NSString * _Nonnull)API_QUERY_UPLOAD_DOCUMENT SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull API_ACD;)
 + (NSString * _Nonnull)API_ACD SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull WS_SEND_OPPORTUNITY;)
-+ (NSString * _Nonnull)WS_SEND_OPPORTUNITY SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull API_CP;)
-+ (NSString * _Nonnull)API_CP SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1112,21 +1098,6 @@ SWIFT_CLASS("_TtC10BaseClases8NameData")
 - (nonnull instancetype)initWithValue:(id _Nonnull)value OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithRealm:(RLMRealm * _Nonnull)realm schema:(RLMObjectSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithValue:(id _Nonnull)value schema:(RLMSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC10BaseClases7NewCard")
-@interface NewCard : NSObject
-@property (nonatomic, copy) NSString * _Nonnull name;
-@property (nonatomic, copy) NSString * _Nonnull lastName;
-@property (nonatomic, copy) NSString * _Nonnull secondLastName;
-@property (nonatomic, copy) NSString * _Nonnull cardNumber;
-@property (nonatomic, copy) NSString * _Nonnull expirationMonth;
-@property (nonatomic, copy) NSString * _Nonnull expirationYear;
-@property (nonatomic, copy) NSString * _Nonnull ccType;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-- (nonnull instancetype)initWithName:(NSString * _Nonnull)name lastName:(NSString * _Nonnull)lastName secondLastName:(NSString * _Nonnull)secondLastName cardNumber:(NSString * _Nonnull)cardNumber expirationMonth:(NSString * _Nonnull)expirationMonth expirationYear:(NSString * _Nonnull)expirationYear ccType:(NSString * _Nonnull)ccType OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

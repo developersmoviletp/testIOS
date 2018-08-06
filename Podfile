@@ -20,18 +20,11 @@ pod 'CreditCardValidator'
 pod 'UICircularProgressRing'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+pod 'EzPopup'
   # Pods for test
   use_frameworks! # <--Use this line
   
 
-  target 'testTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'testUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  
 
 end

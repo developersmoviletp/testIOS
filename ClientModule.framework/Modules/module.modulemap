@@ -1,0 +1,11 @@
+framework module ClientModule {
+  umbrella header "ClientModule.h"
+
+  export *
+  module * { export * }
+}
+
+module ClientModule.Swift {
+    header "ClientModule-Swift.h"
+    requires objc
+}

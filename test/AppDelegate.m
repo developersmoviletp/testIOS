@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import <prospect/prospect.h>
+#import <ClientModule/ClientModule.h>
+#import <BaseClases/BaseClases.h>
 @import IQKeyboardManagerSwift;
 @import UIKit;
 @interface AppDelegate ()
@@ -20,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [IQKeyboardManager sharedManager].enable = true;
-    [ProspectRoute instanceAppDelegate];
+   // [ProspectRoute instanceAppDelegate];
     return YES;
 }
 

@@ -8,7 +8,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <BaseClases/BaseClases.h>
-#import <prospect/prospect.h>
+#import <ClientModule/ClientModule.h>
 @import UIKit;
 @interface ViewController ()
 
@@ -29,41 +29,41 @@
     //    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-}
-
-- (IBAction)lanzadorTrace:(id)sender {
-    [ProspectRoute traceWithViewController:self];
-}
-
-- (IBAction)onClick:(id)sender {
-    [ProspectRoute paymetWithViewController:self user: accountText.text];
-}
-
-- (IBAction)lanzadorAccount:(id)sender {
-    [ProspectRoute accountWithViewController:self user: accountText.text];
-}
-
-- (IBAction)lanzadorProspect:(id)sender {
-    [ProspectRoute prospectWithViewController:self ];
-}
-- (IBAction)lanzadorWifi:(id)sender {
-    [ProspectRoute wifiLaunchWithViewController:self user: accountText.text];
-}
-- (IBAction)lanzadorAlarm:(id)sender {
-    [ProspectRoute AlarmLaunchWithViewController:self user: accountText.text];
-}
+//
+//- (void)didReceiveMemoryWarning {
+//    [super didReceiveMemoryWarning];
+//}
+//
+//-(void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//}
+//
+//- (IBAction)lanzadorTrace:(id)sender {
+//    [ProspectRoute traceWithViewController:self];
+//}
+//
+//- (IBAction)onClick:(id)sender {
+//    [ProspectRoute paymetWithViewController:self user: accountText.text];
+//}
+//
+//- (IBAction)lanzadorAccount:(id)sender {
+//    [ProspectRoute accountWithViewController:self user: accountText.text];
+//}
+//
+//- (IBAction)lanzadorProspect:(id)sender {
+//    [ProspectRoute prospectWithViewController:self ];
+//}
+//- (IBAction)lanzadorWifi:(id)sender {
+//    [ProspectRoute wifiLaunchWithViewController:self user: accountText.text];
+//}
+//- (IBAction)lanzadorAlarm:(id)sender {
+//    [ProspectRoute AlarmLaunchWithViewController:self user: accountText.text];
+//}
 - (IBAction)lanzadorResume:(id)sender {
-    [ProspectRoute resumenLaunchWithViewController:self user: accountText.text];
+    [RouteClass payAndConsultingLaunchWithViewController:self user: accountText.text];
 }
-- (IBAction)lanzadorOptimizer:(id)sender {
-    [ProspectRoute OptimizerLaunchWithViewController:self user: accountText.text];
-}
+//- (IBAction)lanzadorOptimizer:(id)sender {
+//    [ProspectRoute OptimizerLaunchWithViewController:self user: accountText.text];
+//}
 
 @end

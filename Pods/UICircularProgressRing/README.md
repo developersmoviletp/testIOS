@@ -13,7 +13,7 @@
 * Interface builder designable
 * Highly customizable and flexible
 * Easy to use
-* Sleek animations
+* Fluid and interruptible animations
 * Written in Swift
 * RTL language support
 
@@ -36,10 +36,10 @@
 
 	```ruby
 	target 'Example' do
-		# IMPORTANT: Make sure use_frameworks! is included at the top of the file
-		use_frameworks!
-
-		pod 'UICircularProgressRing'
+	    # IMPORTANT: Make sure use_frameworks! is included at the top of the file
+	    use_frameworks!
+	
+	    pod 'UICircularProgressRing'
 	end
 	```
 3. Run `pod install`
@@ -61,27 +61,11 @@ To use with [Carthage](https://github.com/Carthage/Carthage)
 3. Install dependencies
 	`carthage update --platform iOS`
 
-##### Either Embed or Link the framework
-
-###### Embed:
-
-1. Drag the `UICircularProgressRing.framework` from `MyProjDir/Carthage/Builds/iOS/UICircularProgressRing` into the `General -> Embeded Binaries` section of your Xcode project.
-
-###### Link:
-
-1. Drag the `UICircularProgressRing.framework` from `MyProjDir/Carthage/Builds/iOS/UICircularProgressRing` into the `General -> Linked Frameworks and Binaries` section of your Xcode project.
-2. Add a run script phase, under `Build Phases -> +`, put this in the code for the run script: `/usr/local/bin/carthage copy-frameworks`
-3. Add a `Copy Files Phase` under `Build Phases -> +`, select `Frameworks` as destination and add `UICircularProgressRing.framework`, make sure `Code Sign On Copy` is enabled.
-
-### Manually
-
-1. Simply download the `UICircularProgressRingView.swift`, `UICircularProgressRingLayer.swift` and `UICiruclarProgressRingDelegate.swift` files from [here](https://github.com/luispadron/UICircularProgressRing/tree/master/UICircularProgressRing) into your project, make sure you point to your projects target
-
 ## Usage
 
 ### Interface Builder
 
-Simply drag a `UIView` into your storyboard. Make sure to subclass `UICircularProgressRingView` and that the module points `UICircularProgressRing`.
+Simply drag a `UIView` into your storyboard. Make sure to subclass `UICircularProgressRing` and that the module points to `UICircularProgressRing`.
 
 Design your heart out
 
@@ -92,7 +76,7 @@ Design your heart out
 ```swift
 override func viewDidLoad() {
   // Create the view
-  let progressRing = UICircularProgressRingView(frame: CGRect(x: 0, y: 0, width: 240, height: 240))
+  let progressRing = UICircularProgressRing(frame: CGRect(x: 0, y: 0, width: 240, height: 240))
   // Change any of the properties you'd like
   progressRing.maxValue = 50
   progressRing.innerRingColor = UIColor.blue
@@ -105,25 +89,30 @@ To set a value and animate the view
 ```swift
 // Somewhere not in viewDidLoad (since the views have not set yet, thus cannot be animated)
 // Remember to use unowned or weak self if refrencing self to avoid retain cycle
-progressRing.setProgress(value: 49, animationDuration: 2.0) {
+progressRing.startProgress(to: 49, duration: 2.0) {
   print("Done animating!")
   // Do anything your heart desires...
 }
+
+// Pause at any time during a running animation
+progressRing.pauseProgress()
+
+// Continue where you left off after a pause
+progressRing.continueProgress()
 ```
 
 ## Documentation
 
 Please read this before creating an issue about how to use the package:
 
-[DOCUMENTATION](https://htmlpreview.github.io/?https://raw.githubusercontent.com/luispadron/UICircularProgressRing/master/docs/Classes/UICircularProgressRingView.html)
+[DOCUMENTATION](https://htmlpreview.github.io/?https://raw.githubusercontent.com/luispadron/UICircularProgressRing/master/docs/Classes/UICircularProgressRing.html)
 
 ## Example project
 
-Take a look at the example project over [here](Example/)
+Take a look at the example playground over [here](Example/)
 
 1. Download it
-2. Open the `Example.xcworkspace` in Xcode
-3. Mess around and experiment!
+2. Mess around and experiment!
 
 ## Misc.
 
